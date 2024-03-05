@@ -143,5 +143,44 @@
   <ItemGroup>
     <None Include="Resources\hidden %281%292.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %284%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teamwork %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\online-interview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\authority2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teamwork1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forgot password-rafiki %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dialing-number-301.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

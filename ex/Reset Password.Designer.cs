@@ -238,6 +238,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::ex.Properties.Resources.Forgot_password_rafiki__1_;
             this.pictureBox1.Location = new System.Drawing.Point(-68, 90);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(429, 303);
