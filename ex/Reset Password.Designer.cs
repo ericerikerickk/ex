@@ -98,6 +98,7 @@
             this.txtNew.TabIndex = 1;
             this.txtNew.UseSystemPasswordChar = true;
             this.txtNew.Click += new System.EventHandler(this.txtNew_Click);
+            this.txtNew.Leave += new System.EventHandler(this.txtNew_Leave);
             // 
             // pictureBox2
             // 
@@ -280,6 +281,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reset_Password";
+            this.Load += new System.EventHandler(this.Reset_Password_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+
 
 namespace ex
 {
@@ -61,6 +63,33 @@ namespace ex
             {
                 MessageBox.Show("Error", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private bool IsValidPassword(string password)
+        {
+            // Regular expression to enforce password rules
+            string pattern = @"^(?=.*[-!@#$%^&*()_+={}|;':""?,<.>])(?=.*[a-z])(?=.*[A-Z]).{8,}$";
+
+            // Validate password using regular expression
+            return Regex.IsMatch(password, pattern);
+        }
+
+        private void txtNew_Leave(object sender, EventArgs e)
+        {
+            string password = txtNew.Text;
+
+            if (IsValidPassword(password))
+            {
+                MessageBox.Show("Password is valid.");
+            }
+            else
+            {
+                MessageBox.Show("Password does not meet the requirements. The Password should have atleast one special character, one upper and lower key, and atleast 8 characters.");
+            }
+        }
+
+        private void Reset_Password_Load(object sender, EventArgs e)
+        {
+            txtNew.Focus();
         }
     }
 }
