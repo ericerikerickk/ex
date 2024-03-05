@@ -1027,8 +1027,7 @@
             this.PanelUserDashboard.Size = new System.Drawing.Size(586, 402);
             this.PanelUserDashboard.TabIndex = 39;
             this.PanelUserDashboard.Visible = false;
-            this.PanelUserDashboard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelUserDashboard_MouseDown);
-            this.PanelUserDashboard.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelUserDashboard_MouseMove);
+            
             // 
             // pictureBox20
             // 
@@ -1574,8 +1573,7 @@
             this.panelEmployeesDashboard.Size = new System.Drawing.Size(586, 402);
             this.panelEmployeesDashboard.TabIndex = 24;
             this.panelEmployeesDashboard.Visible = false;
-            this.panelEmployeesDashboard.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelEmployeesDashboard_MouseDown);
-            this.panelEmployeesDashboard.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelEmployeesDashboard_MouseMove);
+            
             // 
             // pictureBox18
             // 
@@ -1663,8 +1661,7 @@
             this.panelnonemployee.Size = new System.Drawing.Size(585, 402);
             this.panelnonemployee.TabIndex = 23;
             this.panelnonemployee.Visible = false;
-            this.panelnonemployee.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelnonemployee_MouseDown);
-            this.panelnonemployee.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelnonemployee_MouseMove);
+   
             // 
             // pictureBox17
             // 
@@ -1694,8 +1691,6 @@
             this.panelAdmin.Size = new System.Drawing.Size(585, 402);
             this.panelAdmin.TabIndex = 6;
             this.panelAdmin.Visible = false;
-            this.panelAdmin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelAdmin_MouseDown);
-            this.panelAdmin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelAdmin_MouseMove);
             // 
             // label1
             // 
@@ -1876,8 +1871,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 402);
             this.panel1.TabIndex = 5;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelUserDashboard_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelUserDashboard_MouseMove);
+
             // 
             // panelDashboardActive
             // 
@@ -1933,8 +1927,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AdminDashboard_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AdminDashboard_MouseMove);
+
             this.panelAddress.ResumeLayout(false);
             this.panelAddress.PerformLayout();
             this.panelContact.ResumeLayout(false);
