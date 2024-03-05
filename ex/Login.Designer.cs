@@ -250,6 +250,7 @@
             this.btnForgotpass.TabIndex = 11;
             this.btnForgotpass.Text = "Forgot Password ?";
             this.btnForgotpass.UseVisualStyleBackColor = false;
+            this.btnForgotpass.Click += new System.EventHandler(this.btnForgotpass_Click);
             // 
             // btnLogin
             // 

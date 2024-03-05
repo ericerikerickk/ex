@@ -43,5 +43,11 @@ namespace ex
         {
             Application.Exit();
         }
+
+        private void btnForgotpass_Click(object sender, EventArgs e)
+        {
+            ForgotPassword forgotPassword = new ForgotPassword();
+            forgotPassword.Show();
+        }
     }
 }
