@@ -16,5 +16,11 @@ namespace ex
         {
             InitializeComponent();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+        }
     }
 }
