@@ -61,6 +61,7 @@
             // 
             this.timvcode.Enabled = true;
             this.timvcode.Interval = 1000;
+            this.timvcode.Tick += new System.EventHandler(this.timvcode_Tick);
             // 
             // txtGmail
             // 
@@ -71,6 +72,8 @@
             this.txtGmail.Name = "txtGmail";
             this.txtGmail.Size = new System.Drawing.Size(370, 20);
             this.txtGmail.TabIndex = 1;
+            this.txtGmail.Click += new System.EventHandler(this.txtGmail_Click);
+            this.txtGmail.Leave += new System.EventHandler(this.txtGmail_Leave);
             // 
             // linkLabel1
             // 
@@ -111,6 +114,7 @@
             this.button3.TabIndex = 15;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnConfirm
             // 
@@ -126,6 +130,7 @@
             this.btnConfirm.TabIndex = 14;
             this.btnConfirm.Text = "&CONFIRM";
             this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // sendbtn
             // 
@@ -141,6 +146,7 @@
             this.sendbtn.TabIndex = 13;
             this.sendbtn.Text = "SEND";
             this.sendbtn.UseVisualStyleBackColor = false;
+            this.sendbtn.Click += new System.EventHandler(this.sendbtn_Click);
             // 
             // txtConfirm
             // 
@@ -154,6 +160,7 @@
             this.txtConfirm.Name = "txtConfirm";
             this.txtConfirm.Size = new System.Drawing.Size(370, 20);
             this.txtConfirm.TabIndex = 1;
+            this.txtConfirm.Click += new System.EventHandler(this.txtConfirm_Click);
             // 
             // label3
             // 
@@ -213,6 +220,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 530);
             this.panel2.TabIndex = 3;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // label2
             // 
@@ -265,6 +274,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 530);
             this.panel1.TabIndex = 2;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // pictureBox1
             // 
@@ -287,6 +298,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ForgotPassword";
+            this.Load += new System.EventHandler(this.ForgotPassword_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
