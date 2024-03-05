@@ -72,6 +72,12 @@
     <Compile Include="Reset Password.Designer.cs">
       <DependentUpon>Reset Password.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sign up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign up.Designer.cs">
+      <DependentUpon>Sign up.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +99,9 @@
     </Compile>
     <EmbeddedResource Include="Reset Password.resx">
       <DependentUpon>Reset Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sign up.resx">
+      <DependentUpon>Sign up.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
