@@ -16,69 +16,62 @@ namespace ex
         {
             InitializeComponent();
         }
-
+        private void sidecomponentsInactive()
+        {
+            nonEmployeesPanelInactive.Show();
+            panelDashboardInactive.Show();
+            panelEmployeesInactive.Show();
+            panelUserInactive.Show();
+        }
+        public void loadForm(object form)
+        {
+            if (this.mainpanel.Controls.Count > 0)
+                this.mainpanel.Controls.RemoveAt(0);
+            Form f = form as Form;
+            f.TopLevel = false;
+            f.Dock = DockStyle.Fill;
+            this.mainpanel.Controls.Add(f);
+            this.mainpanel.Tag = f;
+            f.Show();
+        }
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
             timer1.Start();
-            panelDashboardInactive.Visible = false;
-            panelDashboardActive.Visible = true;
-            nonEmployeesPanelInactive.Visible = true;
-            panelEmployeesInactive.Visible = true;
-            panelUserInactive.Visible = true;
-            panelnonemployee.Visible = false;
-            panelAdmin.Visible = true;
+            sidecomponentsInactive();
+            panelDashboardInactive.Hide();
+            panelDashboardActive.Show();
+            loadForm(new AdminDashboardForm());
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            lblTime.Text = DateTime.Now.ToLongTimeString();
-            lblDate.Text = DateTime.Now.ToLongDateString();
-        }
-
         private void panelDashboardInactive_MouseClick(object sender, MouseEventArgs e)
         {
-            panelDashboardInactive.Visible = false;
-            panelDashboardActive.Visible = true;
-            nonEmployeesPanelInactive.Visible = true;
-            panelEmployeesInactive.Visible = true;
-            panelUserInactive.Visible = true;
-            panelnonemployee.Visible = false;
-            panelAdmin.Visible = true;
+            sidecomponentsInactive();
+            panelDashboardInactive.Hide();
+            panelDashboardActive.Show();
+            loadForm(new AdminDashboardForm());
+        }
+        private void label13_MouseClick(object sender, MouseEventArgs e)
+        {
+            sidecomponentsInactive();
+            nonEmployeesPanelInactive.Hide();
+            nonEmployeesPanelactive.Show();
+            loadForm(new NonEmployeeDashboardForm());
         }
 
-        private void nonEmployeesPanelInactive_MouseClick(object sender, MouseEventArgs e)
+        private void panelEmployeesInactive_MouseClick_1(object sender, MouseEventArgs e)
         {
-            panelDashboardInactive.Visible = true;
-            nonEmployeesPanelInactive.Visible = false;
-            nonEmployeesPanelactive.Visible = true;
-            panelEmployeesInactive.Visible = true;
-            panelUserInactive.Visible = true;
-            panelnonemployee.Visible = true;
-            panelEmployeesDashboard.Visible = false;
-            txtFname.Focus();
+
+            sidecomponentsInactive();
+            panelEmployeesInactive.Hide();
+            panelEmployee.Show();
+            loadForm(new EmployeesDashboardForm());
         }
 
-        private void panelEmployeesInactive_MouseClick(object sender, MouseEventArgs e)
+        private void panelUserInactive_MouseClick_1(object sender, MouseEventArgs e)
         {
-            panelDashboardInactive.Visible = true;
-            nonEmployeesPanelInactive.Visible = true;
-            panelEmployeesInactive.Visible = false;
-            panelEmployee.Visible = true;
-            panelUserInactive.Visible = true;
-            panelEmployeesDashboard.Visible = true;
-            PanelUserDashboard.Visible = false;
-            txtEmpFname.Focus();
+            sidecomponentsInactive();
+            panelUserInactive.Hide();
+            panelUserActive.Show();
+            loadForm(new UserDashboardForm());
         }
-
-        private void panelUserInactive_MouseClick(object sender, MouseEventArgs e)
-        {
-            panelDashboardInactive.Visible = true;
-            nonEmployeesPanelInactive.Visible = true;
-            panelEmployeesInactive.Visible = true;
-            panelUserInactive.Visible = false;
-            panelUserActive.Visible = true;
-            PanelUserDashboard.Visible = true;
-        }
-       
     }
 }

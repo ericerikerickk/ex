@@ -16,7 +16,7 @@ namespace ex
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Sign_up());
+            Application.Run(new AdminDashboard());
         }
     }
 }
