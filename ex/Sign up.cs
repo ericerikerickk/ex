@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-using System.Data.SqlClient;
+
 namespace ex
 {
     public partial class Sign_up : Form
@@ -17,7 +17,7 @@ namespace ex
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -32,6 +32,8 @@ namespace ex
 
             txtConfirmpass.BackColor = SystemColors.Control;
             panelConfirmpass.BackColor = SystemColors.Control;
+            panelEmail.BackColor = SystemColors.Control;
+            txtEmail.BackColor = SystemColors.Control;
         }
 
         private void txtPass_Click(object sender, EventArgs e)
@@ -43,6 +45,8 @@ namespace ex
 
             txtConfirmpass.BackColor = SystemColors.Control;
             panelConfirmpass.BackColor = SystemColors.Control;
+            panelEmail.BackColor = SystemColors.Control;
+            txtEmail.BackColor = SystemColors.Control;
         }
 
         private void txtConfirmpass_Click(object sender, EventArgs e)
@@ -54,6 +58,8 @@ namespace ex
 
             txtConfirmpass.BackColor = Color.White;
             panelConfirmpass.BackColor = Color.White;
+            panelEmail.BackColor = SystemColors.Control;
+            txtEmail.BackColor = SystemColors.Control;
         }
 
         private void txtEmail_Click(object sender, EventArgs e)
@@ -62,9 +68,11 @@ namespace ex
             panelPass.BackColor = SystemColors.Control;
             txtUsername.BackColor = SystemColors.Control;
             panelUsername.BackColor = SystemColors.Control;
+
             txtConfirmpass.BackColor = SystemColors.Control;
             panelConfirmpass.BackColor = SystemColors.Control;
-
+            panelEmail.BackColor = Color.White;
+            txtEmail.BackColor = Color.White;
         }
 
         private void picturePass_MouseDown(object sender, MouseEventArgs e)
@@ -115,10 +123,18 @@ namespace ex
             return Regex.IsMatch(password, pattern);
         }
 
-        private void btnSignup_Click(object sender, EventArgs e)
+        private void txtEmail_Leave(object sender, EventArgs e)
         {
-            con.Open();
+            Regex mRegxExpression;
+            if (txtEmail.Text.Trim() != string.Empty)
+            {
+                mRegxExpression = new Regex(@"^([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@gmail\.com$");
 
+                if (!mRegxExpression.IsMatch(txtEmail.Text.Trim()))
+                {
+                    MessageBox.Show("E-mail address must end with @gmail.com", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
