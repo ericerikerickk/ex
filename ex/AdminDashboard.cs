@@ -73,5 +73,38 @@ namespace ex
             panelUserActive.Show();
             loadForm(new UserDashboardForm());
         }
+        private Point _mouseLoc;
+
+        private void mainpanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            _mouseLoc = e.Location;
+
+        }
+
+        private void mainpanel_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int dx = e.Location.X - _mouseLoc.X;
+                int dy = e.Location.Y - _mouseLoc.Y;
+                this.Location = new Point(this.Location.X + dx, this.Location.Y + dy);
+            }
+        }
+
+        private void pictureBox8_MouseDown(object sender, MouseEventArgs e)
+        {
+            _mouseLoc = e.Location;
+
+        }
+
+        private void pictureBox8_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int dx = e.Location.X - _mouseLoc.X;
+                int dy = e.Location.Y - _mouseLoc.Y;
+                this.Location = new Point(this.Location.X + dx, this.Location.Y + dy);
+            }
+        }
     }
 }

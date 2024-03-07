@@ -22,5 +22,10 @@ namespace ex
             lblTime.Text = DateTime.Now.ToLongTimeString();
             lblDate.Text = DateTime.Now.ToLongDateString();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

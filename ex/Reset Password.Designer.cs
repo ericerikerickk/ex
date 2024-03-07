@@ -65,6 +65,8 @@
             this.label8.Size = new System.Drawing.Size(172, 20);
             this.label8.TabIndex = 21;
             this.label8.Text = "Confirm New Password";
+            this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // label5
             // 
@@ -76,6 +78,8 @@
             this.label5.Size = new System.Drawing.Size(168, 25);
             this.label5.TabIndex = 19;
             this.label5.Text = "Reset Password";
+            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // panel3
             // 
@@ -86,6 +90,8 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(450, 45);
             this.panel3.TabIndex = 9;
+            this.panel3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // txtNew
             // 
@@ -99,6 +105,8 @@
             this.txtNew.UseSystemPasswordChar = true;
             this.txtNew.Click += new System.EventHandler(this.txtNew_Click);
             this.txtNew.Leave += new System.EventHandler(this.txtNew_Leave);
+            this.txtNew.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.txtNew.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // pictureBox2
             // 
@@ -109,7 +117,8 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
             // 
             // panel2
@@ -129,6 +138,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(450, 530);
             this.panel2.TabIndex = 5;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // button2
             // 
@@ -143,6 +154,8 @@
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.button2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // button1
             // 
@@ -158,6 +171,8 @@
             this.button1.Text = "CONFIRM";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // label6
             // 
@@ -169,6 +184,8 @@
             this.label6.Size = new System.Drawing.Size(156, 20);
             this.label6.TabIndex = 20;
             this.label6.Text = "Enter New Password";
+            this.label6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // panel4
             // 
@@ -179,6 +196,8 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(450, 45);
             this.panel4.TabIndex = 10;
+            this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // txtConfirm
             // 
@@ -192,6 +211,8 @@
             this.txtConfirm.TabIndex = 1;
             this.txtConfirm.UseSystemPasswordChar = true;
             this.txtConfirm.Click += new System.EventHandler(this.txtConfirm_Click);
+            this.txtConfirm.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.txtConfirm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // pictureBox3
             // 
@@ -202,7 +223,8 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
+            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.pictureBox3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             this.pictureBox3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseUp);
             // 
             // panel5
@@ -211,6 +233,8 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(0, 0);
             this.panel5.TabIndex = 18;
+            this.panel5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // button3
             // 
@@ -224,6 +248,8 @@
             this.button3.TabIndex = 15;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.button3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // confirmbtn
             // 
@@ -238,6 +264,8 @@
             this.confirmbtn.TabIndex = 14;
             this.confirmbtn.Text = "CONFIRM";
             this.confirmbtn.UseVisualStyleBackColor = false;
+            this.confirmbtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.confirmbtn.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // pictureBox1
             // 
@@ -248,6 +276,8 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // panel1
             // 
@@ -259,6 +289,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 530);
             this.panel1.TabIndex = 4;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // label1
             // 
@@ -270,6 +302,8 @@
             this.label1.Size = new System.Drawing.Size(189, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Forgot Password";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // Reset_Password
             // 

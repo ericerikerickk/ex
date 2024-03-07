@@ -105,5 +105,22 @@ namespace ex
             txtConfirm.UseSystemPasswordChar = true;
 
         }
+        private Point _mouseLoc;
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            _mouseLoc = e.Location;
+
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int dx = e.Location.X - _mouseLoc.X;
+                int dy = e.Location.Y - _mouseLoc.Y;
+                this.Location = new Point(this.Location.X + dx, this.Location.Y + dy);
+            }
+        }
     }
 }
