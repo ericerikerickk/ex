@@ -58,22 +58,22 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.label8.Location = new System.Drawing.Point(12, 235);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(187, 21);
+            this.label8.Size = new System.Drawing.Size(172, 20);
             this.label8.TabIndex = 21;
             this.label8.Text = "Confirm New Password";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.label5.Location = new System.Drawing.Point(12, 42);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 24);
+            this.label5.Size = new System.Drawing.Size(168, 25);
             this.label5.TabIndex = 19;
             this.label5.Text = "Reset Password";
             // 
@@ -90,11 +90,11 @@
             // txtNew
             // 
             this.txtNew.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNew.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNew.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.txtNew.Location = new System.Drawing.Point(55, 13);
             this.txtNew.Name = "txtNew";
-            this.txtNew.Size = new System.Drawing.Size(370, 20);
+            this.txtNew.Size = new System.Drawing.Size(370, 19);
             this.txtNew.TabIndex = 1;
             this.txtNew.UseSystemPasswordChar = true;
             this.txtNew.Click += new System.EventHandler(this.txtNew_Click);
@@ -149,7 +149,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(292, 315);
             this.button1.Name = "button1";
@@ -162,11 +162,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.label6.Location = new System.Drawing.Point(12, 143);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 21);
+            this.label6.Size = new System.Drawing.Size(156, 20);
             this.label6.TabIndex = 20;
             this.label6.Text = "Enter New Password";
             // 
@@ -184,11 +184,11 @@
             // 
             this.txtConfirm.BackColor = System.Drawing.SystemColors.Control;
             this.txtConfirm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConfirm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.txtConfirm.Location = new System.Drawing.Point(55, 13);
             this.txtConfirm.Name = "txtConfirm";
-            this.txtConfirm.Size = new System.Drawing.Size(370, 20);
+            this.txtConfirm.Size = new System.Drawing.Size(370, 19);
             this.txtConfirm.TabIndex = 1;
             this.txtConfirm.UseSystemPasswordChar = true;
             this.txtConfirm.Click += new System.EventHandler(this.txtConfirm_Click);
@@ -202,6 +202,8 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
+            this.pictureBox3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseUp);
             // 
             // panel5
             // 
@@ -228,7 +230,7 @@
             this.confirmbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.confirmbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.confirmbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmbtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmbtn.ForeColor = System.Drawing.Color.White;
             this.confirmbtn.Location = new System.Drawing.Point(590, 315);
             this.confirmbtn.Name = "confirmbtn";
@@ -261,11 +263,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(60, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 25);
+            this.label1.Size = new System.Drawing.Size(189, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Forgot Password";
             // 

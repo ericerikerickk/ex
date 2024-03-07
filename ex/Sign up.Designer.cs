@@ -74,7 +74,7 @@
             // 
             // pictureConfirmpass
             // 
-            this.pictureConfirmpass.Image = ((System.Drawing.Image)(resources.GetObject("pictureConfirmpass.Image")));
+            this.pictureConfirmpass.Image = global::ex.Properties.Resources.hidden__1_;
             this.pictureConfirmpass.Location = new System.Drawing.Point(15, 11);
             this.pictureConfirmpass.Margin = new System.Windows.Forms.Padding(2);
             this.pictureConfirmpass.Name = "pictureConfirmpass";
@@ -184,7 +184,7 @@
             // 
             // picturePass
             // 
-            this.picturePass.Image = ((System.Drawing.Image)(resources.GetObject("picturePass.Image")));
+            this.picturePass.Image = global::ex.Properties.Resources.hidden__1_;
             this.picturePass.Location = new System.Drawing.Point(15, 11);
             this.picturePass.Margin = new System.Windows.Forms.Padding(2);
             this.picturePass.Name = "picturePass";

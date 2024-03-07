@@ -213,6 +213,7 @@
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Enter += new System.EventHandler(this.btnClose_Enter);
             // 
             // linkLabelRegister
             // 
@@ -252,6 +253,7 @@
             this.btnForgotpass.Text = "Forgot Password ?";
             this.btnForgotpass.UseVisualStyleBackColor = false;
             this.btnForgotpass.Click += new System.EventHandler(this.btnForgotpass_Click);
+            this.btnForgotpass.Enter += new System.EventHandler(this.btnForgotpass_Enter);
             // 
             // btnLogin
             // 
@@ -267,6 +269,7 @@
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             this.btnLogin.Enter += new System.EventHandler(this.btnLogin_Enter);
             this.btnLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLogin_KeyDown);
+            this.btnLogin.Leave += new System.EventHandler(this.btnLogin_Leave);
             // 
             // panelPass
             // 
@@ -280,13 +283,15 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Image = global::ex.Properties.Resources.hidden__1_;
             this.pictureBox3.Location = new System.Drawing.Point(15, 11);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(24, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseDown);
+            this.pictureBox3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseUp);
             // 
             // panelUsername
             // 

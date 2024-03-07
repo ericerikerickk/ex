@@ -35,6 +35,7 @@ namespace ex
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
         }
 
         private void btnForgotpass_Click(object sender, EventArgs e)
@@ -106,8 +107,9 @@ namespace ex
         {
             txtPass.BackColor = SystemColors.Control; // Set to light gray on Leave
             panelPass.BackColor = SystemColors.Control;
-            panelUsername.BackColor = Color.White;
-            txtUsername.BackColor = Color.White;
+            panelUsername.BackColor = SystemColors.Control;
+            txtUsername.BackColor = SystemColors.Control; // Ensure username background color remains unchanged
+
         }
 
         private void btnLogin_Enter(object sender, EventArgs e)
@@ -129,6 +131,45 @@ namespace ex
                 // Trigger the click event of the login button
                 btnLogin.PerformClick();
             }
+        }
+
+        private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox3.Image = Properties.Resources.eye__2_;
+            txtPass.UseSystemPasswordChar = false;
+            txtPass.BackColor = Color.White;
+            panelPass.BackColor = Color.White;
+            txtUsername.BackColor = SystemColors.Control;
+            panelUsername.BackColor = SystemColors.Control;
+        }
+
+        private void pictureBox3_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox3.Image = Properties.Resources.hidden__1_;
+            txtPass.UseSystemPasswordChar = true;
+            txtPass.BackColor = Color.White;
+            panelPass.BackColor = Color.White;
+        }
+
+        private void btnClose_Enter(object sender, EventArgs e)
+        {
+            panelUsername.BackColor = SystemColors.Control;
+            txtUsername.BackColor = SystemColors.Control;
+            panelPass.BackColor = SystemColors.Control;
+            txtPass.BackColor = SystemColors.Control;
+
+        }
+
+        private void btnLogin_Leave(object sender, EventArgs e)
+        {
+            panelPass.BackColor = Color.White;
+            txtPass.BackColor = Color.White;
+        }
+
+        private void btnForgotpass_Enter(object sender, EventArgs e)
+        {
+            panelPass.BackColor = SystemColors.Control;
+            txtPass.BackColor = SystemColors.Control;
         }
     }
 }

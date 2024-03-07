@@ -91,5 +91,19 @@ namespace ex
         {
             txtNew.Focus();
         }
+
+        private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
+        {
+            pictureBox3.Image = Properties.Resources.eye__2_;
+            txtConfirm.UseSystemPasswordChar = false;
+
+        }
+
+        private void pictureBox3_MouseUp(object sender, MouseEventArgs e)
+        {
+            pictureBox2.Image = Properties.Resources.hidden__1_;
+            txtConfirm.UseSystemPasswordChar = true;
+
+        }
     }
 }

@@ -63,22 +63,26 @@ namespace ex
 
         private void picturePass_MouseDown(object sender, MouseEventArgs e)
         {
+            picturePass.Image = Properties.Resources.eye__2_;
             txtPass.UseSystemPasswordChar = true;
         }
 
         private void picturePass_MouseUp(object sender, MouseEventArgs e)
         {
-            txtPass.UseSystemPasswordChar = false;
+            picturePass.Image = Properties.Resources.hidden__1_;
+            txtPass.UseSystemPasswordChar = true;
         }
 
         private void pictureConfirmpass_MouseDown(object sender, MouseEventArgs e)
         {
+            pictureConfirmpass.Image = Properties.Resources.eye__2_;
             txtConfirmpass.UseSystemPasswordChar = false;
         }
 
         private void pictureConfirmpass_MouseUp(object sender, MouseEventArgs e)
         {
-            txtConfirmpass.UseSystemPasswordChar = false;
+            pictureConfirmpass.Image = Properties.Resources.hidden__1_;
+            txtConfirmpass.UseSystemPasswordChar = true;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
