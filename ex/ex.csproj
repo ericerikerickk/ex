@@ -62,6 +62,18 @@
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Cryptography.cs" />
+    <Compile Include="Documents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents.Designer.cs">
+      <DependentUpon>Documents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProfile.Designer.cs">
+      <DependentUpon>EditProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="EmployeesDashboardForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProfile.resx">
+      <DependentUpon>EditProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeesDashboardForm.resx">
       <DependentUpon>EmployeesDashboardForm.cs</DependentUpon>
@@ -237,6 +252,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-documents-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-profile-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-profile-48 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-documents-50 %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
