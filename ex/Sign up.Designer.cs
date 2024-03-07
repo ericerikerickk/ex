@@ -100,7 +100,6 @@
             // 
             this.txtConfirmpass.BackColor = System.Drawing.SystemColors.Control;
             this.txtConfirmpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConfirmpass.Enabled = false;
             this.txtConfirmpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.txtConfirmpass.Location = new System.Drawing.Point(55, 11);
@@ -111,6 +110,8 @@
             this.txtConfirmpass.Size = new System.Drawing.Size(370, 20);
             this.txtConfirmpass.TabIndex = 6;
             this.txtConfirmpass.Click += new System.EventHandler(this.txtConfirmpass_Click);
+            this.txtConfirmpass.Enter += new System.EventHandler(this.txtConfirmpass_Enter);
+            this.txtConfirmpass.Leave += new System.EventHandler(this.txtConfirmpass_Leave);
             // 
             // label6
             // 
@@ -208,6 +209,7 @@
             this.txtPass.Size = new System.Drawing.Size(370, 20);
             this.txtPass.TabIndex = 6;
             this.txtPass.Click += new System.EventHandler(this.txtPass_Click);
+            this.txtPass.Enter += new System.EventHandler(this.txtPass_Enter);
             this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
             // panelPass
@@ -240,10 +242,11 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(26, 25);
-            this.btnClose.TabIndex = 26;
+            this.btnClose.TabIndex = 9;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Enter += new System.EventHandler(this.btnClose_Enter);
             // 
             // panelUsername
             // 
@@ -280,6 +283,8 @@
             this.txtUsername.Size = new System.Drawing.Size(370, 20);
             this.txtUsername.TabIndex = 4;
             this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // panel1
             // 
@@ -308,7 +313,7 @@
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(148, 35);
-            this.btnLogin.TabIndex = 20;
+            this.btnLogin.TabIndex = 8;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -335,10 +340,11 @@
             this.btnSignup.Margin = new System.Windows.Forms.Padding(2);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(148, 35);
-            this.btnSignup.TabIndex = 18;
+            this.btnSignup.TabIndex = 7;
             this.btnSignup.Text = "SIGNUP";
             this.btnSignup.UseVisualStyleBackColor = false;
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
+            this.btnSignup.Enter += new System.EventHandler(this.btnSignup_Enter);
             // 
             // Sign_up
             // 

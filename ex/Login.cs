@@ -50,17 +50,25 @@ namespace ex
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from userTable where userName='" + txtUsername.Text + "'", con);
             SqlDataReader sdr = cmd.ExecuteReader();
-            if(sdr.Read())
+            if (sdr.Read())
             {
                 Password = sdr.GetString(2);
+
                 IsExist = true;
             }
             con.Close();
-            if(IsExist)
+            if (IsExist)
             {
-                if(Cryptography.Decrypt(Password).Equals(txtPass.Text))
+                // Check if the username contains spaces
+                if (txtUsername.Text.Contains(" "))
                 {
-                    if(txtUsername.Text == "admin")
+                    MessageBox.Show("Username cannot contain spaces", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (Cryptography.Decrypt(Password).Equals(txtPass.Text))
+                {
+                    if (txtUsername.Text.Trim().Equals("admin", StringComparison.OrdinalIgnoreCase))
                     {
                         AdminDashboard adminform = new AdminDashboard();
                         this.Hide();
@@ -81,9 +89,10 @@ namespace ex
             }
             else
             {
-                MessageBox.Show("Please eneter the valid credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Please enter valid credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
         private void txtUsername_Leave(object sender, EventArgs e)
         {
