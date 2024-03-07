@@ -59,17 +59,6 @@ namespace ex
 
         }
 
-        private void txtEmail_Click(object sender, EventArgs e)
-        {
-            txtPass.BackColor = SystemColors.Control;
-            panelPass.BackColor = SystemColors.Control;
-            txtUsername.BackColor = SystemColors.Control;
-            panelUsername.BackColor = SystemColors.Control;
-
-            txtConfirmpass.BackColor = SystemColors.Control;
-            panelConfirmpass.BackColor = SystemColors.Control;
-
-        }
 
         private void picturePass_MouseDown(object sender, MouseEventArgs e)
         {
@@ -94,6 +83,7 @@ namespace ex
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Login form = new Login();
+            this.Hide();
             form.Show();
         }
 

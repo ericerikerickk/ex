@@ -184,7 +184,8 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(370, 19);
             this.txtUsername.TabIndex = 1;
-            this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
+            this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
             // txtPass
             // 
@@ -197,7 +198,7 @@
             this.txtPass.Size = new System.Drawing.Size(370, 19);
             this.txtPass.TabIndex = 2;
             this.txtPass.UseSystemPasswordChar = true;
-            this.txtPass.Click += new System.EventHandler(this.txtPass_Click);
+            this.txtPass.Leave += new System.EventHandler(this.txtPass_Leave);
             // 
             // btnClose
             // 
@@ -264,6 +265,8 @@
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Enter += new System.EventHandler(this.btnLogin_Enter);
+            this.btnLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnLogin_KeyDown);
             // 
             // panelPass
             // 

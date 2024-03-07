@@ -15,28 +15,20 @@ namespace ex
         public Login()
         {
             InitializeComponent();
+            btnLogin.Enter += btnLogin_Enter;
+            txtUsername.Enter += txtUsername_Enter;
+            this.KeyPreview = true; 
+            this.KeyDown += btnLogin_KeyDown;
+
         }
         SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
-        private void txtUsername_Click(object sender, EventArgs e)
-        {
-            txtUsername.BackColor = Color.White;
-            panelUsername.BackColor = Color.White;
-            panelPass.BackColor = SystemColors.Control;
-            txtPass.BackColor = SystemColors.Control;
-        }
-
-        private void txtPass_Click(object sender, EventArgs e)
-        {
-            txtPass.BackColor = Color.White;
-            panelPass.BackColor = Color.White;
-            txtUsername.BackColor = SystemColors.Control;
-            panelUsername.BackColor = SystemColors.Control;
-        }
+       
 
         private void linkLabelRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Sign_up form = new Sign_up();
+            this.Hide();
             form.Show();
         }
 
@@ -90,6 +82,43 @@ namespace ex
             else
             {
                 MessageBox.Show("Please eneter the valid credentials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtUsername_Leave(object sender, EventArgs e)
+        {
+            txtUsername.BackColor = SystemColors.Control;
+            panelUsername.BackColor = SystemColors.Control;
+            txtPass.BackColor = Color.White; // Set to white on Leave
+            panelPass.BackColor = Color.White;
+        }
+
+        private void txtPass_Leave(object sender, EventArgs e)
+        {
+            txtPass.BackColor = SystemColors.Control; // Set to light gray on Leave
+            panelPass.BackColor = SystemColors.Control;
+            panelUsername.BackColor = Color.White;
+            txtUsername.BackColor = Color.White;
+        }
+
+        private void btnLogin_Enter(object sender, EventArgs e)
+        {
+            panelUsername.BackColor = SystemColors.Control;
+            txtUsername.BackColor = SystemColors.Control;
+        }
+
+        private void txtUsername_Enter(object sender, EventArgs e)
+        {
+            panelUsername.BackColor = Color.White;
+            txtUsername.BackColor = Color.White;
+        }
+
+        private void btnLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Trigger the click event of the login button
+                btnLogin.PerformClick();
             }
         }
     }
