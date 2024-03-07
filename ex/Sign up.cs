@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Data.SqlClient;
+using System.Drawing.Drawing2D;
 namespace ex
 {
     public partial class Sign_up : Form

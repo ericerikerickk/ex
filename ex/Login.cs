@@ -8,10 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+
 namespace ex
 {
     public partial class Login : Form
     {
+        private Point _mouseLoc;
+
         public Login()
         {
             InitializeComponent();
@@ -170,6 +173,22 @@ namespace ex
         {
             panelPass.BackColor = SystemColors.Control;
             txtPass.BackColor = SystemColors.Control;
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            _mouseLoc = e.Location;
+
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                int dx = e.Location.X - _mouseLoc.X;
+                int dy = e.Location.Y - _mouseLoc.Y;
+                this.Location = new Point(this.Location.X + dx, this.Location.Y + dy);
+            }
         }
     }
 }
