@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
+using System.Data.SqlClient;
 namespace ex
 {
     public partial class Sign_up : Form
@@ -17,7 +17,7 @@ namespace ex
         {
             InitializeComponent();
         }
-
+        SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -104,6 +104,7 @@ namespace ex
             if (IsValidPassword(password))
             {
                 MessageBox.Show("Password is valid.");
+                txtConfirmpass.Enabled = true;
             }
             else
             {
@@ -117,6 +118,44 @@ namespace ex
 
             // Validate password using regular expression
             return Regex.IsMatch(password, pattern);
+        }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            if(txtUsername.Text != "" && txtConfirmpass.Text != "")
+            {
+                if (txtPass.Text.ToString().Trim().ToLower() == txtConfirmpass.Text.ToString().Trim().ToLower())
+                {
+                    SqlCommand cmd = new SqlCommand("select * from userTable where userName='" + txtUsername.Text + "'", con);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        dr.Close();
+                        MessageBox.Show("Username already exist, please try another", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        con.Close();
+                    }
+                    else
+                    {
+                        string userName = txtUsername.Text;
+                        string password = Cryptography.Encrypt(txtConfirmpass.Text.ToString());
+                        con.Close();
+                        con.Open();
+                        SqlCommand insertUserPass = new SqlCommand("insert into userTable (userName, password) values ('" + userName + "','" + password + "')", con);
+                        insertUserPass.ExecuteNonQuery();
+                        con.Close();
+                        MessageBox.Show("Record inserted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Password and Confirm Password doesn't match!... Please Check...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill all the fields!..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

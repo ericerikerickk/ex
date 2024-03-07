@@ -100,6 +100,7 @@
             // 
             this.txtConfirmpass.BackColor = System.Drawing.SystemColors.Control;
             this.txtConfirmpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtConfirmpass.Enabled = false;
             this.txtConfirmpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmpass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.txtConfirmpass.Location = new System.Drawing.Point(55, 11);
@@ -337,6 +338,7 @@
             this.btnSignup.TabIndex = 18;
             this.btnSignup.Text = "SIGNUP";
             this.btnSignup.UseVisualStyleBackColor = false;
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // Sign_up
             // 
