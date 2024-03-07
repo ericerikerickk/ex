@@ -106,48 +106,69 @@ namespace ex
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            string passwordtest = txtPass.Text;
-
-            if (IsValidPassword(passwordtest))
+            Regex mRegxExpression;
+            if (txtGmail.Text.Trim() != string.Empty)
             {
-                con.Open();
-                if (txtUsername.Text != "" && txtConfirmpass.Text != "")
+                mRegxExpression = new Regex(@"^([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@gmail\.com$");
+
+                if (!mRegxExpression.IsMatch(txtGmail.Text.Trim()))
                 {
-                    if (txtPass.Text.ToString().Trim().ToLower() == txtConfirmpass.Text.ToString().Trim().ToLower())
+                    MessageBox.Show("E-mail address must end with @gmail.com", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string passwordtest = txtPass.Text;
+
+                    if (IsValidPassword(passwordtest))
                     {
-                        SqlCommand cmd = new SqlCommand("select * from userTable where userName='" + txtUsername.Text + "'", con);
-                        SqlDataReader dr = cmd.ExecuteReader();
-                        if (dr.Read())
+                        con.Open();
+                        if (txtUsername.Text != "" && txtConfirmpass.Text != "")
                         {
-                            dr.Close();
-                            MessageBox.Show("Username already exist, please try another", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            con.Close();
+                            if (txtPass.Text.ToString().Trim().ToLower() == txtConfirmpass.Text.ToString().Trim().ToLower())
+                            {
+                                SqlCommand cmd = new SqlCommand("select * from userTable where userName='" + txtUsername.Text + "'", con);
+                                SqlDataReader dr = cmd.ExecuteReader();
+                                if (dr.Read())
+                                {
+                                    dr.Close();
+                                    MessageBox.Show("Username already exist, please try another", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    con.Close();
+                                }
+                                else
+                                {
+                                    string userName = txtUsername.Text;
+                                    string email = txtGmail.Text;
+                                    string password = Cryptography.Encrypt(txtConfirmpass.Text.ToString());
+                                    con.Close();
+                                    con.Open();
+                                    SqlCommand insertUserPass = new SqlCommand("insert into userTable (userName, password, email) values ('" + userName + "','" + password + "','" + email + "')", con);
+                                    insertUserPass.ExecuteNonQuery();
+                                    con.Close();
+                                    MessageBox.Show("Record inserted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    this.Hide();
+                                    Login login = new Login();
+                                    login.ShowDialog();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Password and Confirm Password doesn't match!... Please Check...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
                         }
                         else
                         {
-                            string userName = txtUsername.Text;
-                            string password = Cryptography.Encrypt(txtConfirmpass.Text.ToString());
-                            con.Close();
-                            con.Open();
-                            SqlCommand insertUserPass = new SqlCommand("insert into userTable (userName, password) values ('" + userName + "','" + password + "')", con);
-                            insertUserPass.ExecuteNonQuery();
-                            con.Close();
-                            MessageBox.Show("Record inserted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Please fill all the fields!..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Password and Confirm Password doesn't match!... Please Check...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Password does not meet the requirements. The Password should have atleast one special character, one upper and lower key, and atleast 8 characters.");
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Please fill all the fields!..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("Password does not meet the requirements. The Password should have atleast one special character, one upper and lower key, and atleast 8 characters.");
+                MessageBox.Show("Please input email", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             
         }
@@ -180,8 +201,8 @@ namespace ex
         {
             txtUsername.BackColor = SystemColors.Control;
             panelUsername.BackColor = SystemColors.Control;
-            txtPass.BackColor = Color.White; // Set password panel to white when leaving username textbox
-            panelPass.BackColor = Color.White;
+            txtGmail.BackColor = Color.White; // Set password panel to white when leaving username textbox
+            panelGmail.BackColor = Color.White;
         }
 
         private void txtPass_Leave(object sender, EventArgs e)
@@ -221,6 +242,28 @@ namespace ex
                 int dy = e.Location.Y - _mouseLoc.Y;
                 this.Location = new Point(this.Location.X + dx, this.Location.Y + dy);
             }
+        }
+
+        private void txtGmail_Leave(object sender, EventArgs e)
+        {
+            panelGmail.BackColor = SystemColors.Control;
+            txtGmail.BackColor = SystemColors.Control;
+            Regex mRegxExpression;
+            if (txtGmail.Text.Trim() != string.Empty)
+            {
+                mRegxExpression = new Regex(@"^([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@gmail\.com$");
+
+                if (!mRegxExpression.IsMatch(txtGmail.Text.Trim()))
+                {
+                    MessageBox.Show("E-mail address must end with @gmail.com", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void txtGmail_Enter(object sender, EventArgs e)
+        {
+            panelGmail.BackColor = Color.White;
+            txtGmail.BackColor = Color.White;
         }
     }
 }

@@ -44,6 +44,7 @@ namespace ex
         private void btnForgotpass_Click(object sender, EventArgs e)
         {
             ForgotPassword forgotPassword = new ForgotPassword();
+            this.Hide();
             forgotPassword.Show();
         }
 

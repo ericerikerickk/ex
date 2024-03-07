@@ -111,7 +111,7 @@
             this.button2.Location = new System.Drawing.Point(463, 323);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 35);
-            this.button2.TabIndex = 37;
+            this.button2.TabIndex = 10;
             this.button2.Text = "CLEAR";
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -126,7 +126,7 @@
             this.button1.Location = new System.Drawing.Point(335, 324);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 35);
-            this.button1.TabIndex = 36;
+            this.button1.TabIndex = 9;
             this.button1.Text = "DELETE";
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -141,7 +141,7 @@
             this.sendbtn.Location = new System.Drawing.Point(213, 324);
             this.sendbtn.Name = "sendbtn";
             this.sendbtn.Size = new System.Drawing.Size(102, 35);
-            this.sendbtn.TabIndex = 35;
+            this.sendbtn.TabIndex = 8;
             this.sendbtn.Text = "UPDATE";
             this.sendbtn.UseVisualStyleBackColor = false;
             // 
@@ -168,7 +168,7 @@
             this.comboBox1.Location = new System.Drawing.Point(58, 8);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 28;
+            this.comboBox1.TabIndex = 6;
             this.comboBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox1_MouseClick);
             // 
             // label24
@@ -212,7 +212,7 @@
             this.txtSearch.Location = new System.Drawing.Point(60, 9);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(223, 20);
-            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TabIndex = 7;
             this.txtSearch.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSearch_MouseClick);
             // 
             // label23
@@ -248,7 +248,7 @@
             this.txtEmail.Location = new System.Drawing.Point(52, 9);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(124, 20);
-            this.txtEmail.TabIndex = 0;
+            this.txtEmail.TabIndex = 3;
             this.txtEmail.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEmail_MouseClick);
             // 
             // label22
@@ -284,7 +284,7 @@
             this.txtContact.Location = new System.Drawing.Point(89, 8);
             this.txtContact.Name = "txtContact";
             this.txtContact.Size = new System.Drawing.Size(87, 20);
-            this.txtContact.TabIndex = 0;
+            this.txtContact.TabIndex = 4;
             this.txtContact.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtContact_MouseClick);
             // 
             // label20
@@ -321,7 +321,7 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(110, 77);
-            this.txtAddress.TabIndex = 0;
+            this.txtAddress.TabIndex = 5;
             this.txtAddress.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAddress_MouseClick);
             // 
             // label19
@@ -357,7 +357,7 @@
             this.txtLname.Location = new System.Drawing.Point(83, 9);
             this.txtLname.Name = "txtLname";
             this.txtLname.Size = new System.Drawing.Size(93, 20);
-            this.txtLname.TabIndex = 0;
+            this.txtLname.TabIndex = 2;
             this.txtLname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtLname_MouseClick);
             // 
             // label18
@@ -392,7 +392,7 @@
             this.txtFname.Location = new System.Drawing.Point(83, 9);
             this.txtFname.Name = "txtFname";
             this.txtFname.Size = new System.Drawing.Size(93, 20);
-            this.txtFname.TabIndex = 0;
+            this.txtFname.TabIndex = 1;
             this.txtFname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtFname_MouseClick);
             // 
             // label21

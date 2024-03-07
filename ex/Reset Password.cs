@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
-
+using System.Data.SqlClient;
 
 namespace ex
 {
     public partial class Reset_Password : Form
     {
-        public Reset_Password()
+        private string email;
+        public Reset_Password(string email)
         {
             InitializeComponent();
+            this.email = email;
         }
+        SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
         private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
@@ -55,9 +58,17 @@ namespace ex
 
         private void button1_Click(object sender, EventArgs e)
         {
+            con.Open();
             if (txtNew.Text == txtConfirm.Text)
             {
+                string password = Cryptography.Encrypt(txtConfirm.Text.ToString());
+                SqlCommand update = new SqlCommand("Update userTable SET password = '" + password + "' where email = '" + email + "'", con);
+                update.ExecuteNonQuery();
+                con.Close();
                 MessageBox.Show("Information", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
             }
             else
             {

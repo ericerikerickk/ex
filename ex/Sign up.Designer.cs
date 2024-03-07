@@ -51,6 +51,9 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSignup = new System.Windows.Forms.Button();
+            this.panelGmail = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtGmail = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureConfirmpass)).BeginInit();
             this.panelConfirmpass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picturePass)).BeginInit();
@@ -59,6 +62,8 @@
             this.panelUsername.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panelGmail.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label8
@@ -93,11 +98,11 @@
             this.panelConfirmpass.BackColor = System.Drawing.SystemColors.Control;
             this.panelConfirmpass.Controls.Add(this.pictureConfirmpass);
             this.panelConfirmpass.Controls.Add(this.txtConfirmpass);
-            this.panelConfirmpass.Location = new System.Drawing.Point(301, 224);
+            this.panelConfirmpass.Location = new System.Drawing.Point(301, 256);
             this.panelConfirmpass.Margin = new System.Windows.Forms.Padding(2);
             this.panelConfirmpass.Name = "panelConfirmpass";
             this.panelConfirmpass.Size = new System.Drawing.Size(448, 47);
-            this.panelConfirmpass.TabIndex = 24;
+            this.panelConfirmpass.TabIndex = 25;
             this.panelConfirmpass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label8_MouseDown);
             this.panelConfirmpass.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label8_MouseMove);
             // 
@@ -113,7 +118,7 @@
             this.txtConfirmpass.Name = "txtConfirmpass";
             this.txtConfirmpass.PasswordChar = '*';
             this.txtConfirmpass.Size = new System.Drawing.Size(370, 20);
-            this.txtConfirmpass.TabIndex = 6;
+            this.txtConfirmpass.TabIndex = 7;
             this.txtConfirmpass.Click += new System.EventHandler(this.txtConfirmpass_Click);
             this.txtConfirmpass.Enter += new System.EventHandler(this.txtConfirmpass_Enter);
             this.txtConfirmpass.Leave += new System.EventHandler(this.txtConfirmpass_Leave);
@@ -239,11 +244,11 @@
             this.panelPass.BackColor = System.Drawing.SystemColors.Control;
             this.panelPass.Controls.Add(this.picturePass);
             this.panelPass.Controls.Add(this.txtPass);
-            this.panelPass.Location = new System.Drawing.Point(301, 163);
+            this.panelPass.Location = new System.Drawing.Point(301, 205);
             this.panelPass.Margin = new System.Windows.Forms.Padding(2);
             this.panelPass.Name = "panelPass";
             this.panelPass.Size = new System.Drawing.Size(448, 47);
-            this.panelPass.TabIndex = 23;
+            this.panelPass.TabIndex = 24;
             this.panelPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label8_MouseDown);
             this.panelPass.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label8_MouseMove);
             // 
@@ -349,7 +354,7 @@
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(148, 35);
-            this.btnLogin.TabIndex = 8;
+            this.btnLogin.TabIndex = 27;
             this.btnLogin.Text = "LOGIN";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -376,11 +381,11 @@
             this.btnSignup.FlatAppearance.BorderSize = 0;
             this.btnSignup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignup.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSignup.Location = new System.Drawing.Point(461, 293);
+            this.btnSignup.Location = new System.Drawing.Point(461, 316);
             this.btnSignup.Margin = new System.Windows.Forms.Padding(2);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(148, 35);
-            this.btnSignup.TabIndex = 7;
+            this.btnSignup.TabIndex = 26;
             this.btnSignup.Text = "SIGNUP";
             this.btnSignup.UseVisualStyleBackColor = false;
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
@@ -388,14 +393,54 @@
             this.btnSignup.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label8_MouseDown);
             this.btnSignup.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label8_MouseMove);
             // 
+            // panelGmail
+            // 
+            this.panelGmail.BackColor = System.Drawing.SystemColors.Control;
+            this.panelGmail.Controls.Add(this.pictureBox1);
+            this.panelGmail.Controls.Add(this.txtGmail);
+            this.panelGmail.Location = new System.Drawing.Point(301, 154);
+            this.panelGmail.Margin = new System.Windows.Forms.Padding(2);
+            this.panelGmail.Name = "panelGmail";
+            this.panelGmail.Size = new System.Drawing.Size(448, 47);
+            this.panelGmail.TabIndex = 23;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ex.Properties.Resources.icons8_email_50;
+            this.pictureBox1.Location = new System.Drawing.Point(15, 11);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtGmail
+            // 
+            this.txtGmail.BackColor = System.Drawing.SystemColors.Control;
+            this.txtGmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtGmail.Location = new System.Drawing.Point(55, 15);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGmail.Multiline = true;
+            this.txtGmail.Name = "txtGmail";
+            this.txtGmail.PasswordChar = '*';
+            this.txtGmail.Size = new System.Drawing.Size(370, 20);
+            this.txtGmail.TabIndex = 5;
+            this.txtGmail.UseSystemPasswordChar = true;
+            this.txtGmail.Enter += new System.EventHandler(this.txtGmail_Enter);
+            this.txtGmail.Leave += new System.EventHandler(this.txtGmail_Leave);
+            // 
             // Sign_up
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(750, 530);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.panelConfirmpass);
             this.Controls.Add(this.panelPass);
+            this.Controls.Add(this.panelGmail);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panelUsername);
             this.Controls.Add(this.panel1);
@@ -419,6 +464,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureUser)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelGmail.ResumeLayout(false);
+            this.panelGmail.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,5 +496,8 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSignup;
+        private System.Windows.Forms.Panel panelGmail;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtGmail;
     }
 }
