@@ -160,6 +160,7 @@ namespace ex
             if (txtConfirm.Text == vCode.ToString())
             {
                 Reset_Password reset = new Reset_Password(txtGmail.Text);
+                this.Hide();
                 reset.Show();
             }
             else
@@ -202,9 +203,6 @@ namespace ex
                 // Trigger the click event of the confirm button
                 btnConfirm.PerformClick();
                 e.Handled = true; // Prevent further processing of the Enter key event
-                this.Hide();
-                Reset_Password reset = new Reset_Password();
-                reset.Show();
             }
         }
     }

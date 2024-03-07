@@ -116,25 +116,20 @@
             // 
             this.pictureBox14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox14.Image = global::ex.Properties.Resources.dashboard__1_;
-<<<<<<< Updated upstream
             this.pictureBox14.Location = new System.Drawing.Point(9, 8);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(22, 21);
-=======
+
             this.pictureBox14.Location = new System.Drawing.Point(12, 10);
             this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(29, 26);
->>>>>>> Stashed changes
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox14.TabIndex = 1;
             this.pictureBox14.TabStop = false;
             this.pictureBox14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDashboardInactive_MouseClick);
-<<<<<<< Updated upstream
             this.pictureBox14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
             this.pictureBox14.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
-=======
->>>>>>> Stashed changes
             // 
             // panelUserActive
             // 
@@ -224,16 +219,13 @@
             // 
             this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox12.Image = global::ex.Properties.Resources.group;
-<<<<<<< Updated upstream
             this.pictureBox12.Location = new System.Drawing.Point(9, 8);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(22, 21);
-=======
             this.pictureBox12.Location = new System.Drawing.Point(12, 10);
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(29, 26);
->>>>>>> Stashed changes
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 29;
             this.pictureBox12.TabStop = false;
@@ -282,16 +274,13 @@
             // 
             this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox11.Image = global::ex.Properties.Resources.teamwork;
-<<<<<<< Updated upstream
             this.pictureBox11.Location = new System.Drawing.Point(9, 8);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(22, 21);
-=======
             this.pictureBox11.Location = new System.Drawing.Point(12, 10);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(29, 26);
->>>>>>> Stashed changes
             this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox11.TabIndex = 29;
             this.pictureBox11.TabStop = false;
@@ -330,16 +319,13 @@
             // 
             this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox15.Image = global::ex.Properties.Resources.teamwork__2_;
-<<<<<<< Updated upstream
             this.pictureBox15.Location = new System.Drawing.Point(9, 8);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(22, 21);
-=======
             this.pictureBox15.Location = new System.Drawing.Point(12, 10);
             this.pictureBox15.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(29, 26);
->>>>>>> Stashed changes
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox15.TabIndex = 29;
             this.pictureBox15.TabStop = false;
@@ -434,16 +420,13 @@
             // 
             this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox10.Image = global::ex.Properties.Resources.user__3_;
-<<<<<<< Updated upstream
             this.pictureBox10.Location = new System.Drawing.Point(9, 9);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(22, 21);
-=======
             this.pictureBox10.Location = new System.Drawing.Point(12, 11);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(29, 26);
->>>>>>> Stashed changes
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
@@ -485,16 +468,14 @@
             // 
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox9.Image = global::ex.Properties.Resources.dashboard;
-<<<<<<< Updated upstream
             this.pictureBox9.Location = new System.Drawing.Point(9, 8);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(22, 21);
-=======
+
             this.pictureBox9.Location = new System.Drawing.Point(12, 10);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(29, 26);
->>>>>>> Stashed changes
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 1;
             this.pictureBox9.TabStop = false;
@@ -504,7 +485,6 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-<<<<<<< Updated upstream
             this.label8.Location = new System.Drawing.Point(-3, 55);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(169, 13);
@@ -512,15 +492,12 @@
             this.label8.Text = "___________________________";
             this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
             this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
-=======
             this.label8.Location = new System.Drawing.Point(-4, 68);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(196, 16);
             this.label8.TabIndex = 2;
             this.label8.Text = "___________________________";
->>>>>>> Stashed changes
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::ex.Properties.Resources.user__2_;
