@@ -183,6 +183,26 @@ namespace ex.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_documents_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-documents-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_edit_profile_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-edit-profile-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_email_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-email-50", resourceCulture);
