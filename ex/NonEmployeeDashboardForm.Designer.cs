@@ -84,18 +84,20 @@
             this.panelnonemployee.Controls.Add(this.panelLname);
             this.panelnonemployee.Controls.Add(this.panelFname);
             this.panelnonemployee.Controls.Add(this.label17);
-            this.panelnonemployee.Location = new System.Drawing.Point(104, 24);
+            this.panelnonemployee.Location = new System.Drawing.Point(139, 30);
+            this.panelnonemployee.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelnonemployee.Name = "panelnonemployee";
-            this.panelnonemployee.Size = new System.Drawing.Size(593, 402);
+            this.panelnonemployee.Size = new System.Drawing.Size(791, 495);
             this.panelnonemployee.TabIndex = 24;
             // 
             // pictureBox17
             // 
             this.pictureBox17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox17.Image = global::ex.Properties.Resources.user__4_;
-            this.pictureBox17.Location = new System.Drawing.Point(23, 15);
+            this.pictureBox17.Location = new System.Drawing.Point(31, 18);
+            this.pictureBox17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox17.Size = new System.Drawing.Size(29, 26);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox17.TabIndex = 29;
             this.pictureBox17.TabStop = false;
@@ -108,9 +110,10 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(463, 323);
+            this.button2.Location = new System.Drawing.Point(617, 398);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(102, 35);
+            this.button2.Size = new System.Drawing.Size(136, 43);
             this.button2.TabIndex = 10;
             this.button2.Text = "CLEAR";
             this.button2.UseVisualStyleBackColor = false;
@@ -123,9 +126,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(335, 324);
+            this.button1.Location = new System.Drawing.Point(447, 399);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 35);
+            this.button1.Size = new System.Drawing.Size(143, 43);
             this.button1.TabIndex = 9;
             this.button1.Text = "DELETE";
             this.button1.UseVisualStyleBackColor = false;
@@ -138,9 +142,10 @@
             this.sendbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sendbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sendbtn.ForeColor = System.Drawing.Color.White;
-            this.sendbtn.Location = new System.Drawing.Point(213, 324);
+            this.sendbtn.Location = new System.Drawing.Point(284, 399);
+            this.sendbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sendbtn.Name = "sendbtn";
-            this.sendbtn.Size = new System.Drawing.Size(102, 35);
+            this.sendbtn.Size = new System.Drawing.Size(136, 43);
             this.sendbtn.TabIndex = 8;
             this.sendbtn.Text = "UPDATE";
             this.sendbtn.UseVisualStyleBackColor = false;
@@ -151,9 +156,10 @@
             this.panelGender.Controls.Add(this.comboBox1);
             this.panelGender.Controls.Add(this.label24);
             this.panelGender.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelGender.Location = new System.Drawing.Point(19, 323);
+            this.panelGender.Location = new System.Drawing.Point(25, 398);
+            this.panelGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelGender.Name = "panelGender";
-            this.panelGender.Size = new System.Drawing.Size(182, 38);
+            this.panelGender.Size = new System.Drawing.Size(243, 47);
             this.panelGender.TabIndex = 33;
             // 
             // comboBox1
@@ -165,9 +171,10 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(58, 8);
+            this.comboBox1.Location = new System.Drawing.Point(77, 10);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(160, 25);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox1_MouseClick);
             // 
@@ -178,18 +185,21 @@
             this.label24.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label24.Location = new System.Drawing.Point(7, 10);
+            this.label24.Location = new System.Drawing.Point(9, 12);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(48, 15);
+            this.label24.Size = new System.Drawing.Size(57, 18);
             this.label24.TabIndex = 27;
             this.label24.Text = "Gender";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(204, 90);
+            this.dataGridView1.Location = new System.Drawing.Point(272, 111);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(373, 211);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(497, 260);
             this.dataGridView1.TabIndex = 34;
             // 
             // panelSearch
@@ -198,9 +208,10 @@
             this.panelSearch.Controls.Add(this.txtSearch);
             this.panelSearch.Controls.Add(this.label23);
             this.panelSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelSearch.Location = new System.Drawing.Point(258, 46);
+            this.panelSearch.Location = new System.Drawing.Point(344, 57);
+            this.panelSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSearch.Name = "panelSearch";
-            this.panelSearch.Size = new System.Drawing.Size(307, 38);
+            this.panelSearch.Size = new System.Drawing.Size(409, 47);
             this.panelSearch.TabIndex = 30;
             // 
             // txtSearch
@@ -209,9 +220,10 @@
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtSearch.Location = new System.Drawing.Point(60, 9);
+            this.txtSearch.Location = new System.Drawing.Point(80, 11);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(223, 20);
+            this.txtSearch.Size = new System.Drawing.Size(297, 23);
             this.txtSearch.TabIndex = 7;
             this.txtSearch.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSearch_MouseClick);
             // 
@@ -222,9 +234,10 @@
             this.label23.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label23.Location = new System.Drawing.Point(7, 10);
+            this.label23.Location = new System.Drawing.Point(9, 12);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(46, 15);
+            this.label23.Size = new System.Drawing.Size(55, 18);
             this.label23.TabIndex = 27;
             this.label23.Text = "Search";
             // 
@@ -234,9 +247,10 @@
             this.panelEmail.Controls.Add(this.txtEmail);
             this.panelEmail.Controls.Add(this.label22);
             this.panelEmail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelEmail.Location = new System.Drawing.Point(19, 134);
+            this.panelEmail.Location = new System.Drawing.Point(25, 165);
+            this.panelEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(179, 38);
+            this.panelEmail.Size = new System.Drawing.Size(239, 47);
             this.panelEmail.TabIndex = 33;
             // 
             // txtEmail
@@ -245,9 +259,10 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtEmail.Location = new System.Drawing.Point(52, 9);
+            this.txtEmail.Location = new System.Drawing.Point(69, 11);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(124, 20);
+            this.txtEmail.Size = new System.Drawing.Size(165, 23);
             this.txtEmail.TabIndex = 3;
             this.txtEmail.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEmail_MouseClick);
             // 
@@ -258,9 +273,10 @@
             this.label22.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label22.Location = new System.Drawing.Point(7, 10);
+            this.label22.Location = new System.Drawing.Point(9, 12);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(39, 15);
+            this.label22.Size = new System.Drawing.Size(45, 18);
             this.label22.TabIndex = 27;
             this.label22.Text = "Email";
             // 
@@ -270,9 +286,10 @@
             this.panelContact.Controls.Add(this.txtContact);
             this.panelContact.Controls.Add(this.label20);
             this.panelContact.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelContact.Location = new System.Drawing.Point(19, 178);
+            this.panelContact.Location = new System.Drawing.Point(25, 219);
+            this.panelContact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelContact.Name = "panelContact";
-            this.panelContact.Size = new System.Drawing.Size(179, 38);
+            this.panelContact.Size = new System.Drawing.Size(239, 47);
             this.panelContact.TabIndex = 32;
             // 
             // txtContact
@@ -281,9 +298,10 @@
             this.txtContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.txtContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtContact.Location = new System.Drawing.Point(89, 8);
+            this.txtContact.Location = new System.Drawing.Point(119, 10);
+            this.txtContact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContact.Name = "txtContact";
-            this.txtContact.Size = new System.Drawing.Size(87, 20);
+            this.txtContact.Size = new System.Drawing.Size(115, 23);
             this.txtContact.TabIndex = 4;
             this.txtContact.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtContact_MouseClick);
             // 
@@ -294,9 +312,10 @@
             this.label20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label20.Location = new System.Drawing.Point(7, 10);
+            this.label20.Location = new System.Drawing.Point(9, 12);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(70, 15);
+            this.label20.Size = new System.Drawing.Size(88, 18);
             this.label20.TabIndex = 27;
             this.label20.Text = "Contact No.";
             // 
@@ -306,9 +325,10 @@
             this.panelAddress.Controls.Add(this.txtAddress);
             this.panelAddress.Controls.Add(this.label19);
             this.panelAddress.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelAddress.Location = new System.Drawing.Point(19, 222);
+            this.panelAddress.Location = new System.Drawing.Point(25, 273);
+            this.panelAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelAddress.Name = "panelAddress";
-            this.panelAddress.Size = new System.Drawing.Size(179, 95);
+            this.panelAddress.Size = new System.Drawing.Size(239, 117);
             this.panelAddress.TabIndex = 31;
             // 
             // txtAddress
@@ -317,10 +337,11 @@
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.txtAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtAddress.Location = new System.Drawing.Point(66, 9);
+            this.txtAddress.Location = new System.Drawing.Point(88, 11);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(110, 77);
+            this.txtAddress.Size = new System.Drawing.Size(146, 94);
             this.txtAddress.TabIndex = 5;
             this.txtAddress.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtAddress_MouseClick);
             // 
@@ -331,9 +352,10 @@
             this.label19.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label19.Location = new System.Drawing.Point(7, 10);
+            this.label19.Location = new System.Drawing.Point(9, 12);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(51, 15);
+            this.label19.Size = new System.Drawing.Size(62, 18);
             this.label19.TabIndex = 27;
             this.label19.Text = "Address";
             // 
@@ -343,9 +365,10 @@
             this.panelLname.Controls.Add(this.txtLname);
             this.panelLname.Controls.Add(this.label18);
             this.panelLname.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelLname.Location = new System.Drawing.Point(19, 90);
+            this.panelLname.Location = new System.Drawing.Point(25, 111);
+            this.panelLname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelLname.Name = "panelLname";
-            this.panelLname.Size = new System.Drawing.Size(179, 38);
+            this.panelLname.Size = new System.Drawing.Size(239, 47);
             this.panelLname.TabIndex = 30;
             // 
             // txtLname
@@ -354,9 +377,10 @@
             this.txtLname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.txtLname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtLname.Location = new System.Drawing.Point(83, 9);
+            this.txtLname.Location = new System.Drawing.Point(111, 11);
+            this.txtLname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLname.Name = "txtLname";
-            this.txtLname.Size = new System.Drawing.Size(93, 20);
+            this.txtLname.Size = new System.Drawing.Size(123, 23);
             this.txtLname.TabIndex = 2;
             this.txtLname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtLname_MouseClick);
             // 
@@ -367,9 +391,10 @@
             this.label18.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label18.Location = new System.Drawing.Point(7, 10);
+            this.label18.Location = new System.Drawing.Point(9, 12);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(67, 15);
+            this.label18.Size = new System.Drawing.Size(80, 18);
             this.label18.TabIndex = 27;
             this.label18.Text = "Last Name";
             // 
@@ -379,9 +404,10 @@
             this.panelFname.Controls.Add(this.txtFname);
             this.panelFname.Controls.Add(this.label21);
             this.panelFname.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelFname.Location = new System.Drawing.Point(19, 46);
+            this.panelFname.Location = new System.Drawing.Point(25, 57);
+            this.panelFname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelFname.Name = "panelFname";
-            this.panelFname.Size = new System.Drawing.Size(179, 38);
+            this.panelFname.Size = new System.Drawing.Size(239, 47);
             this.panelFname.TabIndex = 29;
             // 
             // txtFname
@@ -389,9 +415,10 @@
             this.txtFname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.txtFname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtFname.Location = new System.Drawing.Point(83, 9);
+            this.txtFname.Location = new System.Drawing.Point(111, 11);
+            this.txtFname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFname.Name = "txtFname";
-            this.txtFname.Size = new System.Drawing.Size(93, 20);
+            this.txtFname.Size = new System.Drawing.Size(123, 23);
             this.txtFname.TabIndex = 1;
             this.txtFname.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtFname_MouseClick);
             // 
@@ -402,9 +429,10 @@
             this.label21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label21.Location = new System.Drawing.Point(7, 10);
+            this.label21.Location = new System.Drawing.Point(9, 12);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(67, 15);
+            this.label21.Size = new System.Drawing.Size(81, 18);
             this.label21.TabIndex = 27;
             this.label21.Text = "First Name";
             // 
@@ -413,19 +441,21 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label17.Location = new System.Drawing.Point(51, 12);
+            this.label17.Location = new System.Drawing.Point(68, 15);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(287, 25);
+            this.label17.Size = new System.Drawing.Size(228, 31);
             this.label17.TabIndex = 1;
-            this.label17.Text = "Non - Employees Dashboard";
+            this.label17.Text = "Non - Employees ";
             // 
             // NonEmployeeDashboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panelnonemployee);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "NonEmployeeDashboardForm";
             this.Text = "NonEmployeeDashboardForm";
             this.Load += new System.EventHandler(this.NonEmployeeDashboardForm_Load);

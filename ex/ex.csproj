@@ -130,6 +130,9 @@
     <EmbeddedResource Include="AdminDashboardForm.resx">
       <DependentUpon>AdminDashboardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Documents.resx">
+      <DependentUpon>Documents.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditProfile.resx">
       <DependentUpon>EditProfile.cs</DependentUpon>
     </EmbeddedResource>

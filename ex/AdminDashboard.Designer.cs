@@ -116,10 +116,6 @@
             // 
             this.pictureBox14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox14.Image = global::ex.Properties.Resources.dashboard__1_;
-            this.pictureBox14.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(22, 21);
-
             this.pictureBox14.Location = new System.Drawing.Point(12, 10);
             this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox14.Name = "pictureBox14";
@@ -179,20 +175,6 @@
             // 
             this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox16.Image = global::ex.Properties.Resources.group__1_;
-            this.pictureBox16.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(22, 21);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 29;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelUserInactive_MouseClick_1);
-            this.pictureBox16.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
-            this.pictureBox16.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox16.Image = global::ex.Properties.Resources.group__1_;
             this.pictureBox16.Location = new System.Drawing.Point(12, 10);
             this.pictureBox16.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox16.Name = "pictureBox16";
@@ -201,6 +183,8 @@
             this.pictureBox16.TabIndex = 29;
             this.pictureBox16.TabStop = false;
             this.pictureBox16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelUserInactive_MouseClick_1);
+            this.pictureBox16.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
+            this.pictureBox16.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
             // 
             // label12
             // 
@@ -219,9 +203,6 @@
             // 
             this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox12.Image = global::ex.Properties.Resources.group;
-            this.pictureBox12.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(22, 21);
             this.pictureBox12.Location = new System.Drawing.Point(12, 10);
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
@@ -274,9 +255,6 @@
             // 
             this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox11.Image = global::ex.Properties.Resources.teamwork;
-            this.pictureBox11.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(22, 21);
             this.pictureBox11.Location = new System.Drawing.Point(12, 10);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
@@ -319,9 +297,6 @@
             // 
             this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox15.Image = global::ex.Properties.Resources.teamwork__2_;
-            this.pictureBox15.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(22, 21);
             this.pictureBox15.Location = new System.Drawing.Point(12, 10);
             this.pictureBox15.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox15.Name = "pictureBox15";
@@ -381,20 +356,6 @@
             // 
             this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox13.Image = global::ex.Properties.Resources.user__4_;
-            this.pictureBox13.Location = new System.Drawing.Point(9, 9);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(22, 21);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 1;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label13_MouseClick);
-            this.pictureBox13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
-            this.pictureBox13.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox13.Image = global::ex.Properties.Resources.user__4_;
             this.pictureBox13.Location = new System.Drawing.Point(12, 11);
             this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
@@ -403,6 +364,8 @@
             this.pictureBox13.TabIndex = 1;
             this.pictureBox13.TabStop = false;
             this.pictureBox13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label13_MouseClick);
+            this.pictureBox13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
+            this.pictureBox13.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
             // 
             // nonEmployeesPanelactive
             // 
@@ -420,9 +383,6 @@
             // 
             this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox10.Image = global::ex.Properties.Resources.user__3_;
-            this.pictureBox10.Location = new System.Drawing.Point(9, 9);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(22, 21);
             this.pictureBox10.Location = new System.Drawing.Point(12, 11);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
@@ -468,10 +428,6 @@
             // 
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox9.Image = global::ex.Properties.Resources.dashboard;
-            this.pictureBox9.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(22, 21);
-
             this.pictureBox9.Location = new System.Drawing.Point(12, 10);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
@@ -485,19 +441,15 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(-3, 55);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(169, 13);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "___________________________";
-            this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
-            this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
             this.label8.Location = new System.Drawing.Point(-4, 68);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(196, 16);
             this.label8.TabIndex = 2;
             this.label8.Text = "___________________________";
+            this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
+            this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
+            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::ex.Properties.Resources.user__2_;

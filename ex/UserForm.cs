@@ -34,26 +34,27 @@ namespace ex
         }
         private void UserForm_Load(object sender, EventArgs e)
         {
-            //timer1.Start();
             sidecomponentsInactive();
             panelProfileInactive.Hide();
             panelProfileActive.Show();
             loadForm(new EditProfile());
         }
+ 
 
-        private void panelProfileInactive_MouseClick(object sender, MouseEventArgs e)
-        {
-            sidecomponentsInactive();
-            panelProfileInactive.Hide();
-            panelProfileActive.Show();
-            loadForm(new EditProfile());
-        }
-        private void panelDocumentsInactive_MouseClick(object sender, MouseEventArgs e)
+        private void labeldocs_MouseClick(object sender, MouseEventArgs e)
         {
             sidecomponentsInactive();
             panelDocumentsInactive.Hide();
             panelDocumentsActive.Show();
             loadForm(new Documents());
+        }
+
+        private void labelprofile_MouseClick(object sender, MouseEventArgs e)
+        {
+            sidecomponentsInactive();
+            panelProfileInactive.Hide();
+            panelProfileActive.Show();
+            loadForm(new EditProfile());
         }
     }
 }
