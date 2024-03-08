@@ -131,13 +131,22 @@ namespace ex
                         {
                             if (txtPass.Text.ToString().Trim().ToLower() == txtConfirmpass.Text.ToString().Trim().ToLower())
                             {
-                                SqlCommand cmd = new SqlCommand("select * from userTable where userName='" + txtUsername.Text + "'", con);
-                                SqlDataReader dr = cmd.ExecuteReader();
-                                if (dr.Read())
+                                SqlCommand cmdUserName = new SqlCommand("select * from userTable where userName='" + txtUsername.Text + "'", con);
+                                SqlDataReader drUserName = cmdUserName.ExecuteReader();
+                                SqlCommand cmdEmail = new SqlCommand("select * from userTable where email='" + txtGmail.Text + "'", con);
+                                SqlDataReader drEmail = cmdEmail.ExecuteReader();
+                                if (drUserName.Read())
                                 {
-                                    dr.Close();
+                                    drUserName.Close();
                                     MessageBox.Show("Username already exist, please try another", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     con.Close();
+                                }
+                                else if(drEmail.Read())
+                                {
+                                    drUserName.Close();
+                                    MessageBox.Show("Email already exist, please try another", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    con.Close();
+                                
                                 }
                                 else
                                 {
@@ -158,6 +167,7 @@ namespace ex
                             }
                             else
                             {
+                                con.Close();
                                 MessageBox.Show("Password and Confirm Password doesn't match!... Please Check...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
