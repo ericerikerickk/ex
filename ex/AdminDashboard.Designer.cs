@@ -46,12 +46,6 @@
             this.panelEmployeesInactive = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.nonEmployeesPanelInactive = new System.Windows.Forms.Panel();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.nonEmployeesPanelactive = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelDashboardActive = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -68,10 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.panelEmployeesInactive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            this.nonEmployeesPanelInactive.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            this.nonEmployeesPanelactive.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelDashboardActive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -134,7 +124,7 @@
             this.panelUserActive.Controls.Add(this.label12);
             this.panelUserActive.Controls.Add(this.pictureBox12);
             this.panelUserActive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelUserActive.Location = new System.Drawing.Point(16, 293);
+            this.panelUserActive.Location = new System.Drawing.Point(16, 235);
             this.panelUserActive.Margin = new System.Windows.Forms.Padding(4);
             this.panelUserActive.Name = "panelUserActive";
             this.panelUserActive.Size = new System.Drawing.Size(183, 47);
@@ -228,10 +218,11 @@
             // panelEmployee
             // 
             this.panelEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panelEmployee.Controls.Add(this.panelEmployeesInactive);
             this.panelEmployee.Controls.Add(this.label11);
             this.panelEmployee.Controls.Add(this.pictureBox11);
             this.panelEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelEmployee.Location = new System.Drawing.Point(16, 228);
+            this.panelEmployee.Location = new System.Drawing.Point(16, 166);
             this.panelEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.panelEmployee.Name = "panelEmployee";
             this.panelEmployee.Size = new System.Drawing.Size(183, 47);
@@ -269,7 +260,7 @@
             this.panelEmployeesInactive.Controls.Add(this.label15);
             this.panelEmployeesInactive.Controls.Add(this.pictureBox15);
             this.panelEmployeesInactive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelEmployeesInactive.Location = new System.Drawing.Point(16, 228);
+            this.panelEmployeesInactive.Location = new System.Drawing.Point(0, 0);
             this.panelEmployeesInactive.Margin = new System.Windows.Forms.Padding(4);
             this.panelEmployeesInactive.Name = "panelEmployeesInactive";
             this.panelEmployeesInactive.Size = new System.Drawing.Size(183, 47);
@@ -306,100 +297,12 @@
             this.pictureBox15.TabStop = false;
             this.pictureBox15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelEmployeesInactive_MouseClick_1);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(55, 14);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(111, 16);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Non - Employees";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label13.Location = new System.Drawing.Point(55, 14);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(111, 16);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "Non - Employees";
-            this.label13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label13_MouseClick);
-            this.label13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
-            this.label13.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
-            // 
-            // nonEmployeesPanelInactive
-            // 
-            this.nonEmployeesPanelInactive.BackColor = System.Drawing.Color.White;
-            this.nonEmployeesPanelInactive.Controls.Add(this.label13);
-            this.nonEmployeesPanelInactive.Controls.Add(this.pictureBox13);
-            this.nonEmployeesPanelInactive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nonEmployeesPanelInactive.Location = new System.Drawing.Point(16, 162);
-            this.nonEmployeesPanelInactive.Margin = new System.Windows.Forms.Padding(4);
-            this.nonEmployeesPanelInactive.Name = "nonEmployeesPanelInactive";
-            this.nonEmployeesPanelInactive.Size = new System.Drawing.Size(183, 47);
-            this.nonEmployeesPanelInactive.TabIndex = 29;
-            this.nonEmployeesPanelInactive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label13_MouseClick);
-            this.nonEmployeesPanelInactive.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
-            this.nonEmployeesPanelInactive.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox13.Image = global::ex.Properties.Resources.user__4_;
-            this.pictureBox13.Location = new System.Drawing.Point(12, 11);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(29, 26);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 1;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label13_MouseClick);
-            this.pictureBox13.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
-            this.pictureBox13.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
-            // 
-            // nonEmployeesPanelactive
-            // 
-            this.nonEmployeesPanelactive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.nonEmployeesPanelactive.Controls.Add(this.label10);
-            this.nonEmployeesPanelactive.Controls.Add(this.pictureBox10);
-            this.nonEmployeesPanelactive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.nonEmployeesPanelactive.Location = new System.Drawing.Point(16, 162);
-            this.nonEmployeesPanelactive.Margin = new System.Windows.Forms.Padding(4);
-            this.nonEmployeesPanelactive.Name = "nonEmployeesPanelactive";
-            this.nonEmployeesPanelactive.Size = new System.Drawing.Size(183, 47);
-            this.nonEmployeesPanelactive.TabIndex = 4;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox10.Image = global::ex.Properties.Resources.user__3_;
-            this.pictureBox10.Location = new System.Drawing.Point(12, 11);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(29, 26);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 1;
-            this.pictureBox10.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panelDashboardInactive);
-            this.panel1.Controls.Add(this.nonEmployeesPanelInactive);
-            this.panel1.Controls.Add(this.panelEmployeesInactive);
             this.panel1.Controls.Add(this.panelUserActive);
             this.panel1.Controls.Add(this.panelEmployee);
-            this.panel1.Controls.Add(this.nonEmployeesPanelactive);
             this.panel1.Controls.Add(this.panelDashboardActive);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.pictureBox8);
@@ -503,12 +406,6 @@
             this.panelEmployeesInactive.ResumeLayout(false);
             this.panelEmployeesInactive.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            this.nonEmployeesPanelInactive.ResumeLayout(false);
-            this.nonEmployeesPanelInactive.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            this.nonEmployeesPanelactive.ResumeLayout(false);
-            this.nonEmployeesPanelactive.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelDashboardActive.ResumeLayout(false);
@@ -538,12 +435,6 @@
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.Panel nonEmployeesPanelInactive;
-        private System.Windows.Forms.Panel nonEmployeesPanelactive;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelDashboardActive;
         private System.Windows.Forms.Label label8;

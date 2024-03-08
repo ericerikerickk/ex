@@ -18,7 +18,7 @@ namespace ex
         }
         private void sidecomponentsInactive()
         {
-            nonEmployeesPanelInactive.Show();
+            //nonEmployeesPanelInactive.Show();
             panelDashboardInactive.Show();
             panelEmployeesInactive.Show();
             panelUserInactive.Show();
@@ -49,13 +49,13 @@ namespace ex
             panelDashboardActive.Show();
             loadForm(new AdminDashboardForm());
         }
-        private void label13_MouseClick(object sender, MouseEventArgs e)
+       /* private void label13_MouseClick(object sender, MouseEventArgs e)
         {
             sidecomponentsInactive();
             nonEmployeesPanelInactive.Hide();
             nonEmployeesPanelactive.Show();
             loadForm(new NonEmployeeDashboardForm());
-        }
+        }*/
 
         private void panelEmployeesInactive_MouseClick_1(object sender, MouseEventArgs e)
         {
