@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panelDocumentsActive = new System.Windows.Forms.Panel();
             this.panelDocumentsInactive = new System.Windows.Forms.Panel();
             this.labeldocs = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panelDocumentsActive = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -45,9 +45,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panelDocumentsActive.SuspendLayout();
             this.panelDocumentsInactive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            this.panelDocumentsActive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panelProfileActive.SuspendLayout();
@@ -70,6 +70,47 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 507);
             this.panel1.TabIndex = 6;
+            // 
+            // panelDocumentsInactive
+            // 
+            this.panelDocumentsInactive.BackColor = System.Drawing.Color.White;
+            this.panelDocumentsInactive.Controls.Add(this.labeldocs);
+            this.panelDocumentsInactive.Controls.Add(this.pictureBox13);
+            this.panelDocumentsInactive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelDocumentsInactive.Location = new System.Drawing.Point(16, 173);
+            this.panelDocumentsInactive.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDocumentsInactive.Name = "panelDocumentsInactive";
+            this.panelDocumentsInactive.Size = new System.Drawing.Size(183, 47);
+            this.panelDocumentsInactive.TabIndex = 29;
+            this.panelDocumentsInactive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labeldocs_MouseClick);
+            // 
+            // labeldocs
+            // 
+            this.labeldocs.AutoSize = true;
+            this.labeldocs.BackColor = System.Drawing.Color.White;
+            this.labeldocs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labeldocs.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
+            this.labeldocs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.labeldocs.Location = new System.Drawing.Point(55, 14);
+            this.labeldocs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labeldocs.Name = "labeldocs";
+            this.labeldocs.Size = new System.Drawing.Size(75, 16);
+            this.labeldocs.TabIndex = 28;
+            this.labeldocs.Text = "Documents";
+            this.labeldocs.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labeldocs_MouseClick);
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox13.Image = global::ex.Properties.Resources.icons8_documents_50;
+            this.pictureBox13.Location = new System.Drawing.Point(12, 11);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 1;
+            this.pictureBox13.TabStop = false;
+            this.pictureBox13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labeldocs_MouseClick);
             // 
             // label8
             // 
@@ -94,44 +135,6 @@
             this.panelDocumentsActive.Name = "panelDocumentsActive";
             this.panelDocumentsActive.Size = new System.Drawing.Size(183, 47);
             this.panelDocumentsActive.TabIndex = 30;
-            // 
-            // panelDocumentsInactive
-            // 
-            this.panelDocumentsInactive.BackColor = System.Drawing.Color.White;
-            this.panelDocumentsInactive.Controls.Add(this.labeldocs);
-            this.panelDocumentsInactive.Controls.Add(this.pictureBox13);
-            this.panelDocumentsInactive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelDocumentsInactive.Location = new System.Drawing.Point(16, 173);
-            this.panelDocumentsInactive.Margin = new System.Windows.Forms.Padding(4);
-            this.panelDocumentsInactive.Name = "panelDocumentsInactive";
-            this.panelDocumentsInactive.Size = new System.Drawing.Size(183, 47);
-            this.panelDocumentsInactive.TabIndex = 29;
-            // 
-            // labeldocs
-            // 
-            this.labeldocs.AutoSize = true;
-            this.labeldocs.BackColor = System.Drawing.Color.White;
-            this.labeldocs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labeldocs.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
-            this.labeldocs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.labeldocs.Location = new System.Drawing.Point(55, 14);
-            this.labeldocs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labeldocs.Name = "labeldocs";
-            this.labeldocs.Size = new System.Drawing.Size(75, 16);
-            this.labeldocs.TabIndex = 28;
-            this.labeldocs.Text = "Documents";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox13.Image = global::ex.Properties.Resources.icons8_documents_50;
-            this.pictureBox13.Location = new System.Drawing.Point(12, 11);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(29, 26);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 1;
-            this.pictureBox13.TabStop = false;
             // 
             // label2
             // 
@@ -194,7 +197,7 @@
             this.panelProfileInactive.Name = "panelProfileInactive";
             this.panelProfileInactive.Size = new System.Drawing.Size(183, 47);
             this.panelProfileInactive.TabIndex = 28;
-            this.panelProfileInactive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelProfileInactive_MouseClick);
+            this.panelProfileInactive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labelprofile_MouseClick);
             // 
             // labelprofile
             // 
@@ -209,6 +212,7 @@
             this.labelprofile.Size = new System.Drawing.Size(50, 18);
             this.labelprofile.TabIndex = 27;
             this.labelprofile.Text = "Profile";
+            this.labelprofile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labelprofile_MouseClick);
             // 
             // pictureBox14
             // 
@@ -221,6 +225,7 @@
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 1;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labelprofile_MouseClick);
             // 
             // label1
             // 
@@ -274,11 +279,11 @@
             this.Load += new System.EventHandler(this.UserForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelDocumentsActive.ResumeLayout(false);
-            this.panelDocumentsActive.PerformLayout();
             this.panelDocumentsInactive.ResumeLayout(false);
             this.panelDocumentsInactive.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            this.panelDocumentsActive.ResumeLayout(false);
+            this.panelDocumentsActive.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panelProfileActive.ResumeLayout(false);

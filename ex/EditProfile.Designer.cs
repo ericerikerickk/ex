@@ -299,7 +299,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 43);
             this.button1.TabIndex = 40;
-            this.button1.Text = "Apply Changes";
+            this.button1.Text = "Apply ";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
