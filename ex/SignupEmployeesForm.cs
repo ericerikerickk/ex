@@ -133,37 +133,37 @@ namespace ex
                             {
                                 SqlCommand cmdUserName = new SqlCommand("select * from userTable where userName='" + txtUsername.Text + "'", con);
                                 SqlDataReader drUserName = cmdUserName.ExecuteReader();
-                                SqlCommand cmdEmail = new SqlCommand("select * from userTable where email='" + txtGmail.Text + "'", con);
-                                SqlDataReader drEmail = cmdEmail.ExecuteReader();
                                 if (drUserName.Read())
                                 {
                                     drUserName.Close();
                                     MessageBox.Show("Username already exist, please try another", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     con.Close();
+                                    return; // Return here to exit the method
                                 }
-                                else if(drEmail.Read())
+                                drUserName.Close(); // Close the DataReader here
+
+                                SqlCommand cmdEmail = new SqlCommand("select * from userTable where email='" + txtGmail.Text + "'", con);
+                                SqlDataReader drEmail = cmdEmail.ExecuteReader();
+                                if (drEmail.Read())
                                 {
-                                    drUserName.Close();
+                                    drEmail.Close();
                                     MessageBox.Show("Email already exist, please try another", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     con.Close();
-                                
+                                    return; // Return here to exit the method
                                 }
-                                else
-                                {
-                                    string userName = txtUsername.Text;
-                                    string email = txtGmail.Text;
-                                    string stepDepartment = comboSteps.Text;
-                                    string password = Cryptography.Encrypt(txtConfirmpass.Text.ToString());
-                                    con.Close();
-                                    con.Open();
-                                    SqlCommand insertUserPass = new SqlCommand("insert into userTable (userName, password, email, stepDepartment) values ('" + userName + "','" + password + "','" + email + "', '" + stepDepartment + "')", con);
-                                    insertUserPass.ExecuteNonQuery();
-                                    con.Close();
-                                    MessageBox.Show("Record inserted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    this.Hide();
-                                    Login login = new Login();
-                                    login.ShowDialog();
-                                }
+                                drEmail.Close(); // Close the DataReader here
+
+                                string userName = txtUsername.Text;
+                                string email = txtGmail.Text;
+                                string stepDepartment = comboSteps.Text;
+                                string password = Cryptography.Encrypt(txtConfirmpass.Text.ToString());
+                                SqlCommand insertUserPass = new SqlCommand("insert into userTable (userName, password, email, stepDepartment) values ('" + userName + "','" + password + "','" + email + "', '" + stepDepartment + "')", con);
+                                insertUserPass.ExecuteNonQuery();
+                                con.Close();
+                                MessageBox.Show("Record inserted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                this.Hide();
+                                Login login = new Login();
+                                login.ShowDialog();
                             }
                             else
                             {
@@ -187,6 +187,7 @@ namespace ex
                 MessageBox.Show("Please input email", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
 
         private void picturePass_MouseDown(object sender, MouseEventArgs e)
         {
