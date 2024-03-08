@@ -73,5 +73,61 @@ namespace ex
             resetFocus();
             panelSearch.BackColor = Color.White;
         }
+
+        private void txtUserLname_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+            panelLname.BackColor = Color.White;
+            txtUserLname.BackColor = Color.White;
+        }
+
+        private void txtUserFname_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+            panelFname.BackColor = Color.White;
+            txtUserFname.BackColor = Color.White;
+        }
+
+        private void txtUserEmail_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+            panelEmail.BackColor = Color.White;
+            txtUserEmail.BackColor = Color.White;
+        }
+
+        private void txtUserContact_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+            panelContact.BackColor = Color.White;
+            txtUserContact.BackColor = Color.White;
+        }
+
+        private void txtUserAddress_Enter(object sender, EventArgs e)
+        {
+
+            resetFocus();
+            panelAddress.BackColor = Color.White;
+            txtUserAddress.BackColor = Color.White;
+        }
+
+        private void comboBox3_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+            panelGender.BackColor = Color.White;
+            comboBox3.BackColor = Color.White;
+        }
+
+        private void txtUserSearch_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+            panelSearch.BackColor = Color.White;
+            txtUserSearch.BackColor = Color.White;
+        }
+
+        private void button9_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+
+        }
     }
 }
