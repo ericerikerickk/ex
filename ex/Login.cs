@@ -191,5 +191,12 @@ namespace ex
                 this.Location = new Point(this.Location.X + dx, this.Location.Y + dy);
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            SignupEmployeesForm signemp = new SignupEmployeesForm();
+            signemp.ShowDialog();
+        }
     }
 }

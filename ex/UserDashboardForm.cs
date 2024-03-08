@@ -25,6 +25,14 @@ namespace ex
             panelAddress.BackColor = SystemColors.ButtonFace;
             panelGender.BackColor = SystemColors.ButtonFace;
             panelSearch.BackColor = SystemColors.ButtonFace;
+            txtUserFname.BackColor = SystemColors.ButtonFace;
+            txtUserLname.BackColor = SystemColors.ButtonFace;
+            txtUserEmail.BackColor = SystemColors.ButtonFace;
+            txtUserContact.BackColor = SystemColors.ButtonFace;
+            txtUserAddress.BackColor = SystemColors.ButtonFace;
+            comboBox3.BackColor = SystemColors.ButtonFace;
+            txtUserSearch.BackColor = SystemColors.ButtonFace;
+
         }
 
         private void UserDashboardForm_Load(object sender, EventArgs e)
@@ -127,7 +135,6 @@ namespace ex
         private void button9_Enter(object sender, EventArgs e)
         {
             resetFocus();
-
         }
     }
 }
