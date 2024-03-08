@@ -137,15 +137,6 @@ namespace ex
             }
         }
 
-        private void pictureBox3_MouseDown(object sender, MouseEventArgs e)
-        {
-            pictureBox3.Image = Properties.Resources.eye__2_;
-            txtPass.UseSystemPasswordChar = false;
-            txtPass.BackColor = Color.White;
-            panelPass.BackColor = Color.White;
-            txtUsername.BackColor = SystemColors.Control;
-            panelUsername.BackColor = SystemColors.Control;
-        }
 
         private void pictureBox3_MouseUp(object sender, MouseEventArgs e)
         {
@@ -176,13 +167,22 @@ namespace ex
             txtPass.BackColor = SystemColors.Control;
         }
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void pictureBox3_MouseDown_1(object sender, MouseEventArgs e)
         {
-            _mouseLoc = e.Location;
-
+            pictureBox3.Image = Properties.Resources.eye__2_;
+            txtPass.UseSystemPasswordChar = false;
+            txtPass.BackColor = Color.White;
+            panelPass.BackColor = Color.White;
+            txtUsername.BackColor = SystemColors.Control;
+            panelUsername.BackColor = SystemColors.Control;
         }
 
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            _mouseLoc = e.Location;
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
