@@ -24,7 +24,9 @@ namespace ex
         SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
         }
 
         private void txtUsername_Click(object sender, EventArgs e)

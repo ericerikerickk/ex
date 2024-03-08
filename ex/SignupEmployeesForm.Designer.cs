@@ -431,6 +431,7 @@
             this.comboSteps.Name = "comboSteps";
             this.comboSteps.Size = new System.Drawing.Size(142, 21);
             this.comboSteps.TabIndex = 6;
+            this.comboSteps.Text = "Step 1";
             this.comboSteps.Enter += new System.EventHandler(this.comboSteps_Enter);
             // 
             // pictureBox2
