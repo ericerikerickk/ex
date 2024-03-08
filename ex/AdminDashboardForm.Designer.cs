@@ -321,6 +321,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminDashboardForm";
             this.Text = "AdminDashboardForm";
+            this.Load += new System.EventHandler(this.AdminDashboardForm_Load);
             this.panelAdmin.ResumeLayout(false);
             this.panelAdmin.PerformLayout();
             this.panel8.ResumeLayout(false);

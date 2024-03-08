@@ -27,5 +27,11 @@ namespace ex
         {
             Application.Exit();
         }
+
+        private void AdminDashboardForm_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+
+        }
     }
 }
