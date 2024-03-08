@@ -160,8 +160,8 @@
             this.pictureBox5.Size = new System.Drawing.Size(65, 65);
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
-            this.pictureBox5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
-            this.pictureBox5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label5_MouseMove);
+            this.pictureBox5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.pictureBox5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SignupEmployeesForm_MouseMove);
             // 
             // pictureBox1
             // 
@@ -213,8 +213,8 @@
             this.label2.Size = new System.Drawing.Size(164, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Welcome to the";
-            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
-            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label5_MouseMove);
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SignupEmployeesForm_MouseMove);
             // 
             // panelPass
             // 
@@ -237,8 +237,8 @@
             this.label6.Size = new System.Drawing.Size(82, 17);
             this.label6.TabIndex = 16;
             this.label6.Text = "Corporation";
-            this.label6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
-            this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label5_MouseMove);
+            this.label6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.label6.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SignupEmployeesForm_MouseMove);
             // 
             // label5
             // 
@@ -250,8 +250,8 @@
             this.label5.Size = new System.Drawing.Size(148, 17);
             this.label5.TabIndex = 15;
             this.label5.Text = "Fast Net Development";
-            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
-            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label5_MouseMove);
+            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.label5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SignupEmployeesForm_MouseMove);
             // 
             // label7
             // 
@@ -263,8 +263,8 @@
             this.label7.Size = new System.Drawing.Size(96, 17);
             this.label7.TabIndex = 14;
             this.label7.Text = "Developed By";
-            this.label7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
-            this.label7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label5_MouseMove);
+            this.label7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.label7.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SignupEmployeesForm_MouseMove);
             // 
             // label4
             // 
@@ -277,8 +277,8 @@
             this.label4.Size = new System.Drawing.Size(86, 26);
             this.label4.TabIndex = 3;
             this.label4.Text = "System";
-            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
-            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label5_MouseMove);
+            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SignupEmployeesForm_MouseMove);
             // 
             // btnClose
             // 
@@ -332,6 +332,8 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(300, 530);
             this.panel1.TabIndex = 30;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SignupEmployeesForm_MouseMove);
             // 
             // label3
             // 
@@ -344,8 +346,8 @@
             this.label3.Size = new System.Drawing.Size(163, 26);
             this.label3.TabIndex = 2;
             this.label3.Text = "Document Alert";
-            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
-            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label5_MouseMove);
+            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.label3.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SignupEmployeesForm_MouseMove);
             // 
             // btnLogin
             // 
@@ -373,6 +375,8 @@
             this.label1.Size = new System.Drawing.Size(174, 17);
             this.label1.TabIndex = 29;
             this.label1.Text = "Already have an Account?";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SignupEmployeesForm_MouseMove);
             // 
             // btnSignup
             // 
@@ -399,8 +403,8 @@
             this.label8.Size = new System.Drawing.Size(208, 25);
             this.label8.TabIndex = 37;
             this.label8.Text = "Create your Account";
-            this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
-            this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label5_MouseMove);
+            this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SignupEmployeesForm_MouseMove);
             // 
             // panelSteps
             // 
@@ -460,8 +464,8 @@
             this.Name = "SignupEmployeesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignupEmployeesForm";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label5_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label5_MouseMove);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.SignupEmployeesForm_MouseMove);
             this.panelConfirmpass.ResumeLayout(false);
             this.panelConfirmpass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureConfirmpass)).EndInit();
