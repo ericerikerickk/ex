@@ -1,0 +1,18 @@
+﻿USE [master]
+GO
+
+/****** Object: Table [dbo].[step2Table] Script Date: 3/11/2024 2:36:32 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[step2Table] (
+    [step2ID]          INT      IDENTITY (1, 1) NOT NULL,
+    [step2Status]      BIT      NULL,
+    [step2DateUpdated] DATETIME NULL,
+    [docID]            INT      NULL
+);
+
+

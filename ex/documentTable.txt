@@ -1,7 +1,7 @@
 ﻿USE [master]
 GO
 
-/****** Object: Table [dbo].[documentTable] Script Date: 3/11/2024 1:45:33 PM ******/
+/****** Object: Table [dbo].[documentTable] Script Date: 3/11/2024 2:34:20 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -14,12 +14,10 @@ CREATE TABLE [dbo].[documentTable] (
     [projectTitle] NVARCHAR (50) NULL,
     [userID]       INT           NULL,
     [dateCreated]  DATETIME      NULL,
-    [status]       NVARCHAR (50) NULL,
-    [step1]        BIT           NULL,
-    [step2]        BIT           NULL,
-    [step3]        BIT           NULL,
-    [step4]        BIT           NULL,
-    [dateUpdated]  DATETIME      NULL
+    [step1ID]      INT           NULL,
+    [step2ID]      INT           NULL,
+    [step3ID]      INT           NULL,
+    [step4ID]      INT           NULL
 );
 
 
