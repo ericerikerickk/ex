@@ -78,7 +78,7 @@
             this.btnReceiveStep4.Name = "btnReceiveStep4";
             this.btnReceiveStep4.Size = new System.Drawing.Size(197, 43);
             this.btnReceiveStep4.TabIndex = 3;
-            this.btnReceiveStep4.Text = "RECEIVE";
+            this.btnReceiveStep4.Text = "REJECT";
             this.btnReceiveStep4.UseVisualStyleBackColor = false;
             // 
             // STEP4
