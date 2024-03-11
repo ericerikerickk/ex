@@ -1,0 +1,25 @@
+﻿USE [master]
+GO
+
+/****** Object: Table [dbo].[documentTable] Script Date: 3/11/2024 1:45:33 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[documentTable] (
+    [docID]        INT           IDENTITY (1, 1) NOT NULL,
+    [projectNo]    NVARCHAR (50) NULL,
+    [projectTitle] NVARCHAR (50) NULL,
+    [userID]       INT           NULL,
+    [dateCreated]  DATETIME      NULL,
+    [status]       NVARCHAR (50) NULL,
+    [step1]        BIT           NULL,
+    [step2]        BIT           NULL,
+    [step3]        BIT           NULL,
+    [step4]        BIT           NULL,
+    [dateUpdated]  DATETIME      NULL
+);
+
+
