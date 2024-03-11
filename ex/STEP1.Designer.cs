@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelSTEP1 = new System.Windows.Forms.Panel();
+            this.btnReceivestep1 = new System.Windows.Forms.Button();
             this.dataGridSTEP1 = new System.Windows.Forms.DataGridView();
             this.panelSTEP1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSTEP1)).BeginInit();
@@ -37,11 +38,24 @@
             // panelSTEP1
             // 
             this.panelSTEP1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelSTEP1.Controls.Add(this.btnReceivestep1);
             this.panelSTEP1.Controls.Add(this.dataGridSTEP1);
-            this.panelSTEP1.Location = new System.Drawing.Point(36, 153);
+            this.panelSTEP1.Location = new System.Drawing.Point(12, 42);
             this.panelSTEP1.Name = "panelSTEP1";
-            this.panelSTEP1.Size = new System.Drawing.Size(902, 202);
+            this.panelSTEP1.Size = new System.Drawing.Size(950, 432);
             this.panelSTEP1.TabIndex = 1;
+            // 
+            // btnReceivestep1
+            // 
+            this.btnReceivestep1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnReceivestep1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceivestep1.ForeColor = System.Drawing.Color.White;
+            this.btnReceivestep1.Location = new System.Drawing.Point(371, 364);
+            this.btnReceivestep1.Name = "btnReceivestep1";
+            this.btnReceivestep1.Size = new System.Drawing.Size(197, 43);
+            this.btnReceivestep1.TabIndex = 2;
+            this.btnReceivestep1.Text = "RECEIVE";
+            this.btnReceivestep1.UseVisualStyleBackColor = false;
             // 
             // dataGridSTEP1
             // 
@@ -50,7 +64,7 @@
             this.dataGridSTEP1.Name = "dataGridSTEP1";
             this.dataGridSTEP1.RowHeadersWidth = 51;
             this.dataGridSTEP1.RowTemplate.Height = 24;
-            this.dataGridSTEP1.Size = new System.Drawing.Size(862, 159);
+            this.dataGridSTEP1.Size = new System.Drawing.Size(908, 319);
             this.dataGridSTEP1.TabIndex = 1;
             // 
             // STEP1
@@ -74,5 +88,6 @@
 
         private System.Windows.Forms.Panel panelSTEP1;
         private System.Windows.Forms.DataGridView dataGridSTEP1;
+        private System.Windows.Forms.Button btnReceivestep1;
     }
 }

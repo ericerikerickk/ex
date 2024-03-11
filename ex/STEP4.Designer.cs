@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.panelSTEP4 = new System.Windows.Forms.Panel();
+            this.btnApproveStep4 = new System.Windows.Forms.Button();
             this.dataGridSTEP4 = new System.Windows.Forms.DataGridView();
+            this.btnReceiveStep4 = new System.Windows.Forms.Button();
             this.panelSTEP4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSTEP4)).BeginInit();
             this.SuspendLayout();
@@ -37,11 +39,25 @@
             // panelSTEP4
             // 
             this.panelSTEP4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelSTEP4.Controls.Add(this.btnReceiveStep4);
+            this.panelSTEP4.Controls.Add(this.btnApproveStep4);
             this.panelSTEP4.Controls.Add(this.dataGridSTEP4);
-            this.panelSTEP4.Location = new System.Drawing.Point(36, 153);
+            this.panelSTEP4.Location = new System.Drawing.Point(12, 38);
             this.panelSTEP4.Name = "panelSTEP4";
-            this.panelSTEP4.Size = new System.Drawing.Size(902, 202);
-            this.panelSTEP4.TabIndex = 4;
+            this.panelSTEP4.Size = new System.Drawing.Size(950, 432);
+            this.panelSTEP4.TabIndex = 2;
+            // 
+            // btnApproveStep4
+            // 
+            this.btnApproveStep4.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnApproveStep4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApproveStep4.ForeColor = System.Drawing.Color.White;
+            this.btnApproveStep4.Location = new System.Drawing.Point(70, 364);
+            this.btnApproveStep4.Name = "btnApproveStep4";
+            this.btnApproveStep4.Size = new System.Drawing.Size(197, 43);
+            this.btnApproveStep4.TabIndex = 2;
+            this.btnApproveStep4.Text = "APPROVE";
+            this.btnApproveStep4.UseVisualStyleBackColor = false;
             // 
             // dataGridSTEP4
             // 
@@ -50,8 +66,20 @@
             this.dataGridSTEP4.Name = "dataGridSTEP4";
             this.dataGridSTEP4.RowHeadersWidth = 51;
             this.dataGridSTEP4.RowTemplate.Height = 24;
-            this.dataGridSTEP4.Size = new System.Drawing.Size(862, 159);
+            this.dataGridSTEP4.Size = new System.Drawing.Size(908, 319);
             this.dataGridSTEP4.TabIndex = 1;
+            // 
+            // btnReceiveStep4
+            // 
+            this.btnReceiveStep4.BackColor = System.Drawing.Color.Red;
+            this.btnReceiveStep4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceiveStep4.ForeColor = System.Drawing.Color.White;
+            this.btnReceiveStep4.Location = new System.Drawing.Point(690, 364);
+            this.btnReceiveStep4.Name = "btnReceiveStep4";
+            this.btnReceiveStep4.Size = new System.Drawing.Size(197, 43);
+            this.btnReceiveStep4.TabIndex = 3;
+            this.btnReceiveStep4.Text = "RECEIVE";
+            this.btnReceiveStep4.UseVisualStyleBackColor = false;
             // 
             // STEP4
             // 
@@ -73,6 +101,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panelSTEP4;
+        private System.Windows.Forms.Button btnApproveStep4;
         private System.Windows.Forms.DataGridView dataGridSTEP4;
+        private System.Windows.Forms.Button btnReceiveStep4;
     }
 }
