@@ -40,14 +40,16 @@ namespace ex
             sidecomponentsInactive();
             panelDashboardInactive.Hide();
             panelDashboardActive.Show();
-            loadForm(new AdminDashboardForm());
+            loadForm(new AdminForm());
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            this.WindowState = FormWindowState.Normal;
         }
         private void panelDashboardInactive_MouseClick(object sender, MouseEventArgs e)
         {
             sidecomponentsInactive();
             panelDashboardInactive.Hide();
             panelDashboardActive.Show();
-            loadForm(new AdminDashboardForm());
+            loadForm(new AdminForm());
         }
        /* private void label13_MouseClick(object sender, MouseEventArgs e)
         {
@@ -63,7 +65,7 @@ namespace ex
             sidecomponentsInactive();
             panelEmployeesInactive.Hide();
             panelEmployee.Show();
-            loadForm(new EmployeesDashboardForm());
+            loadForm(new EmployeeForm());
         }
 
         private void panelUserInactive_MouseClick_1(object sender, MouseEventArgs e)
@@ -105,6 +107,35 @@ namespace ex
                 int dy = e.Location.Y - _mouseLoc.Y;
                 this.Location = new Point(this.Location.X + dx, this.Location.Y + dy);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else if(this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void panel2_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            panelLogoutInactive.Show();
+        }
+
+        private void label1_MouseEnter(object sender, EventArgs e)
+        {
+            panelLogoutInactive.Hide();
         }
     }
 }

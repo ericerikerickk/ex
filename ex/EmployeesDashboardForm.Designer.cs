@@ -34,7 +34,6 @@
             this.panelSteps = new System.Windows.Forms.Panel();
             this.txtSteps = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -61,9 +60,13 @@
             this.txtEmpFname = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.userNo = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panelEmployeesDashboard.SuspendLayout();
             this.panelSteps.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.panelGender.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panelSearch.SuspendLayout();
@@ -72,15 +75,19 @@
             this.PanelAddress.SuspendLayout();
             this.panelLname.SuspendLayout();
             this.panelFname.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEmployeesDashboard
             // 
             this.panelEmployeesDashboard.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelEmployeesDashboard.Controls.Add(this.flowLayoutPanel1);
+            this.panelEmployeesDashboard.Controls.Add(this.panel1);
             this.panelEmployeesDashboard.Controls.Add(this.userID);
             this.panelEmployeesDashboard.Controls.Add(this.label2);
             this.panelEmployeesDashboard.Controls.Add(this.panelSteps);
-            this.panelEmployeesDashboard.Controls.Add(this.pictureBox18);
             this.panelEmployeesDashboard.Controls.Add(this.btnClear);
             this.panelEmployeesDashboard.Controls.Add(this.btnDelete);
             this.panelEmployeesDashboard.Controls.Add(this.btnUpdate);
@@ -92,7 +99,6 @@
             this.panelEmployeesDashboard.Controls.Add(this.PanelAddress);
             this.panelEmployeesDashboard.Controls.Add(this.panelLname);
             this.panelEmployeesDashboard.Controls.Add(this.panelFname);
-            this.panelEmployeesDashboard.Controls.Add(this.label32);
             this.panelEmployeesDashboard.Location = new System.Drawing.Point(108, 24);
             this.panelEmployeesDashboard.Name = "panelEmployeesDashboard";
             this.panelEmployeesDashboard.Size = new System.Drawing.Size(585, 402);
@@ -155,17 +161,6 @@
             this.label1.Size = new System.Drawing.Size(38, 15);
             this.label1.TabIndex = 27;
             this.label1.Text = "Steps";
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox18.Image = global::ex.Properties.Resources.teamwork__2_;
-            this.pictureBox18.Location = new System.Drawing.Point(19, 15);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(22, 21);
-            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox18.TabIndex = 38;
-            this.pictureBox18.TabStop = false;
             // 
             // btnClear
             // 
@@ -499,11 +494,64 @@
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label32.Location = new System.Drawing.Point(47, 12);
+            this.label32.Location = new System.Drawing.Point(29, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(124, 25);
             this.label32.TabIndex = 1;
             this.label32.Text = "Employees ";
+            // 
+            // pictureBox18
+            // 
+            this.pictureBox18.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox18.Image = global::ex.Properties.Resources.teamwork__2_;
+            this.pictureBox18.Location = new System.Drawing.Point(7, 2);
+            this.pictureBox18.Name = "pictureBox18";
+            this.pictureBox18.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox18.TabIndex = 38;
+            this.pictureBox18.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pictureBox18);
+            this.panel1.Controls.Add(this.label32);
+            this.panel1.Location = new System.Drawing.Point(170, 46);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(158, 33);
+            this.panel1.TabIndex = 41;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label3.Location = new System.Drawing.Point(3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 25);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "User ID No.";
+            // 
+            // userNo
+            // 
+            this.userNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.userNo.AutoSize = true;
+            this.userNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.userNo.Location = new System.Drawing.Point(131, 0);
+            this.userNo.Name = "userNo";
+            this.userNo.Size = new System.Drawing.Size(68, 25);
+            this.userNo.TabIndex = 42;
+            this.userNo.Text = "Id No.";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.label3);
+            this.flowLayoutPanel1.Controls.Add(this.userNo);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(59, 14);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(209, 26);
+            this.flowLayoutPanel1.TabIndex = 43;
             // 
             // EmployeesDashboardForm
             // 
@@ -520,7 +568,6 @@
             this.panelEmployeesDashboard.PerformLayout();
             this.panelSteps.ResumeLayout(false);
             this.panelSteps.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.panelGender.ResumeLayout(false);
             this.panelGender.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -536,6 +583,11 @@
             this.panelLname.PerformLayout();
             this.panelFname.ResumeLayout(false);
             this.panelFname.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -543,7 +595,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelEmployeesDashboard;
-        private System.Windows.Forms.PictureBox pictureBox18;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
@@ -575,5 +626,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label userID;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label userNo;
     }
 }

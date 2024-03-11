@@ -29,69 +29,71 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panelAdmin = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.countUserlbl = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.countUserlbl = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.countEmpLbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panelAdmin.SuspendLayout();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panelAdmin = new System.Windows.Forms.Panel();
+            this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelAdmin.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelAdmin
+            // timer1
             // 
-            this.panelAdmin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelAdmin.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panelAdmin.Controls.Add(this.panel8);
-            this.panelAdmin.Controls.Add(this.panel9);
-            this.panelAdmin.Controls.Add(this.panel6);
-            this.panelAdmin.Controls.Add(this.panel5);
-            this.panelAdmin.Controls.Add(this.panel4);
-            this.panelAdmin.Controls.Add(this.button3);
-            this.panelAdmin.Controls.Add(this.label1);
-            this.panelAdmin.Location = new System.Drawing.Point(102, 24);
-            this.panelAdmin.Name = "panelAdmin";
-            this.panelAdmin.Size = new System.Drawing.Size(596, 402);
-            this.panelAdmin.TabIndex = 7;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panel8
+            // panel5
             // 
-            this.panel8.BackColor = System.Drawing.Color.LimeGreen;
-            this.panel8.Controls.Add(this.pictureBox2);
-            this.panel8.Location = new System.Drawing.Point(219, 78);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(66, 54);
-            this.panel8.TabIndex = 21;
+            this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel5.Controls.Add(this.countUserlbl);
+            this.panel5.Controls.Add(this.label4);
+            this.panel5.Location = new System.Drawing.Point(389, 87);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(179, 98);
+            this.panel5.TabIndex = 18;
             // 
-            // pictureBox2
+            // countUserlbl
             // 
-            this.pictureBox2.Image = global::ex.Properties.Resources.authority1;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 37);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.countUserlbl.AutoSize = true;
+            this.countUserlbl.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.countUserlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countUserlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.countUserlbl.Location = new System.Drawing.Point(110, 44);
+            this.countUserlbl.Name = "countUserlbl";
+            this.countUserlbl.Size = new System.Drawing.Size(48, 25);
+            this.countUserlbl.TabIndex = 23;
+            this.countUserlbl.Text = "100";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label4.Location = new System.Drawing.Point(100, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 15);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "Users";
             // 
             // panel9
             // 
@@ -154,39 +156,6 @@
             this.lblTime.TabIndex = 20;
             this.lblTime.Text = "Time";
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel5.Controls.Add(this.countUserlbl);
-            this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(389, 87);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(179, 98);
-            this.panel5.TabIndex = 18;
-            // 
-            // countUserlbl
-            // 
-            this.countUserlbl.AutoSize = true;
-            this.countUserlbl.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.countUserlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countUserlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.countUserlbl.Location = new System.Drawing.Point(110, 44);
-            this.countUserlbl.Name = "countUserlbl";
-            this.countUserlbl.Size = new System.Drawing.Size(48, 25);
-            this.countUserlbl.TabIndex = 23;
-            this.countUserlbl.Text = "100";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label4.Location = new System.Drawing.Point(100, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 15);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "Users";
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -220,6 +189,36 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "Employees";
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.LimeGreen;
+            this.panel8.Controls.Add(this.pictureBox2);
+            this.panel8.Location = new System.Drawing.Point(219, 78);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(66, 54);
+            this.panel8.TabIndex = 21;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ex.Properties.Resources.authority1;
+            this.pictureBox2.Location = new System.Drawing.Point(8, 9);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(48, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label1.Location = new System.Drawing.Point(15, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Admin Dashboard";
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
@@ -234,20 +233,21 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label1
+            // panelAdmin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(15, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(183, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Admin Dashboard";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.panelAdmin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelAdmin.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelAdmin.Controls.Add(this.panel8);
+            this.panelAdmin.Controls.Add(this.panel9);
+            this.panelAdmin.Controls.Add(this.panel6);
+            this.panelAdmin.Controls.Add(this.panel5);
+            this.panelAdmin.Controls.Add(this.panel4);
+            this.panelAdmin.Controls.Add(this.button3);
+            this.panelAdmin.Controls.Add(this.label1);
+            this.panelAdmin.Location = new System.Drawing.Point(102, 24);
+            this.panelAdmin.Name = "panelAdmin";
+            this.panelAdmin.Size = new System.Drawing.Size(596, 402);
+            this.panelAdmin.TabIndex = 7;
             // 
             // AdminDashboardForm
             // 
@@ -259,42 +259,41 @@
             this.Name = "AdminDashboardForm";
             this.Text = "AdminDashboardForm";
             this.Load += new System.EventHandler(this.AdminDashboardForm_Load);
-            this.panelAdmin.ResumeLayout(false);
-            this.panelAdmin.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelAdmin.ResumeLayout(false);
+            this.panelAdmin.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelAdmin;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label countUserlbl;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label countEmpLbl;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Panel panelAdmin;
     }
 }
