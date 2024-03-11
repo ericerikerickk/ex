@@ -31,11 +31,11 @@
             this.PanelUserDashboard = new System.Windows.Forms.Panel();
             this.pictureBox20 = new System.Windows.Forms.PictureBox();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.panelGender = new System.Windows.Forms.Panel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.txtGender = new System.Windows.Forms.ComboBox();
             this.label33 = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.panelSearch = new System.Windows.Forms.Panel();
@@ -57,6 +57,8 @@
             this.txtUserFname = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.userID = new System.Windows.Forms.Label();
             this.PanelUserDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
@@ -73,11 +75,13 @@
             // PanelUserDashboard
             // 
             this.PanelUserDashboard.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PanelUserDashboard.Controls.Add(this.userID);
+            this.PanelUserDashboard.Controls.Add(this.label2);
             this.PanelUserDashboard.Controls.Add(this.pictureBox20);
             this.PanelUserDashboard.Controls.Add(this.pictureBox19);
-            this.PanelUserDashboard.Controls.Add(this.button7);
-            this.PanelUserDashboard.Controls.Add(this.button8);
-            this.PanelUserDashboard.Controls.Add(this.button9);
+            this.PanelUserDashboard.Controls.Add(this.btnClear);
+            this.PanelUserDashboard.Controls.Add(this.btnDelete);
+            this.PanelUserDashboard.Controls.Add(this.btnUpdate);
             this.PanelUserDashboard.Controls.Add(this.panelGender);
             this.PanelUserDashboard.Controls.Add(this.dataGridView3);
             this.PanelUserDashboard.Controls.Add(this.panelSearch);
@@ -113,56 +117,59 @@
             this.pictureBox19.TabIndex = 38;
             this.pictureBox19.TabStop = false;
             // 
-            // button7
+            // btnClear
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(463, 323);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(102, 35);
-            this.button7.TabIndex = 10;
-            this.button7.Text = "CLEAR";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(463, 323);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(102, 35);
+            this.btnClear.TabIndex = 10;
+            this.btnClear.Text = "CLEAR";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // button8
+            // btnDelete
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(335, 324);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(107, 35);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "DELETE";
-            this.button8.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(335, 324);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(107, 35);
+            this.btnDelete.TabIndex = 9;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button9
+            // btnUpdate
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(213, 324);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(102, 35);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "UPDATE";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Enter += new System.EventHandler(this.button9_Enter);
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(213, 324);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(102, 35);
+            this.btnUpdate.TabIndex = 8;
+            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            this.btnUpdate.Enter += new System.EventHandler(this.button9_Enter);
             // 
             // panelGender
             // 
             this.panelGender.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panelGender.Controls.Add(this.comboBox3);
+            this.panelGender.Controls.Add(this.txtGender);
             this.panelGender.Controls.Add(this.label33);
             this.panelGender.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelGender.Location = new System.Drawing.Point(19, 323);
@@ -170,21 +177,21 @@
             this.panelGender.Size = new System.Drawing.Size(182, 38);
             this.panelGender.TabIndex = 6;
             // 
-            // comboBox3
+            // txtGender
             // 
-            this.comboBox3.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.txtGender.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtGender.FormattingEnabled = true;
+            this.txtGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox3.Location = new System.Drawing.Point(58, 8);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 28;
-            this.comboBox3.Enter += new System.EventHandler(this.comboBox3_Enter);
-            this.comboBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox3_MouseClick);
+            this.txtGender.Location = new System.Drawing.Point(58, 8);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(121, 21);
+            this.txtGender.TabIndex = 28;
+            this.txtGender.Enter += new System.EventHandler(this.comboBox3_Enter);
+            this.txtGender.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox3_MouseClick);
             // 
             // label33
             // 
@@ -201,13 +208,16 @@
             // 
             // dataGridView3
             // 
+            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView3.Location = new System.Drawing.Point(204, 90);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.Size = new System.Drawing.Size(373, 211);
             this.dataGridView3.TabIndex = 34;
             this.dataGridView3.TabStop = false;
+            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
             // 
             // panelSearch
             // 
@@ -230,8 +240,11 @@
             this.txtUserSearch.Name = "txtUserSearch";
             this.txtUserSearch.Size = new System.Drawing.Size(223, 20);
             this.txtUserSearch.TabIndex = 0;
+            this.txtUserSearch.Text = "Search by Last Name";
             this.txtUserSearch.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUserSearch_MouseClick);
+            this.txtUserSearch.TextChanged += new System.EventHandler(this.txtUserSearch_TextChanged);
             this.txtUserSearch.Enter += new System.EventHandler(this.txtUserSearch_Enter);
+            this.txtUserSearch.Leave += new System.EventHandler(this.txtUserSearch_Leave);
             // 
             // label34
             // 
@@ -442,6 +455,23 @@
             this.label40.TabIndex = 1;
             this.label40.Text = "User ";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(460, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "User ID No.";
+            // 
+            // userID
+            // 
+            this.userID.AutoSize = true;
+            this.userID.Location = new System.Drawing.Point(529, 21);
+            this.userID.Name = "userID";
+            this.userID.Size = new System.Drawing.Size(0, 13);
+            this.userID.TabIndex = 41;
+            // 
             // UserDashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,11 +511,11 @@
         private System.Windows.Forms.Panel PanelUserDashboard;
         private System.Windows.Forms.PictureBox pictureBox20;
         private System.Windows.Forms.PictureBox pictureBox19;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel panelGender;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox txtGender;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Panel panelSearch;
@@ -507,5 +537,7 @@
         private System.Windows.Forms.TextBox txtUserFname;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label userID;
+        private System.Windows.Forms.Label label2;
     }
 }

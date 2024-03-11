@@ -134,16 +134,19 @@ namespace ex
                             else
                             {
                                 MessageBox.Show("Password and Confirm Password doesn't match!... Please Check...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                con.Close();
                             }
                         }
                         else
                         {
                             MessageBox.Show("Please fill all the fields!..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            con.Close();
                         }
                     }
                     else
                     {
                         MessageBox.Show("Password does not meet the requirements. The Password should have atleast one special character, one upper and lower key, and atleast 8 characters.");
+                        con.Close();
                     }
                 }
             }

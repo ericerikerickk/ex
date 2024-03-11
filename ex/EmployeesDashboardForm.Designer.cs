@@ -29,12 +29,17 @@
         private void InitializeComponent()
         {
             this.panelEmployeesDashboard = new System.Windows.Forms.Panel();
+            this.userID = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panelSteps = new System.Windows.Forms.Panel();
+            this.txtSteps = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.panelGender = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtGender = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panelSearch = new System.Windows.Forms.Panel();
@@ -56,10 +61,8 @@
             this.txtEmpFname = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.panelSteps = new System.Windows.Forms.Panel();
-            this.comboSteps = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelEmployeesDashboard.SuspendLayout();
+            this.panelSteps.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
             this.panelGender.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -69,17 +72,18 @@
             this.PanelAddress.SuspendLayout();
             this.panelLname.SuspendLayout();
             this.panelFname.SuspendLayout();
-            this.panelSteps.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelEmployeesDashboard
             // 
             this.panelEmployeesDashboard.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelEmployeesDashboard.Controls.Add(this.userID);
+            this.panelEmployeesDashboard.Controls.Add(this.label2);
             this.panelEmployeesDashboard.Controls.Add(this.panelSteps);
             this.panelEmployeesDashboard.Controls.Add(this.pictureBox18);
-            this.panelEmployeesDashboard.Controls.Add(this.button4);
-            this.panelEmployeesDashboard.Controls.Add(this.button5);
-            this.panelEmployeesDashboard.Controls.Add(this.button6);
+            this.panelEmployeesDashboard.Controls.Add(this.btnClear);
+            this.panelEmployeesDashboard.Controls.Add(this.btnDelete);
+            this.panelEmployeesDashboard.Controls.Add(this.btnUpdate);
             this.panelEmployeesDashboard.Controls.Add(this.panelGender);
             this.panelEmployeesDashboard.Controls.Add(this.dataGridView2);
             this.panelEmployeesDashboard.Controls.Add(this.panelSearch);
@@ -94,6 +98,64 @@
             this.panelEmployeesDashboard.Size = new System.Drawing.Size(585, 402);
             this.panelEmployeesDashboard.TabIndex = 25;
             // 
+            // userID
+            // 
+            this.userID.AutoSize = true;
+            this.userID.Location = new System.Drawing.Point(514, 14);
+            this.userID.Name = "userID";
+            this.userID.Size = new System.Drawing.Size(0, 13);
+            this.userID.TabIndex = 40;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(446, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "User ID No.";
+            // 
+            // panelSteps
+            // 
+            this.panelSteps.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panelSteps.Controls.Add(this.txtSteps);
+            this.panelSteps.Controls.Add(this.label1);
+            this.panelSteps.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelSteps.Location = new System.Drawing.Point(19, 361);
+            this.panelSteps.Name = "panelSteps";
+            this.panelSteps.Size = new System.Drawing.Size(182, 38);
+            this.panelSteps.TabIndex = 7;
+            // 
+            // txtSteps
+            // 
+            this.txtSteps.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSteps.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtSteps.FormattingEnabled = true;
+            this.txtSteps.Items.AddRange(new object[] {
+            "Step 1",
+            "Step 2",
+            "Step 3",
+            "Step 4"});
+            this.txtSteps.Location = new System.Drawing.Point(58, 8);
+            this.txtSteps.Name = "txtSteps";
+            this.txtSteps.Size = new System.Drawing.Size(121, 21);
+            this.txtSteps.TabIndex = 28;
+            this.txtSteps.Enter += new System.EventHandler(this.comboSteps_Enter);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label1.Location = new System.Drawing.Point(7, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Steps";
+            // 
             // pictureBox18
             // 
             this.pictureBox18.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -105,56 +167,59 @@
             this.pictureBox18.TabIndex = 38;
             this.pictureBox18.TabStop = false;
             // 
-            // button4
+            // btnClear
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(463, 323);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 35);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "CLEAR";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(463, 323);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(102, 35);
+            this.btnClear.TabIndex = 11;
+            this.btnClear.Text = "CLEAR";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // button5
+            // btnDelete
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(335, 324);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(107, 35);
-            this.button5.TabIndex = 10;
-            this.button5.Text = "DELETE";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(335, 324);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(107, 35);
+            this.btnDelete.TabIndex = 10;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button6
+            // btnUpdate
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(213, 324);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(102, 35);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "UPDATE";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Enter += new System.EventHandler(this.button6_Enter);
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(213, 324);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(102, 35);
+            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.button6_Click);
+            this.btnUpdate.Enter += new System.EventHandler(this.button6_Enter);
             // 
             // panelGender
             // 
             this.panelGender.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panelGender.Controls.Add(this.comboBox2);
+            this.panelGender.Controls.Add(this.txtGender);
             this.panelGender.Controls.Add(this.label25);
             this.panelGender.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelGender.Location = new System.Drawing.Point(19, 323);
@@ -162,21 +227,21 @@
             this.panelGender.Size = new System.Drawing.Size(182, 38);
             this.panelGender.TabIndex = 6;
             // 
-            // comboBox2
+            // txtGender
             // 
-            this.comboBox2.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.txtGender.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtGender.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtGender.FormattingEnabled = true;
+            this.txtGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox2.Location = new System.Drawing.Point(58, 8);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 28;
-            this.comboBox2.Enter += new System.EventHandler(this.comboBox2_Enter);
-            this.comboBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox2_MouseClick);
+            this.txtGender.Location = new System.Drawing.Point(58, 8);
+            this.txtGender.Name = "txtGender";
+            this.txtGender.Size = new System.Drawing.Size(121, 21);
+            this.txtGender.TabIndex = 28;
+            this.txtGender.Enter += new System.EventHandler(this.comboBox2_Enter);
+            this.txtGender.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBox2_MouseClick);
             // 
             // label25
             // 
@@ -193,13 +258,16 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView2.Location = new System.Drawing.Point(204, 90);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(373, 211);
             this.dataGridView2.TabIndex = 34;
             this.dataGridView2.TabStop = false;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // panelSearch
             // 
@@ -222,8 +290,11 @@
             this.txtEmpSearch.Name = "txtEmpSearch";
             this.txtEmpSearch.Size = new System.Drawing.Size(223, 20);
             this.txtEmpSearch.TabIndex = 0;
+            this.txtEmpSearch.Text = "Search by Last Name";
             this.txtEmpSearch.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEmpSearch_MouseClick);
+            this.txtEmpSearch.TextChanged += new System.EventHandler(this.txtEmpSearch_TextChanged);
             this.txtEmpSearch.Enter += new System.EventHandler(this.txtEmpSearch_Enter);
+            this.txtEmpSearch.Leave += new System.EventHandler(this.txtEmpSearch_Leave);
             // 
             // label26
             // 
@@ -434,47 +505,6 @@
             this.label32.TabIndex = 1;
             this.label32.Text = "Employees ";
             // 
-            // panelSteps
-            // 
-            this.panelSteps.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panelSteps.Controls.Add(this.comboSteps);
-            this.panelSteps.Controls.Add(this.label1);
-            this.panelSteps.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelSteps.Location = new System.Drawing.Point(19, 361);
-            this.panelSteps.Name = "panelSteps";
-            this.panelSteps.Size = new System.Drawing.Size(182, 38);
-            this.panelSteps.TabIndex = 7;
-            // 
-            // comboSteps
-            // 
-            this.comboSteps.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.comboSteps.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboSteps.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.comboSteps.FormattingEnabled = true;
-            this.comboSteps.Items.AddRange(new object[] {
-            "Step 1",
-            "Step 2",
-            "Step 3",
-            "Step 4"});
-            this.comboSteps.Location = new System.Drawing.Point(58, 8);
-            this.comboSteps.Name = "comboSteps";
-            this.comboSteps.Size = new System.Drawing.Size(121, 21);
-            this.comboSteps.TabIndex = 28;
-            this.comboSteps.Enter += new System.EventHandler(this.comboSteps_Enter);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(7, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 15);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Steps";
-            // 
             // EmployeesDashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,6 +518,8 @@
             this.Load += new System.EventHandler(this.EmployeesDashboardForm_Load);
             this.panelEmployeesDashboard.ResumeLayout(false);
             this.panelEmployeesDashboard.PerformLayout();
+            this.panelSteps.ResumeLayout(false);
+            this.panelSteps.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
             this.panelGender.ResumeLayout(false);
             this.panelGender.PerformLayout();
@@ -504,8 +536,6 @@
             this.panelLname.PerformLayout();
             this.panelFname.ResumeLayout(false);
             this.panelFname.PerformLayout();
-            this.panelSteps.ResumeLayout(false);
-            this.panelSteps.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -514,11 +544,11 @@
 
         private System.Windows.Forms.Panel panelEmployeesDashboard;
         private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Panel panelGender;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox txtGender;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Panel panelSearch;
@@ -541,7 +571,9 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Panel panelSteps;
-        private System.Windows.Forms.ComboBox comboSteps;
+        private System.Windows.Forms.ComboBox txtSteps;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label userID;
+        private System.Windows.Forms.Label label2;
     }
 }

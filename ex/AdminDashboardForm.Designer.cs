@@ -39,10 +39,10 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.countUserlbl = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.countEmpLbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,29 +69,26 @@
             this.panelAdmin.Controls.Add(this.panel4);
             this.panelAdmin.Controls.Add(this.button3);
             this.panelAdmin.Controls.Add(this.label1);
-            this.panelAdmin.Location = new System.Drawing.Point(136, 30);
-            this.panelAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAdmin.Location = new System.Drawing.Point(102, 24);
             this.panelAdmin.Name = "panelAdmin";
-            this.panelAdmin.Size = new System.Drawing.Size(795, 495);
+            this.panelAdmin.Size = new System.Drawing.Size(596, 402);
             this.panelAdmin.TabIndex = 7;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.LimeGreen;
             this.panel8.Controls.Add(this.pictureBox2);
-            this.panel8.Location = new System.Drawing.Point(292, 96);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Location = new System.Drawing.Point(219, 78);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(88, 66);
+            this.panel8.Size = new System.Drawing.Size(66, 54);
             this.panel8.TabIndex = 21;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::ex.Properties.Resources.authority1;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 11);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(8, 9);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 46);
+            this.pictureBox2.Size = new System.Drawing.Size(48, 37);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -100,19 +97,17 @@
             // 
             this.panel9.BackColor = System.Drawing.Color.Firebrick;
             this.panel9.Controls.Add(this.pictureBox3);
-            this.panel9.Location = new System.Drawing.Point(537, 96);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Location = new System.Drawing.Point(403, 78);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(88, 66);
+            this.panel9.Size = new System.Drawing.Size(66, 54);
             this.panel9.TabIndex = 22;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::ex.Properties.Resources.user1;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 11);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(9, 9);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(64, 46);
+            this.pictureBox3.Size = new System.Drawing.Size(48, 37);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 19;
             this.pictureBox3.TabStop = false;
@@ -123,18 +118,16 @@
             this.panel6.Controls.Add(this.pictureBox4);
             this.panel6.Controls.Add(this.lblDate);
             this.panel6.Controls.Add(this.lblTime);
-            this.panel6.Location = new System.Drawing.Point(111, 279);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Location = new System.Drawing.Point(83, 227);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(559, 154);
+            this.panel6.Size = new System.Drawing.Size(419, 125);
             this.panel6.TabIndex = 19;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(419, 22);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Location = new System.Drawing.Point(314, 18);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(131, 110);
+            this.pictureBox4.Size = new System.Drawing.Size(98, 89);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 21;
             this.pictureBox4.TabStop = false;
@@ -144,10 +137,9 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F);
             this.lblDate.ForeColor = System.Drawing.Color.White;
-            this.lblDate.Location = new System.Drawing.Point(3, 94);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDate.Location = new System.Drawing.Point(2, 76);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(84, 37);
+            this.lblDate.Size = new System.Drawing.Size(66, 29);
             this.lblDate.TabIndex = 21;
             this.lblDate.Text = "Date";
             // 
@@ -156,82 +148,75 @@
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F);
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(7, 22);
-            this.lblTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTime.Location = new System.Drawing.Point(5, 18);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(88, 37);
+            this.lblTime.Size = new System.Drawing.Size(70, 29);
             this.lblTime.TabIndex = 20;
             this.lblTime.Text = "Time";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.countUserlbl);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(519, 107);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(389, 87);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(239, 121);
+            this.panel5.Size = new System.Drawing.Size(179, 98);
             this.panel5.TabIndex = 18;
             // 
-            // label7
+            // countUserlbl
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label7.Location = new System.Drawing.Point(147, 54);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 29);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "100";
+            this.countUserlbl.AutoSize = true;
+            this.countUserlbl.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.countUserlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countUserlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.countUserlbl.Location = new System.Drawing.Point(110, 44);
+            this.countUserlbl.Name = "countUserlbl";
+            this.countUserlbl.Size = new System.Drawing.Size(48, 25);
+            this.countUserlbl.TabIndex = 23;
+            this.countUserlbl.Text = "100";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label4.Location = new System.Drawing.Point(133, 10);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(100, 8);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 18);
+            this.label4.Size = new System.Drawing.Size(39, 15);
             this.label4.TabIndex = 22;
-            this.label4.Text = "Total Count";
+            this.label4.Text = "Users";
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.countEmpLbl);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(276, 107);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(207, 87);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(235, 121);
+            this.panel4.Size = new System.Drawing.Size(176, 98);
             this.panel4.TabIndex = 18;
             // 
-            // label6
+            // countEmpLbl
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label6.Location = new System.Drawing.Point(156, 54);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 29);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "50";
+            this.countEmpLbl.AutoSize = true;
+            this.countEmpLbl.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.countEmpLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countEmpLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.countEmpLbl.Location = new System.Drawing.Point(117, 44);
+            this.countEmpLbl.Name = "countEmpLbl";
+            this.countEmpLbl.Size = new System.Drawing.Size(36, 25);
+            this.countEmpLbl.TabIndex = 22;
+            this.countEmpLbl.Text = "50";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label3.Location = new System.Drawing.Point(136, 10);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(102, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 18);
+            this.label3.Size = new System.Drawing.Size(68, 15);
             this.label3.TabIndex = 21;
             this.label3.Text = "Employees";
             // 
@@ -241,10 +226,9 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(704, 15);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(528, 12);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(53, 49);
+            this.button3.Size = new System.Drawing.Size(40, 40);
             this.button3.TabIndex = 16;
             this.button3.Text = "X";
             this.button3.UseVisualStyleBackColor = false;
@@ -255,10 +239,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(20, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(15, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 31);
+            this.label1.Size = new System.Drawing.Size(183, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Admin Dashboard";
             // 
@@ -268,12 +251,11 @@
             // 
             // AdminDashboardForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AdminDashboardForm";
             this.Text = "AdminDashboardForm";
             this.Load += new System.EventHandler(this.AdminDashboardForm_Load);
@@ -306,10 +288,10 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label countUserlbl;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label countEmpLbl;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
