@@ -51,18 +51,21 @@ namespace ex
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string Password = "";
-            bool IsExist = false;
-            con.Open();
-            SqlCommand cmd = new SqlCommand("select * from userTable where userName='" + txtUsername.Text + "'", con);
-            SqlDataReader sdr = cmd.ExecuteReader();
-            if (sdr.Read())
-            {
-                Password = sdr.GetString(2);
+            string Step1 = "";
+            bool IsExistPassword = false;
 
-                IsExist = true;
+            con.Open();
+            SqlCommand cmdPassword = new SqlCommand("select * from userTable where userName='" + txtUsername.Text + "'", con);
+            SqlDataReader sdrPassword = cmdPassword.ExecuteReader();
+            if (sdrPassword.Read())
+            {
+                Password = sdrPassword.GetString(2);
+                Step1 = sdrPassword.GetString(4);
+                IsExistPassword = true;
+                
             }
             con.Close();
-            if (IsExist)
+            if (IsExistPassword)
             {
                 // Check if the username contains spaces
                 if (txtUsername.Text.Contains(" "))
@@ -73,16 +76,23 @@ namespace ex
 
                 if (Cryptography.Decrypt(Password).Equals(txtPass.Text))
                 {
+                   
                     if (txtUsername.Text.Trim().Equals("admin", StringComparison.OrdinalIgnoreCase))
                     {
-                        AdminDashboard adminform = new AdminDashboard();
+                        AdminDashboard adminform = new AdminDashboard(txtUsername.Text);
                         this.Hide();
                         adminform.ShowDialog();
+                    }
+                    else if(Step1 == "Step 1")
+                    {
+                        STEP1 step1Form = new STEP1(txtUsername.Text);
+                        this.Hide();
+                        step1Form.ShowDialog();
                     }
                     else
                     {
                         MessageBox.Show("Successfully Logging in", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        UserForm userform = new UserForm();
+                        UserForm userform = new UserForm(txtUsername.Text);
                         this.Hide();
                         userform.ShowDialog();
                     }

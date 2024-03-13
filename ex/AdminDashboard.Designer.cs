@@ -58,6 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mainpanel = new System.Windows.Forms.Panel();
+            this.labelHello = new System.Windows.Forms.Label();
             this.panelDashboardInactive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panelUserActive.SuspendLayout();
@@ -294,6 +295,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.labelHello);
             this.panel1.Controls.Add(this.panelLogoutInactive);
             this.panel1.Controls.Add(this.panelDashboardInactive);
             this.panel1.Controls.Add(this.panelUserActive);
@@ -442,6 +444,15 @@
             this.mainpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mainpanel_MouseDown);
             this.mainpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mainpanel_MouseMove);
             // 
+            // labelHello
+            // 
+            this.labelHello.AutoSize = true;
+            this.labelHello.Location = new System.Drawing.Point(38, 255);
+            this.labelHello.Name = "labelHello";
+            this.labelHello.Size = new System.Drawing.Size(35, 13);
+            this.labelHello.TabIndex = 35;
+            this.labelHello.Text = "label3";
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,7 +463,7 @@
             this.Name = "AdminDashboard";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Admin Dashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.panelDashboardInactive.ResumeLayout(false);
             this.panelDashboardInactive.PerformLayout();
@@ -515,6 +526,7 @@
         private System.Windows.Forms.Panel paneLogoutActive;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label labelHello;
     }
 }
 

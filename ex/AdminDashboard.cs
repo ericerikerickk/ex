@@ -12,9 +12,12 @@ namespace ex
 {
     public partial class AdminDashboard : Form
     {
-        public AdminDashboard()
+        private string adminUser;
+        public AdminDashboard(string adminUser)
         {
             InitializeComponent();
+            this.adminUser = adminUser;
+            labelHello.Text = "Hello World '    " + adminUser + "'";
         }
         private void sidecomponentsInactive()
         {
@@ -65,7 +68,7 @@ namespace ex
             sidecomponentsInactive();
             panelEmployeesInactive.Hide();
             panelEmployee.Show();
-            loadForm(new EmployeeForm());
+            loadForm(new EmployeesDashboardForm());
         }
 
         private void panelUserInactive_MouseClick_1(object sender, MouseEventArgs e)

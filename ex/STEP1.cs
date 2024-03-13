@@ -12,9 +12,13 @@ namespace ex
 {
     public partial class STEP1 : Form
     {
-        public STEP1()
+        private string step1User;
+
+        public STEP1(string step1User)
         {
+            this.step1User = step1User;
             InitializeComponent();
+            labelStep1.Text = "Hello " + step1User;
         }
     }
 }

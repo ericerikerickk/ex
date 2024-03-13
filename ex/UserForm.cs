@@ -12,9 +12,13 @@ namespace ex
 {
     public partial class UserForm : Form
     {
-        public UserForm()
+        public string userName;
+        public UserForm(string userName)
         {
             InitializeComponent();
+            this.userName = userName;
+            HelloUser.Text = "Hello" + userName;
+            EditProfile edit = new EditProfile(userName);
         }
         private void sidecomponentsInactive()
         {
@@ -37,7 +41,7 @@ namespace ex
             sidecomponentsInactive();
             panelProfileInactive.Hide();
             panelProfileActive.Show();
-            loadForm(new EditProfile());
+            loadForm(new EditProfile(userName));
         }
  
 
@@ -54,7 +58,7 @@ namespace ex
             sidecomponentsInactive();
             panelProfileInactive.Hide();
             panelProfileActive.Show();
-            loadForm(new EditProfile());
+            loadForm(new EditProfile(userName));
         }
     }
 }
