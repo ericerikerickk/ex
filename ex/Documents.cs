@@ -16,5 +16,10 @@ namespace ex
         {
             InitializeComponent();
         }
+
+        private void btnSubmitdocs_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
