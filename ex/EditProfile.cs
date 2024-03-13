@@ -23,10 +23,10 @@ namespace ex
 
         private void applyBtn_Click(object sender, EventArgs e)
         {
-            if(txtUserFname.Text == " " && txtUserLname.Text == " " && txtUserEmail.Text == "" && txtUserContact.Text == "" && txtUserAddress.Text == "" && txtGender.Text == "")
+            if(txtUserFname.Text == "" && txtUserLname.Text == "" && txtUserEmail.Text == "" && txtUserContact.Text == "" && txtUserAddress.Text == "" && txtGender.Text == "")
             {
                 con.Open();
-                SqlCommand cmdEdit = new SqlCommand("UPDATE userTable SET firstName='" + txtUserFname.Text + "', lastName ='" + txtUserLname.Text + "', email='" + txtUserEmail.Text + "', contact='" + txtUserContact.Text + "', address='" + txtUserAddress.Text + "', gender='" + txtGender.Text + "' where userName ='" + user + "'", con);
+                SqlCommand cmdEdit = new SqlCommand("UPDATE userTable SET firstName='" + txtUserFname.Text + "',lastName ='" + txtUserLname.Text + "',email='" + txtUserEmail.Text + "',contact='" + txtUserContact.Text + "',address='" + txtUserAddress.Text + "',gender='" + txtGender.Text + "' where userName ='" + user + "'", con);
                 cmdEdit.ExecuteNonQuery();
                 MessageBox.Show("Successfully Updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 con.Close();

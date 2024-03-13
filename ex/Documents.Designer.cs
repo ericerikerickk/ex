@@ -35,6 +35,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblProject = new System.Windows.Forms.Label();
             this.dataGridViewDocs = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panelDocuments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDocs)).BeginInit();
             this.SuspendLayout();
@@ -42,6 +44,8 @@
             // panelDocuments
             // 
             this.panelDocuments.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelDocuments.Controls.Add(this.textBox3);
+            this.panelDocuments.Controls.Add(this.label1);
             this.panelDocuments.Controls.Add(this.btnSubmitdocs);
             this.panelDocuments.Controls.Add(this.textBox2);
             this.panelDocuments.Controls.Add(this.textBox1);
@@ -59,13 +63,14 @@
             this.btnSubmitdocs.FlatAppearance.BorderSize = 0;
             this.btnSubmitdocs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitdocs.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSubmitdocs.Location = new System.Drawing.Point(377, 185);
+            this.btnSubmitdocs.Location = new System.Drawing.Point(377, 192);
             this.btnSubmitdocs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSubmitdocs.Name = "btnSubmitdocs";
             this.btnSubmitdocs.Size = new System.Drawing.Size(197, 43);
             this.btnSubmitdocs.TabIndex = 10;
             this.btnSubmitdocs.Text = "SUBMIT";
             this.btnSubmitdocs.UseVisualStyleBackColor = false;
+            this.btnSubmitdocs.Click += new System.EventHandler(this.btnSubmitdocs_Click);
             // 
             // textBox2
             // 
@@ -77,7 +82,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(222, 35);
+            this.textBox1.Location = new System.Drawing.Point(617, 22);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(192, 33);
@@ -97,11 +102,11 @@
             // 
             this.lblProject.AutoSize = true;
             this.lblProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProject.Location = new System.Drawing.Point(76, 40);
+            this.lblProject.Location = new System.Drawing.Point(51, 28);
             this.lblProject.Name = "lblProject";
-            this.lblProject.Size = new System.Drawing.Size(140, 20);
+            this.lblProject.Size = new System.Drawing.Size(165, 20);
             this.lblProject.TabIndex = 2;
-            this.lblProject.Text = "PROJECT NAME";
+            this.lblProject.Text = "PROJECT NUMBER";
             // 
             // dataGridViewDocs
             // 
@@ -112,6 +117,24 @@
             this.dataGridViewDocs.RowTemplate.Height = 24;
             this.dataGridViewDocs.Size = new System.Drawing.Size(919, 221);
             this.dataGridViewDocs.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(471, 28);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "PROJECT NAME";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(222, 22);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(192, 33);
+            this.textBox3.TabIndex = 12;
             // 
             // Documents
             // 
@@ -140,5 +163,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblProject;
         private System.Windows.Forms.Button btnSubmitdocs;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label1;
     }
 }

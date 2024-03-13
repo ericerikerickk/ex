@@ -60,7 +60,8 @@ namespace ex
             if (sdrPassword.Read())
             {
                 Password = sdrPassword.GetString(2);
-                Step1 = sdrPassword.GetString(4);
+               // Step1 = sdrPassword.GetString(4);
+                Step1 = sdrPassword.IsDBNull(4) ? "" : sdrPassword.GetString(4);
                 IsExistPassword = true;
                 
             }
