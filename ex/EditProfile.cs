@@ -158,5 +158,74 @@ namespace ex
             lblGender.Visible = true;
             CancelBtn.Visible = false;
         }
+
+        private void txtUserFname_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+            panelFname.BackColor = Color.White;
+            txtUserFname.BackColor = Color.White;
+        }
+        private void resetFocus()
+        {
+            panelFname.BackColor = SystemColors.ButtonFace;
+            txtUserFname.BackColor = SystemColors.ButtonFace;
+            panelLname.BackColor = SystemColors.ButtonFace;
+            txtUserLname.BackColor = SystemColors.ButtonFace;
+            panelAddress.BackColor = SystemColors.ButtonFace;
+            txtUserAddress.BackColor = SystemColors.ButtonFace;
+            txtUserContact.BackColor = SystemColors.ButtonFace;
+            panelContact.BackColor = SystemColors.ButtonFace;
+            panelEmail.BackColor = SystemColors.ButtonFace;
+            txtUserEmail.BackColor = SystemColors.ButtonFace;
+            panelGender.BackColor = SystemColors.ButtonFace;
+            txtGender.BackColor = SystemColors.ButtonFace;
+        }
+
+        private void txtUserLname_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+            panelLname.BackColor = Color.White;
+            txtUserLname.BackColor = Color.White;
+        }
+
+        private void txtUserEmail_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+            panelEmail.BackColor = Color.White;
+            txtUserEmail.BackColor = Color.White;
+        }
+
+        private void txtUserContact_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+            panelContact.BackColor = Color.White;
+            txtUserContact.BackColor = Color.White;
+        }
+
+       
+
+        private void applyBtn_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+        }
+
+        private void CancelBtn_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+        }
+
+        private void txtUserAddress_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+            panelAddress.BackColor = Color.White;
+            txtUserAddress.BackColor = Color.White;
+        }
+
+        private void txtGender_Enter(object sender, EventArgs e)
+        {
+            resetFocus();
+            panelGender.BackColor = Color.White;
+            txtGender.BackColor = Color.White;
+        }
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelDocuments = new System.Windows.Forms.Panel();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.lblHello = new System.Windows.Forms.Label();
             this.txtProjectNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,8 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblProject = new System.Windows.Forms.Label();
             this.dataGridViewDocs = new System.Windows.Forms.DataGridView();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panelDocuments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDocs)).BeginInit();
             this.SuspendLayout();
@@ -59,15 +59,42 @@
             this.panelDocuments.Controls.Add(this.dataGridViewDocs);
             this.panelDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDocuments.Location = new System.Drawing.Point(0, 0);
-            this.panelDocuments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelDocuments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelDocuments.Name = "panelDocuments";
-            this.panelDocuments.Size = new System.Drawing.Size(973, 510);
+            this.panelDocuments.Size = new System.Drawing.Size(730, 414);
             this.panelDocuments.TabIndex = 0;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(141, 173);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(110, 24);
+            this.txtSearch.TabIndex = 15;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDelete.Location = new System.Drawing.Point(531, 118);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(111, 28);
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // lblHello
             // 
             this.lblHello.AutoSize = true;
-            this.lblHello.Location = new System.Drawing.Point(12, 175);
+            this.lblHello.Location = new System.Drawing.Point(26, 180);
+            this.lblHello.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHello.Name = "lblHello";
             this.lblHello.Size = new System.Drawing.Size(111, 13);
             this.lblHello.TabIndex = 13;
@@ -75,20 +102,21 @@
             // 
             // txtProjectNo
             // 
-            this.txtProjectNo.Location = new System.Drawing.Point(232, 22);
-            this.txtProjectNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtProjectNo.Location = new System.Drawing.Point(174, 18);
+            this.txtProjectNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtProjectNo.Multiline = true;
             this.txtProjectNo.Name = "txtProjectNo";
-            this.txtProjectNo.Size = new System.Drawing.Size(192, 34);
+            this.txtProjectNo.Size = new System.Drawing.Size(145, 28);
             this.txtProjectNo.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(471, 28);
+            this.label1.Location = new System.Drawing.Point(353, 23);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 20);
+            this.label1.Size = new System.Drawing.Size(112, 16);
             this.label1.TabIndex = 11;
             this.label1.Text = "PROJECT NAME";
             // 
@@ -98,10 +126,10 @@
             this.btnSubmitdocs.FlatAppearance.BorderSize = 0;
             this.btnSubmitdocs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitdocs.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSubmitdocs.Location = new System.Drawing.Point(530, 68);
+            this.btnSubmitdocs.Location = new System.Drawing.Point(516, 67);
             this.btnSubmitdocs.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmitdocs.Name = "btnSubmitdocs";
-            this.btnSubmitdocs.Size = new System.Drawing.Size(197, 43);
+            this.btnSubmitdocs.Size = new System.Drawing.Size(148, 35);
             this.btnSubmitdocs.TabIndex = 10;
             this.btnSubmitdocs.Text = "SUBMIT";
             this.btnSubmitdocs.UseVisualStyleBackColor = false;
@@ -109,29 +137,30 @@
             // 
             // txtProjectDescription
             // 
-            this.txtProjectDescription.Location = new System.Drawing.Point(235, 82);
-            this.txtProjectDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtProjectDescription.Location = new System.Drawing.Point(176, 67);
+            this.txtProjectDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtProjectDescription.Multiline = true;
             this.txtProjectDescription.Name = "txtProjectDescription";
-            this.txtProjectDescription.Size = new System.Drawing.Size(439, 96);
+            this.txtProjectDescription.Size = new System.Drawing.Size(330, 79);
             this.txtProjectDescription.TabIndex = 5;
             // 
             // txtProjectName
             // 
-            this.txtProjectName.Location = new System.Drawing.Point(625, 22);
-            this.txtProjectName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtProjectName.Location = new System.Drawing.Point(469, 18);
+            this.txtProjectName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtProjectName.Multiline = true;
             this.txtProjectName.Name = "txtProjectName";
-            this.txtProjectName.Size = new System.Drawing.Size(192, 34);
+            this.txtProjectName.Size = new System.Drawing.Size(145, 28);
             this.txtProjectName.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 84);
+            this.label2.Location = new System.Drawing.Point(8, 68);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(205, 20);
+            this.label2.Size = new System.Drawing.Size(164, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "PROJECT DESCRIPTION";
             // 
@@ -139,9 +168,10 @@
             // 
             this.lblProject.AutoSize = true;
             this.lblProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProject.Location = new System.Drawing.Point(51, 28);
+            this.lblProject.Location = new System.Drawing.Point(38, 23);
+            this.lblProject.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProject.Name = "lblProject";
-            this.lblProject.Size = new System.Drawing.Size(165, 20);
+            this.lblProject.Size = new System.Drawing.Size(132, 16);
             this.lblProject.TabIndex = 2;
             this.lblProject.Text = "PROJECT NUMBER";
             // 
@@ -149,50 +179,24 @@
             // 
             this.dataGridViewDocs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewDocs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDocs.Location = new System.Drawing.Point(87, 247);
-            this.dataGridViewDocs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewDocs.Location = new System.Drawing.Point(65, 201);
+            this.dataGridViewDocs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewDocs.Name = "dataGridViewDocs";
             this.dataGridViewDocs.ReadOnly = true;
             this.dataGridViewDocs.RowHeadersWidth = 51;
             this.dataGridViewDocs.RowTemplate.Height = 24;
-            this.dataGridViewDocs.Size = new System.Drawing.Size(799, 222);
+            this.dataGridViewDocs.Size = new System.Drawing.Size(599, 180);
             this.dataGridViewDocs.TabIndex = 1;
             this.dataGridViewDocs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDocs_CellClick);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDelete.Location = new System.Drawing.Point(530, 111);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(148, 35);
-            this.btnDelete.TabIndex = 14;
-            this.btnDelete.Text = "DELETE";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(128, 169);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(145, 28);
-            this.txtSearch.TabIndex = 15;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
-            // 
             // Documents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 510);
+            this.ClientSize = new System.Drawing.Size(730, 414);
             this.Controls.Add(this.panelDocuments);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Documents";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -49,9 +49,9 @@
             this.txtUserLname = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
             this.panelFname = new System.Windows.Forms.Panel();
-            this.txtUserFname = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
             this.lblFname = new System.Windows.Forms.Label();
+            this.txtUserFname = new System.Windows.Forms.TextBox();
             this.applyBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@
             this.panelGender.Location = new System.Drawing.Point(303, 158);
             this.panelGender.Name = "panelGender";
             this.panelGender.Size = new System.Drawing.Size(267, 38);
-            this.panelGender.TabIndex = 38;
+            this.panelGender.TabIndex = 6;
             // 
             // lblGender
             // 
@@ -101,6 +101,7 @@
             this.txtGender.Size = new System.Drawing.Size(180, 21);
             this.txtGender.TabIndex = 28;
             this.txtGender.Visible = false;
+            this.txtGender.Enter += new System.EventHandler(this.txtGender_Enter);
             // 
             // label33
             // 
@@ -125,7 +126,7 @@
             this.panelEmail.Location = new System.Drawing.Point(14, 103);
             this.panelEmail.Name = "panelEmail";
             this.panelEmail.Size = new System.Drawing.Size(267, 38);
-            this.panelEmail.TabIndex = 39;
+            this.panelEmail.TabIndex = 3;
             // 
             // lblEmail
             // 
@@ -147,6 +148,7 @@
             this.txtUserEmail.Size = new System.Drawing.Size(180, 20);
             this.txtUserEmail.TabIndex = 0;
             this.txtUserEmail.Visible = false;
+            this.txtUserEmail.Enter += new System.EventHandler(this.txtUserEmail_Enter);
             // 
             // label35
             // 
@@ -171,7 +173,7 @@
             this.panelContact.Location = new System.Drawing.Point(303, 103);
             this.panelContact.Name = "panelContact";
             this.panelContact.Size = new System.Drawing.Size(267, 38);
-            this.panelContact.TabIndex = 37;
+            this.panelContact.TabIndex = 4;
             // 
             // lblContact
             // 
@@ -193,6 +195,7 @@
             this.txtUserContact.Size = new System.Drawing.Size(180, 20);
             this.txtUserContact.TabIndex = 0;
             this.txtUserContact.Visible = false;
+            this.txtUserContact.Enter += new System.EventHandler(this.txtUserContact_Enter);
             // 
             // label36
             // 
@@ -217,7 +220,7 @@
             this.panelAddress.Location = new System.Drawing.Point(14, 158);
             this.panelAddress.Name = "panelAddress";
             this.panelAddress.Size = new System.Drawing.Size(267, 95);
-            this.panelAddress.TabIndex = 36;
+            this.panelAddress.TabIndex = 5;
             // 
             // lblAddress
             // 
@@ -240,6 +243,7 @@
             this.txtUserAddress.Size = new System.Drawing.Size(180, 77);
             this.txtUserAddress.TabIndex = 0;
             this.txtUserAddress.Visible = false;
+            this.txtUserAddress.Enter += new System.EventHandler(this.txtUserAddress_Enter);
             // 
             // label37
             // 
@@ -264,7 +268,7 @@
             this.panelLname.Location = new System.Drawing.Point(303, 46);
             this.panelLname.Name = "panelLname";
             this.panelLname.Size = new System.Drawing.Size(267, 38);
-            this.panelLname.TabIndex = 35;
+            this.panelLname.TabIndex = 2;
             // 
             // lblLastName
             // 
@@ -286,6 +290,7 @@
             this.txtUserLname.Size = new System.Drawing.Size(180, 20);
             this.txtUserLname.TabIndex = 0;
             this.txtUserLname.Visible = false;
+            this.txtUserLname.Enter += new System.EventHandler(this.txtUserLname_Enter);
             // 
             // label38
             // 
@@ -310,19 +315,7 @@
             this.panelFname.Location = new System.Drawing.Point(14, 46);
             this.panelFname.Name = "panelFname";
             this.panelFname.Size = new System.Drawing.Size(267, 38);
-            this.panelFname.TabIndex = 34;
-            // 
-            // txtUserFname
-            // 
-            this.txtUserFname.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtUserFname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUserFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.txtUserFname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtUserFname.Location = new System.Drawing.Point(84, 9);
-            this.txtUserFname.Name = "txtUserFname";
-            this.txtUserFname.Size = new System.Drawing.Size(180, 20);
-            this.txtUserFname.TabIndex = 0;
-            this.txtUserFname.Visible = false;
+            this.panelFname.TabIndex = 1;
             // 
             // label39
             // 
@@ -346,20 +339,34 @@
             this.lblFname.Size = new System.Drawing.Size(0, 13);
             this.lblFname.TabIndex = 44;
             // 
+            // txtUserFname
+            // 
+            this.txtUserFname.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtUserFname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUserFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.txtUserFname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.txtUserFname.Location = new System.Drawing.Point(84, 9);
+            this.txtUserFname.Name = "txtUserFname";
+            this.txtUserFname.Size = new System.Drawing.Size(180, 20);
+            this.txtUserFname.TabIndex = 0;
+            this.txtUserFname.Visible = false;
+            this.txtUserFname.Enter += new System.EventHandler(this.txtUserFname_Enter);
+            // 
             // applyBtn
             // 
             this.applyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.applyBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applyBtn.ForeColor = System.Drawing.Color.White;
             this.applyBtn.Location = new System.Drawing.Point(303, 316);
-            this.applyBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.applyBtn.Margin = new System.Windows.Forms.Padding(2);
             this.applyBtn.Name = "applyBtn";
             this.applyBtn.Size = new System.Drawing.Size(102, 35);
-            this.applyBtn.TabIndex = 40;
+            this.applyBtn.TabIndex = 7;
             this.applyBtn.Text = "Apply ";
             this.applyBtn.UseVisualStyleBackColor = false;
             this.applyBtn.Visible = false;
             this.applyBtn.Click += new System.EventHandler(this.applyBtn_Click);
+            this.applyBtn.Enter += new System.EventHandler(this.applyBtn_Enter);
             // 
             // CancelBtn
             // 
@@ -367,14 +374,15 @@
             this.CancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.ForeColor = System.Drawing.Color.White;
             this.CancelBtn.Location = new System.Drawing.Point(442, 316);
-            this.CancelBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CancelBtn.Margin = new System.Windows.Forms.Padding(2);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(102, 35);
-            this.CancelBtn.TabIndex = 41;
+            this.CancelBtn.TabIndex = 8;
             this.CancelBtn.Text = "Cancel";
             this.CancelBtn.UseVisualStyleBackColor = false;
             this.CancelBtn.Visible = false;
             this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
+            this.CancelBtn.Enter += new System.EventHandler(this.CancelBtn_Enter);
             // 
             // label1
             // 
@@ -401,7 +409,7 @@
             this.panelEditProfile.Controls.Add(this.editBtn);
             this.panelEditProfile.Controls.Add(this.applyBtn);
             this.panelEditProfile.Location = new System.Drawing.Point(9, 10);
-            this.panelEditProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelEditProfile.Margin = new System.Windows.Forms.Padding(2);
             this.panelEditProfile.Name = "panelEditProfile";
             this.panelEditProfile.Size = new System.Drawing.Size(609, 392);
             this.panelEditProfile.TabIndex = 43;
@@ -412,7 +420,7 @@
             this.editBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editBtn.ForeColor = System.Drawing.Color.White;
             this.editBtn.Location = new System.Drawing.Point(442, 316);
-            this.editBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(2);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(102, 35);
             this.editBtn.TabIndex = 43;
@@ -427,7 +435,7 @@
             this.ClientSize = new System.Drawing.Size(627, 412);
             this.Controls.Add(this.panelEditProfile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditProfile";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
