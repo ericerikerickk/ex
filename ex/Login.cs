@@ -55,7 +55,7 @@ namespace ex
             bool IsExistPassword = false;
             int userID = -1;
             con.Open();
-            SqlCommand cmdPassword = new SqlCommand("select * from userTable where userName='" + txtUsername.Text + "'", con);
+            SqlCommand cmdPassword = new SqlCommand("SELECT * FROM userTable WHERE userName = '" + txtUsername.Text + "' COLLATE SQL_Latin1_General_CP1_CS_AS", con);
             SqlDataReader sdrPassword = cmdPassword.ExecuteReader();
             if (sdrPassword.Read())
             {

@@ -38,12 +38,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblProject = new System.Windows.Forms.Label();
             this.dataGridViewDocs = new System.Windows.Forms.DataGridView();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.panelDocuments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDocs)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDocuments
             // 
+            this.panelDocuments.Controls.Add(this.txtSearch);
+            this.panelDocuments.Controls.Add(this.btnDelete);
             this.panelDocuments.Controls.Add(this.lblHello);
             this.panelDocuments.Controls.Add(this.txtProjectNo);
             this.panelDocuments.Controls.Add(this.label1);
@@ -63,11 +67,11 @@
             // lblHello
             // 
             this.lblHello.AutoSize = true;
-            this.lblHello.Location = new System.Drawing.Point(79, 133);
+            this.lblHello.Location = new System.Drawing.Point(12, 175);
             this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(35, 13);
+            this.lblHello.Size = new System.Drawing.Size(111, 13);
             this.lblHello.TabIndex = 13;
-            this.lblHello.Text = "label3";
+            this.lblHello.Text = "Search by Project No.";
             // 
             // txtProjectNo
             // 
@@ -95,7 +99,7 @@
             this.btnSubmitdocs.FlatAppearance.BorderSize = 0;
             this.btnSubmitdocs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitdocs.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSubmitdocs.Location = new System.Drawing.Point(283, 156);
+            this.btnSubmitdocs.Location = new System.Drawing.Point(530, 68);
             this.btnSubmitdocs.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmitdocs.Name = "btnSubmitdocs";
             this.btnSubmitdocs.Size = new System.Drawing.Size(148, 35);
@@ -156,6 +160,33 @@
             this.dataGridViewDocs.RowTemplate.Height = 24;
             this.dataGridViewDocs.Size = new System.Drawing.Size(689, 180);
             this.dataGridViewDocs.TabIndex = 1;
+            this.dataGridViewDocs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDocs_CellClick);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnDelete.Location = new System.Drawing.Point(530, 111);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(148, 35);
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.Text = "DELETE";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(128, 169);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(145, 28);
+            this.txtSearch.TabIndex = 15;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
             // Documents
             // 
@@ -188,5 +219,7 @@
         private System.Windows.Forms.TextBox txtProjectNo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblHello;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }

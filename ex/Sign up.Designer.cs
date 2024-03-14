@@ -367,6 +367,7 @@
             this.btnSignup.UseVisualStyleBackColor = false;
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             this.btnSignup.Enter += new System.EventHandler(this.btnSignup_Enter);
+            this.btnSignup.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnSignup_KeyDown);
             // 
             // panelGmail
             // 

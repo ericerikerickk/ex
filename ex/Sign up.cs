@@ -20,6 +20,8 @@ namespace ex
         {
             InitializeComponent();
             txtUsername.Select();
+            this.KeyPreview = true;
+            this.KeyDown += btnSignup_KeyDown;
         }
         SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         private void btnClose_Click(object sender, EventArgs e)
@@ -105,24 +107,29 @@ namespace ex
                         con.Open();
                         if (txtUsername.Text != "" && txtConfirmpass.Text != "" && txtGmail.Text != "")
                         {
-                            if (txtPass.Text.ToString().Trim().ToLower() == txtConfirmpass.Text.ToString().Trim().ToLower())
+                            if (txtPass.Text.Trim().ToLower() == txtConfirmpass.Text.Trim().ToLower())
                             {
-                                SqlCommand cmd = new SqlCommand("select * from userTable where userName='" + txtUsername.Text + "'", con);
+                                // Convert the username to lower case for comparison
+                                string username = txtUsername.Text.ToLower();
+                                SqlCommand cmd = new SqlCommand("SELECT * FROM userTable WHERE LOWER(userName) = @Username", con);
+                                cmd.Parameters.AddWithValue("@Username", username);
                                 SqlDataReader dr = cmd.ExecuteReader();
                                 if (dr.Read())
                                 {
                                     dr.Close();
-                                    MessageBox.Show("Username already exist, please try another", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("Username already exists, please try another", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                     con.Close();
                                 }
                                 else
                                 {
-                                    string userName = txtUsername.Text;
                                     string email = txtGmail.Text;
-                                    string password = Cryptography.Encrypt(txtConfirmpass.Text.ToString());
+                                    string password = Cryptography.Encrypt(txtConfirmpass.Text);
                                     con.Close();
                                     con.Open();
-                                    SqlCommand insertUserPass = new SqlCommand("insert into userTable (userName, password, email) values ('" + userName + "','" + password + "','" + email + "')", con);
+                                    SqlCommand insertUserPass = new SqlCommand("INSERT INTO userTable (userName, password, email) VALUES (@UserName, @Password, @Email)", con);
+                                    insertUserPass.Parameters.AddWithValue("@UserName", username);
+                                    insertUserPass.Parameters.AddWithValue("@Password", password);
+                                    insertUserPass.Parameters.AddWithValue("@Email", email);
                                     insertUserPass.ExecuteNonQuery();
                                     con.Close();
                                     MessageBox.Show("Record inserted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -133,19 +140,19 @@ namespace ex
                             }
                             else
                             {
-                                MessageBox.Show("Password and Confirm Password doesn't match!... Please Check...", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Password and Confirm Password don't match! Please check.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 con.Close();
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Please fill all the fields!..", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Please fill all the fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             con.Close();
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Password does not meet the requirements. The Password should have atleast one special character, one upper and lower key, and atleast 8 characters.");
+                        MessageBox.Show("Password does not meet the requirements. The password should have at least one special character, one upper and lower case letter, and at least 8 characters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         con.Close();
                     }
                 }
@@ -154,8 +161,8 @@ namespace ex
             {
                 MessageBox.Show("Please input email", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
         }
+
 
         private void btnSignup_Enter(object sender, EventArgs e)
         {
@@ -248,6 +255,15 @@ namespace ex
             txtPass.BackColor = SystemColors.ButtonFace;
             txtConfirmpass.BackColor = SystemColors.ButtonFace;
 
+        }
+
+        private void btnSignup_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // Trigger the click event of the login button
+                btnLogin.PerformClick();
+            }
         }
     }
 }
