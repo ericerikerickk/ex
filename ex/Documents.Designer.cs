@@ -59,7 +59,7 @@
             this.panelDocuments.Controls.Add(this.dataGridViewDocs);
             this.panelDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDocuments.Location = new System.Drawing.Point(0, 0);
-            this.panelDocuments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDocuments.Margin = new System.Windows.Forms.Padding(2);
             this.panelDocuments.Name = "panelDocuments";
             this.panelDocuments.Size = new System.Drawing.Size(730, 414);
             this.panelDocuments.TabIndex = 0;
@@ -81,10 +81,10 @@
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDelete.Location = new System.Drawing.Point(531, 118);
+            this.btnDelete.Location = new System.Drawing.Point(516, 106);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(111, 28);
+            this.btnDelete.Size = new System.Drawing.Size(111, 40);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -103,7 +103,7 @@
             // txtProjectNo
             // 
             this.txtProjectNo.Location = new System.Drawing.Point(174, 18);
-            this.txtProjectNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProjectNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtProjectNo.Multiline = true;
             this.txtProjectNo.Name = "txtProjectNo";
             this.txtProjectNo.Size = new System.Drawing.Size(145, 28);
@@ -129,7 +129,7 @@
             this.btnSubmitdocs.Location = new System.Drawing.Point(516, 67);
             this.btnSubmitdocs.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmitdocs.Name = "btnSubmitdocs";
-            this.btnSubmitdocs.Size = new System.Drawing.Size(148, 35);
+            this.btnSubmitdocs.Size = new System.Drawing.Size(111, 35);
             this.btnSubmitdocs.TabIndex = 10;
             this.btnSubmitdocs.Text = "SUBMIT";
             this.btnSubmitdocs.UseVisualStyleBackColor = false;
@@ -138,7 +138,7 @@
             // txtProjectDescription
             // 
             this.txtProjectDescription.Location = new System.Drawing.Point(176, 67);
-            this.txtProjectDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProjectDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtProjectDescription.Multiline = true;
             this.txtProjectDescription.Name = "txtProjectDescription";
             this.txtProjectDescription.Size = new System.Drawing.Size(330, 79);
@@ -147,7 +147,7 @@
             // txtProjectName
             // 
             this.txtProjectName.Location = new System.Drawing.Point(469, 18);
-            this.txtProjectName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProjectName.Margin = new System.Windows.Forms.Padding(2);
             this.txtProjectName.Multiline = true;
             this.txtProjectName.Name = "txtProjectName";
             this.txtProjectName.Size = new System.Drawing.Size(145, 28);
@@ -180,7 +180,7 @@
             this.dataGridViewDocs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewDocs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDocs.Location = new System.Drawing.Point(65, 201);
-            this.dataGridViewDocs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewDocs.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDocs.Name = "dataGridViewDocs";
             this.dataGridViewDocs.ReadOnly = true;
             this.dataGridViewDocs.RowHeadersWidth = 51;
@@ -196,7 +196,7 @@
             this.ClientSize = new System.Drawing.Size(730, 414);
             this.Controls.Add(this.panelDocuments);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Documents";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

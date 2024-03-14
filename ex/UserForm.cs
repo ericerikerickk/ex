@@ -24,6 +24,7 @@ namespace ex
         {
             panelProfileInactive.Show();
             panelDocumentsInactive.Show();
+            panelDashboardInactive.Show();
         }
         public void loadForm(object form)
         {
@@ -39,11 +40,11 @@ namespace ex
         private void UserForm_Load(object sender, EventArgs e)
         {
             sidecomponentsInactive();
-            panelProfileInactive.Hide();
-            panelProfileActive.Show();
-            loadForm(new EditProfile(userName));
+            panelDashboardInactive.Hide();
+            panelDashboardActive.Show();
+            loadForm(new UserDashboard(userName));
         }
- 
+
 
         private void labeldocs_MouseClick(object sender, MouseEventArgs e)
         {
@@ -59,6 +60,15 @@ namespace ex
             panelProfileInactive.Hide();
             panelProfileActive.Show();
             loadForm(new EditProfile(userName));
+
+        }
+
+        private void label14_MouseClick(object sender, MouseEventArgs e)
+        {
+            sidecomponentsInactive();
+            panelDashboardInactive.Hide();
+            panelDashboardActive.Show();
+            loadForm(new UserDashboard(userName));
         }
     }
 }
