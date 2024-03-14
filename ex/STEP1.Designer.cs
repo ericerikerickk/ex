@@ -41,10 +41,10 @@
             this.panelSTEP1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelSTEP1.Controls.Add(this.btnReceivestep1);
             this.panelSTEP1.Controls.Add(this.dataGridSTEP1);
-            this.panelSTEP1.Location = new System.Drawing.Point(9, 34);
-            this.panelSTEP1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSTEP1.Location = new System.Drawing.Point(12, 42);
+            this.panelSTEP1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSTEP1.Name = "panelSTEP1";
-            this.panelSTEP1.Size = new System.Drawing.Size(712, 351);
+            this.panelSTEP1.Size = new System.Drawing.Size(949, 432);
             this.panelSTEP1.TabIndex = 1;
             // 
             // btnReceivestep1
@@ -52,43 +52,45 @@
             this.btnReceivestep1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.btnReceivestep1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReceivestep1.ForeColor = System.Drawing.Color.White;
-            this.btnReceivestep1.Location = new System.Drawing.Point(278, 296);
-            this.btnReceivestep1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReceivestep1.Location = new System.Drawing.Point(371, 364);
+            this.btnReceivestep1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReceivestep1.Name = "btnReceivestep1";
-            this.btnReceivestep1.Size = new System.Drawing.Size(148, 35);
+            this.btnReceivestep1.Size = new System.Drawing.Size(197, 43);
             this.btnReceivestep1.TabIndex = 2;
             this.btnReceivestep1.Text = "RECEIVE";
             this.btnReceivestep1.UseVisualStyleBackColor = false;
+            this.btnReceivestep1.Click += new System.EventHandler(this.btnReceivestep1_Click);
             // 
             // dataGridSTEP1
             // 
             this.dataGridSTEP1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridSTEP1.Location = new System.Drawing.Point(17, 16);
-            this.dataGridSTEP1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridSTEP1.Location = new System.Drawing.Point(23, 20);
+            this.dataGridSTEP1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridSTEP1.Name = "dataGridSTEP1";
             this.dataGridSTEP1.RowHeadersWidth = 51;
             this.dataGridSTEP1.RowTemplate.Height = 24;
-            this.dataGridSTEP1.Size = new System.Drawing.Size(681, 259);
+            this.dataGridSTEP1.Size = new System.Drawing.Size(908, 319);
             this.dataGridSTEP1.TabIndex = 1;
             // 
             // labelStep1
             // 
             this.labelStep1.AutoSize = true;
-            this.labelStep1.Location = new System.Drawing.Point(23, 9);
+            this.labelStep1.Location = new System.Drawing.Point(31, 11);
+            this.labelStep1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelStep1.Name = "labelStep1";
-            this.labelStep1.Size = new System.Drawing.Size(35, 13);
+            this.labelStep1.Size = new System.Drawing.Size(44, 16);
             this.labelStep1.TabIndex = 2;
             this.labelStep1.Text = "label1";
             // 
             // STEP1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 414);
+            this.ClientSize = new System.Drawing.Size(973, 510);
             this.Controls.Add(this.labelStep1);
             this.Controls.Add(this.panelSTEP1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "STEP1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
