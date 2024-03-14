@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelDashboardInactive = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.HelloUser = new System.Windows.Forms.Label();
             this.panelDocumentsInactive = new System.Windows.Forms.Panel();
             this.labeldocs = new System.Windows.Forms.Label();
@@ -48,12 +45,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelDashboardActive = new System.Windows.Forms.Panel();
+            this.panelDashboardInactive = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.paneLogoutActive = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panelDashboardInactive.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelDocumentsInactive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.panelDocumentsActive.SuspendLayout();
@@ -64,7 +65,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelDashboardActive.SuspendLayout();
+            this.panelDashboardInactive.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.paneLogoutActive.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,49 +82,12 @@
             this.panel1.Controls.Add(this.pictureBox8);
             this.panel1.Controls.Add(this.panelProfileActive);
             this.panel1.Controls.Add(this.panelDashboardActive);
+            this.panel1.Controls.Add(this.paneLogoutActive);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(160, 412);
             this.panel1.TabIndex = 6;
-            // 
-            // panelDashboardInactive
-            // 
-            this.panelDashboardInactive.BackColor = System.Drawing.Color.White;
-            this.panelDashboardInactive.Controls.Add(this.label14);
-            this.panelDashboardInactive.Controls.Add(this.pictureBox3);
-            this.panelDashboardInactive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelDashboardInactive.Location = new System.Drawing.Point(0, 0);
-            this.panelDashboardInactive.Name = "panelDashboardInactive";
-            this.panelDashboardInactive.Size = new System.Drawing.Size(137, 38);
-            this.panelDashboardInactive.TabIndex = 32;
-            this.panelDashboardInactive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label14_MouseClick);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.White;
-            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label14.Location = new System.Drawing.Point(41, 10);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 15);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "Dashboard";
-            this.label14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label14_MouseClick);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::ex.Properties.Resources.dashboard__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(22, 21);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label14_MouseClick);
             // 
             // HelloUser
             // 
@@ -311,6 +279,44 @@
             this.panelDashboardActive.Size = new System.Drawing.Size(137, 38);
             this.panelDashboardActive.TabIndex = 28;
             // 
+            // panelDashboardInactive
+            // 
+            this.panelDashboardInactive.BackColor = System.Drawing.Color.White;
+            this.panelDashboardInactive.Controls.Add(this.label14);
+            this.panelDashboardInactive.Controls.Add(this.pictureBox3);
+            this.panelDashboardInactive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelDashboardInactive.Location = new System.Drawing.Point(0, 0);
+            this.panelDashboardInactive.Name = "panelDashboardInactive";
+            this.panelDashboardInactive.Size = new System.Drawing.Size(137, 38);
+            this.panelDashboardInactive.TabIndex = 32;
+            this.panelDashboardInactive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label14_MouseClick);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label14.Location = new System.Drawing.Point(41, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(68, 15);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Dashboard";
+            this.label14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label14_MouseClick);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::ex.Properties.Resources.dashboard__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label14_MouseClick);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -334,6 +340,42 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 1;
             this.pictureBox9.TabStop = false;
+            // 
+            // paneLogoutActive
+            // 
+            this.paneLogoutActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.paneLogoutActive.Controls.Add(this.label4);
+            this.paneLogoutActive.Controls.Add(this.pictureBox5);
+            this.paneLogoutActive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.paneLogoutActive.Location = new System.Drawing.Point(12, 362);
+            this.paneLogoutActive.Name = "paneLogoutActive";
+            this.paneLogoutActive.Size = new System.Drawing.Size(137, 38);
+            this.paneLogoutActive.TabIndex = 36;
+            this.paneLogoutActive.Click += new System.EventHandler(this.paneLogoutActive_Click);
+            this.paneLogoutActive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.paneLogoutActive_MouseClick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(41, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Logout";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox5.Image = global::ex.Properties.Resources.logout__1_;
+            this.pictureBox5.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 29;
+            this.pictureBox5.TabStop = false;
             // 
             // panel2
             // 
@@ -360,9 +402,6 @@
             this.Load += new System.EventHandler(this.UserForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelDashboardInactive.ResumeLayout(false);
-            this.panelDashboardInactive.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelDocumentsInactive.ResumeLayout(false);
             this.panelDocumentsInactive.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
@@ -378,7 +417,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelDashboardActive.ResumeLayout(false);
             this.panelDashboardActive.PerformLayout();
+            this.panelDashboardInactive.ResumeLayout(false);
+            this.panelDashboardInactive.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.paneLogoutActive.ResumeLayout(false);
+            this.paneLogoutActive.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -407,5 +452,8 @@
         private System.Windows.Forms.Panel panelDashboardActive;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Panel paneLogoutActive;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

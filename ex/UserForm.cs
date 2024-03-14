@@ -70,5 +70,19 @@ namespace ex
             panelDashboardActive.Show();
             loadForm(new UserDashboard(userName));
         }
+
+        private void paneLogoutActive_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+        }
+
+        private void paneLogoutActive_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+        }
     }
 }

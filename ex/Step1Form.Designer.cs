@@ -45,6 +45,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panelDashboardInactive = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelDocumentsInactive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
@@ -55,11 +58,14 @@
             this.panelProfileInactive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelDashboardInactive.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panelDashboardInactive);
             this.panel1.Controls.Add(this.HelloUser);
             this.panel1.Controls.Add(this.panelDocumentsInactive);
             this.panel1.Controls.Add(this.label8);
@@ -87,7 +93,7 @@
             this.panelDocumentsInactive.Controls.Add(this.labeldocs);
             this.panelDocumentsInactive.Controls.Add(this.pictureBox13);
             this.panelDocumentsInactive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelDocumentsInactive.Location = new System.Drawing.Point(12, 141);
+            this.panelDocumentsInactive.Location = new System.Drawing.Point(12, 168);
             this.panelDocumentsInactive.Name = "panelDocumentsInactive";
             this.panelDocumentsInactive.Size = new System.Drawing.Size(137, 38);
             this.panelDocumentsInactive.TabIndex = 29;
@@ -133,7 +139,7 @@
             this.panelDocumentsActive.Controls.Add(this.label2);
             this.panelDocumentsActive.Controls.Add(this.pictureBox2);
             this.panelDocumentsActive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelDocumentsActive.Location = new System.Drawing.Point(12, 141);
+            this.panelDocumentsActive.Location = new System.Drawing.Point(12, 168);
             this.panelDocumentsActive.Name = "panelDocumentsActive";
             this.panelDocumentsActive.Size = new System.Drawing.Size(137, 38);
             this.panelDocumentsActive.TabIndex = 30;
@@ -179,7 +185,7 @@
             this.panelProfileActive.Controls.Add(this.label1);
             this.panelProfileActive.Controls.Add(this.pictureBox1);
             this.panelProfileActive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelProfileActive.Location = new System.Drawing.Point(12, 78);
+            this.panelProfileActive.Location = new System.Drawing.Point(12, 124);
             this.panelProfileActive.Name = "panelProfileActive";
             this.panelProfileActive.Size = new System.Drawing.Size(137, 38);
             this.panelProfileActive.TabIndex = 29;
@@ -253,6 +259,41 @@
             this.panel2.Size = new System.Drawing.Size(627, 412);
             this.panel2.TabIndex = 8;
             // 
+            // panelDashboardInactive
+            // 
+            this.panelDashboardInactive.BackColor = System.Drawing.Color.White;
+            this.panelDashboardInactive.Controls.Add(this.label14);
+            this.panelDashboardInactive.Controls.Add(this.pictureBox3);
+            this.panelDashboardInactive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelDashboardInactive.Location = new System.Drawing.Point(12, 80);
+            this.panelDashboardInactive.Name = "panelDashboardInactive";
+            this.panelDashboardInactive.Size = new System.Drawing.Size(137, 38);
+            this.panelDashboardInactive.TabIndex = 33;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.White;
+            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label14.Location = new System.Drawing.Point(41, 10);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(68, 15);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Dashboard";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::ex.Properties.Resources.dashboard__1_;
+            this.pictureBox3.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
             // Step1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +320,9 @@
             this.panelProfileInactive.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelDashboardInactive.ResumeLayout(false);
+            this.panelDashboardInactive.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -302,5 +346,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelDashboardInactive;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
