@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.panelSTEP4 = new System.Windows.Forms.Panel();
+            this.btnReceiveStep4 = new System.Windows.Forms.Button();
             this.btnApproveStep4 = new System.Windows.Forms.Button();
             this.dataGridSTEP4 = new System.Windows.Forms.DataGridView();
-            this.btnReceiveStep4 = new System.Windows.Forms.Button();
+            this.labelStep4 = new System.Windows.Forms.Label();
             this.panelSTEP4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSTEP4)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +47,18 @@
             this.panelSTEP4.Name = "panelSTEP4";
             this.panelSTEP4.Size = new System.Drawing.Size(950, 432);
             this.panelSTEP4.TabIndex = 2;
+            // 
+            // btnReceiveStep4
+            // 
+            this.btnReceiveStep4.BackColor = System.Drawing.Color.Red;
+            this.btnReceiveStep4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceiveStep4.ForeColor = System.Drawing.Color.White;
+            this.btnReceiveStep4.Location = new System.Drawing.Point(690, 364);
+            this.btnReceiveStep4.Name = "btnReceiveStep4";
+            this.btnReceiveStep4.Size = new System.Drawing.Size(197, 43);
+            this.btnReceiveStep4.TabIndex = 3;
+            this.btnReceiveStep4.Text = "REJECT";
+            this.btnReceiveStep4.UseVisualStyleBackColor = false;
             // 
             // btnApproveStep4
             // 
@@ -69,23 +82,22 @@
             this.dataGridSTEP4.Size = new System.Drawing.Size(908, 319);
             this.dataGridSTEP4.TabIndex = 1;
             // 
-            // btnReceiveStep4
+            // labelStep4
             // 
-            this.btnReceiveStep4.BackColor = System.Drawing.Color.Red;
-            this.btnReceiveStep4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReceiveStep4.ForeColor = System.Drawing.Color.White;
-            this.btnReceiveStep4.Location = new System.Drawing.Point(690, 364);
-            this.btnReceiveStep4.Name = "btnReceiveStep4";
-            this.btnReceiveStep4.Size = new System.Drawing.Size(197, 43);
-            this.btnReceiveStep4.TabIndex = 3;
-            this.btnReceiveStep4.Text = "REJECT";
-            this.btnReceiveStep4.UseVisualStyleBackColor = false;
+            this.labelStep4.AutoSize = true;
+            this.labelStep4.Location = new System.Drawing.Point(32, 9);
+            this.labelStep4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelStep4.Name = "labelStep4";
+            this.labelStep4.Size = new System.Drawing.Size(44, 16);
+            this.labelStep4.TabIndex = 3;
+            this.labelStep4.Text = "label1";
             // 
             // STEP4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 509);
+            this.Controls.Add(this.labelStep4);
             this.Controls.Add(this.panelSTEP4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "STEP4";
@@ -95,6 +107,7 @@
             this.panelSTEP4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSTEP4)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,5 +117,6 @@
         private System.Windows.Forms.Button btnApproveStep4;
         private System.Windows.Forms.DataGridView dataGridSTEP4;
         private System.Windows.Forms.Button btnReceiveStep4;
+        private System.Windows.Forms.Label labelStep4;
     }
 }

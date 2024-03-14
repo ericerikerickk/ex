@@ -52,6 +52,9 @@ namespace ex
         {
             string Password = "";
             string Step1 = "";
+            string Step2 = "";
+            string Step3 = "";
+            string Step4 = "";
             bool IsExistPassword = false;
             int userID = -1;
             con.Open();
@@ -63,6 +66,9 @@ namespace ex
                 userID = sdrPassword.GetInt32(0);
                // Step1 = sdrPassword.GetString(4);
                 Step1 = sdrPassword.IsDBNull(4) ? "" : sdrPassword.GetString(4);
+                Step2 = sdrPassword.IsDBNull(4) ? "" : sdrPassword.GetString(4);
+                Step3 = sdrPassword.IsDBNull(4) ? "" : sdrPassword.GetString(4);
+                Step4 = sdrPassword.IsDBNull(4) ? "" : sdrPassword.GetString(4);
                 IsExistPassword = true;
                 
             }
@@ -90,6 +96,24 @@ namespace ex
                         STEP1 step1Form = new STEP1(userID);
                         this.Hide();
                         step1Form.ShowDialog();
+                    }
+                    else if (Step2 == "Step 2")
+                    {
+                        STEP2 step2Form = new STEP2(userID);
+                        this.Hide();
+                        step2Form.ShowDialog();
+                    }
+                    else if (Step3 == "Step 3")
+                    {
+                        STEP3 step3Form = new STEP3(userID);
+                        this.Hide();
+                        step3Form.ShowDialog();
+                    }
+                    else if (Step4 == "Step 4")
+                    {
+                        STEP4 step4Form = new STEP4(userID);
+                        this.Hide();
+                        step4Form.ShowDialog();
                     }
                     else
                     {

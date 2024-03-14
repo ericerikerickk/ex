@@ -31,6 +31,7 @@
             this.panelSTEP3 = new System.Windows.Forms.Panel();
             this.btnReceivestep3 = new System.Windows.Forms.Button();
             this.dataGridSTEP3 = new System.Windows.Forms.DataGridView();
+            this.labelStep3 = new System.Windows.Forms.Label();
             this.panelSTEP3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSTEP3)).BeginInit();
             this.SuspendLayout();
@@ -67,11 +68,22 @@
             this.dataGridSTEP3.Size = new System.Drawing.Size(908, 319);
             this.dataGridSTEP3.TabIndex = 1;
             // 
+            // labelStep3
+            // 
+            this.labelStep3.AutoSize = true;
+            this.labelStep3.Location = new System.Drawing.Point(32, 9);
+            this.labelStep3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelStep3.Name = "labelStep3";
+            this.labelStep3.Size = new System.Drawing.Size(44, 16);
+            this.labelStep3.TabIndex = 3;
+            this.labelStep3.Text = "label1";
+            // 
             // STEP3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 509);
+            this.Controls.Add(this.labelStep3);
             this.Controls.Add(this.panelSTEP3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "STEP3";
@@ -81,6 +93,7 @@
             this.panelSTEP3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSTEP3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -89,5 +102,6 @@
         private System.Windows.Forms.Panel panelSTEP3;
         private System.Windows.Forms.Button btnReceivestep3;
         private System.Windows.Forms.DataGridView dataGridSTEP3;
+        private System.Windows.Forms.Label labelStep3;
     }
 }
