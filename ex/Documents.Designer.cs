@@ -29,25 +29,27 @@
         private void InitializeComponent()
         {
             this.panelDocuments = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtProjectNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSubmitdocs = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtProjectDescription = new System.Windows.Forms.TextBox();
+            this.txtProjectName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblProject = new System.Windows.Forms.Label();
             this.dataGridViewDocs = new System.Windows.Forms.DataGridView();
+            this.lblHello = new System.Windows.Forms.Label();
             this.panelDocuments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDocs)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDocuments
             // 
-            this.panelDocuments.Controls.Add(this.textBox3);
+            this.panelDocuments.Controls.Add(this.lblHello);
+            this.panelDocuments.Controls.Add(this.txtProjectNo);
             this.panelDocuments.Controls.Add(this.label1);
             this.panelDocuments.Controls.Add(this.btnSubmitdocs);
-            this.panelDocuments.Controls.Add(this.textBox2);
-            this.panelDocuments.Controls.Add(this.textBox1);
+            this.panelDocuments.Controls.Add(this.txtProjectDescription);
+            this.panelDocuments.Controls.Add(this.txtProjectName);
             this.panelDocuments.Controls.Add(this.label2);
             this.panelDocuments.Controls.Add(this.lblProject);
             this.panelDocuments.Controls.Add(this.dataGridViewDocs);
@@ -58,14 +60,14 @@
             this.panelDocuments.Size = new System.Drawing.Size(730, 414);
             this.panelDocuments.TabIndex = 0;
             // 
-            // textBox3
+            // txtProjectNo
             // 
-            this.textBox3.Location = new System.Drawing.Point(174, 18);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(145, 28);
-            this.textBox3.TabIndex = 12;
+            this.txtProjectNo.Location = new System.Drawing.Point(174, 18);
+            this.txtProjectNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProjectNo.Multiline = true;
+            this.txtProjectNo.Name = "txtProjectNo";
+            this.txtProjectNo.Size = new System.Drawing.Size(145, 28);
+            this.txtProjectNo.TabIndex = 12;
             // 
             // label1
             // 
@@ -93,23 +95,23 @@
             this.btnSubmitdocs.UseVisualStyleBackColor = false;
             this.btnSubmitdocs.Click += new System.EventHandler(this.btnSubmitdocs_Click);
             // 
-            // textBox2
+            // txtProjectDescription
             // 
-            this.textBox2.Location = new System.Drawing.Point(176, 67);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(330, 79);
-            this.textBox2.TabIndex = 5;
+            this.txtProjectDescription.Location = new System.Drawing.Point(176, 67);
+            this.txtProjectDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProjectDescription.Multiline = true;
+            this.txtProjectDescription.Name = "txtProjectDescription";
+            this.txtProjectDescription.Size = new System.Drawing.Size(330, 79);
+            this.txtProjectDescription.TabIndex = 5;
             // 
-            // textBox1
+            // txtProjectName
             // 
-            this.textBox1.Location = new System.Drawing.Point(469, 18);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 28);
-            this.textBox1.TabIndex = 4;
+            this.txtProjectName.Location = new System.Drawing.Point(469, 18);
+            this.txtProjectName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProjectName.Multiline = true;
+            this.txtProjectName.Name = "txtProjectName";
+            this.txtProjectName.Size = new System.Drawing.Size(145, 28);
+            this.txtProjectName.TabIndex = 4;
             // 
             // label2
             // 
@@ -145,6 +147,15 @@
             this.dataGridViewDocs.Size = new System.Drawing.Size(689, 180);
             this.dataGridViewDocs.TabIndex = 1;
             // 
+            // lblHello
+            // 
+            this.lblHello.AutoSize = true;
+            this.lblHello.Location = new System.Drawing.Point(79, 133);
+            this.lblHello.Name = "lblHello";
+            this.lblHello.Size = new System.Drawing.Size(35, 13);
+            this.lblHello.TabIndex = 13;
+            this.lblHello.Text = "label3";
+            // 
             // Documents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -168,12 +179,13 @@
 
         private System.Windows.Forms.Panel panelDocuments;
         private System.Windows.Forms.DataGridView dataGridViewDocs;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtProjectDescription;
+        private System.Windows.Forms.TextBox txtProjectName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblProject;
         private System.Windows.Forms.Button btnSubmitdocs;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtProjectNo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblHello;
     }
 }

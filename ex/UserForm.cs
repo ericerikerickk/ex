@@ -50,7 +50,7 @@ namespace ex
             sidecomponentsInactive();
             panelDocumentsInactive.Hide();
             panelDocumentsActive.Show();
-            loadForm(new Documents());
+            loadForm(new Documents(userName));
         }
 
         private void labelprofile_MouseClick(object sender, MouseEventArgs e)
