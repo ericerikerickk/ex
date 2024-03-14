@@ -156,7 +156,6 @@
             this.dataGridViewDocs.RowTemplate.Height = 24;
             this.dataGridViewDocs.Size = new System.Drawing.Size(689, 180);
             this.dataGridViewDocs.TabIndex = 1;
-            this.dataGridViewDocs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDocs_CellClick);
             // 
             // Documents
             // 

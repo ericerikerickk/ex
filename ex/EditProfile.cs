@@ -20,7 +20,6 @@ namespace ex
         {
             InitializeComponent();
             this.user = user;
-            getData();
         }
         SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
@@ -59,6 +58,7 @@ namespace ex
         }
         private void getData()
         {
+
             string firstName = "";
             string lastName = "";
             string contact = "";
@@ -76,6 +76,10 @@ namespace ex
                 contact = sdrRead.GetString(7);
                 address = sdrRead.GetString(8);
                 gender = sdrRead.GetString(9);
+            }
+            else
+            {
+                MessageBox.Show("Please edit your profile", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             con.Close();
             lblFname.Text = firstName;
