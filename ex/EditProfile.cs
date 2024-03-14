@@ -28,6 +28,11 @@ namespace ex
         {
             if(txtUserFname.Text.Contains(" ") && txtUserLname.Text.Contains(" ") && txtUserEmail.Text.Contains(" ") && txtUserContact.Text.Contains(" ") && txtUserAddress.Text.Contains(" ") && txtGender.Text.Contains(" "))
             {
+                MessageBox.Show("Please enter the complete details", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
                 con.Open();
                 SqlCommand cmdEdit = new SqlCommand("UPDATE userTable SET firstName='" + txtUserFname.Text + "',lastName ='" + txtUserLname.Text + "',email='" + txtUserEmail.Text + "',contact='" + txtUserContact.Text + "',address='" + txtUserAddress.Text + "',gender='" + txtGender.Text + "' where userName ='" + user + "'", con);
                 cmdEdit.ExecuteNonQuery();
@@ -49,11 +54,6 @@ namespace ex
                 lblGender.Visible = true;
                 CancelBtn.Visible = false;
                 getData();
-            }
-            else
-            {
-                MessageBox.Show("Please enter the complete details", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
 
         }

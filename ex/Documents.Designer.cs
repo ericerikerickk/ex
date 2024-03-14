@@ -43,7 +43,6 @@
             // 
             // panelDocuments
             // 
-            this.panelDocuments.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelDocuments.Controls.Add(this.textBox3);
             this.panelDocuments.Controls.Add(this.label1);
             this.panelDocuments.Controls.Add(this.btnSubmitdocs);
@@ -52,10 +51,11 @@
             this.panelDocuments.Controls.Add(this.label2);
             this.panelDocuments.Controls.Add(this.lblProject);
             this.panelDocuments.Controls.Add(this.dataGridViewDocs);
-            this.panelDocuments.Location = new System.Drawing.Point(9, 10);
+            this.panelDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDocuments.Location = new System.Drawing.Point(0, 0);
             this.panelDocuments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelDocuments.Name = "panelDocuments";
-            this.panelDocuments.Size = new System.Drawing.Size(712, 394);
+            this.panelDocuments.Size = new System.Drawing.Size(730, 414);
             this.panelDocuments.TabIndex = 0;
             // 
             // textBox3
@@ -135,6 +135,7 @@
             // 
             // dataGridViewDocs
             // 
+            this.dataGridViewDocs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewDocs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDocs.Location = new System.Drawing.Point(12, 201);
             this.dataGridViewDocs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
