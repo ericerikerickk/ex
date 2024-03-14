@@ -34,7 +34,7 @@ namespace ex
             else
             {
                 con.Open();
-                SqlCommand cmdEdit = new SqlCommand("UPDATE userTable SET firstName='" + txtUserFname.Text + "',lastName ='" + txtUserLname.Text + "',email='" + txtUserEmail.Text + "',contact='" + txtUserContact.Text + "',address='" + txtUserAddress.Text + "',gender='" + txtGender.Text + "' where userName ='" + user + "'", con);
+                SqlCommand cmdEdit = new SqlCommand("UPDATE userTable SET firstName='" + txtUserFname.Text + "',lastName ='" + txtUserLname.Text + "',email='" + txtUserEmail.Text + "',contact='" + txtUserContact.Text + "',address='" + txtUserAddress.Text + "',gender='" + txtGender.Text + "' where userID ='" + user + "'", con);
                 cmdEdit.ExecuteNonQuery();
                 MessageBox.Show("Successfully Updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 con.Close();
@@ -66,7 +66,7 @@ namespace ex
             string gender = "";
             string address = "";
             con.Open();
-            SqlCommand readcmd = new SqlCommand("select * from userTable where userName='" + user + "'", con);
+            SqlCommand readcmd = new SqlCommand("select * from userTable where userID='" + user + "'", con);
             SqlDataReader sdrRead = readcmd.ExecuteReader();
             if (sdrRead.Read())
             {

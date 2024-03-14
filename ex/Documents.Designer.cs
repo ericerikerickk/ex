@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelDocuments = new System.Windows.Forms.Panel();
+            this.lblHello = new System.Windows.Forms.Label();
             this.txtProjectNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSubmitdocs = new System.Windows.Forms.Button();
@@ -37,7 +38,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblProject = new System.Windows.Forms.Label();
             this.dataGridViewDocs = new System.Windows.Forms.DataGridView();
-            this.lblHello = new System.Windows.Forms.Label();
             this.panelDocuments.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDocs)).BeginInit();
             this.SuspendLayout();
@@ -55,15 +55,24 @@
             this.panelDocuments.Controls.Add(this.dataGridViewDocs);
             this.panelDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDocuments.Location = new System.Drawing.Point(0, 0);
-            this.panelDocuments.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelDocuments.Margin = new System.Windows.Forms.Padding(2);
             this.panelDocuments.Name = "panelDocuments";
             this.panelDocuments.Size = new System.Drawing.Size(730, 414);
             this.panelDocuments.TabIndex = 0;
             // 
+            // lblHello
+            // 
+            this.lblHello.AutoSize = true;
+            this.lblHello.Location = new System.Drawing.Point(79, 133);
+            this.lblHello.Name = "lblHello";
+            this.lblHello.Size = new System.Drawing.Size(35, 13);
+            this.lblHello.TabIndex = 13;
+            this.lblHello.Text = "label3";
+            // 
             // txtProjectNo
             // 
             this.txtProjectNo.Location = new System.Drawing.Point(174, 18);
-            this.txtProjectNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProjectNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtProjectNo.Multiline = true;
             this.txtProjectNo.Name = "txtProjectNo";
             this.txtProjectNo.Size = new System.Drawing.Size(145, 28);
@@ -87,7 +96,7 @@
             this.btnSubmitdocs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmitdocs.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnSubmitdocs.Location = new System.Drawing.Point(283, 156);
-            this.btnSubmitdocs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubmitdocs.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmitdocs.Name = "btnSubmitdocs";
             this.btnSubmitdocs.Size = new System.Drawing.Size(148, 35);
             this.btnSubmitdocs.TabIndex = 10;
@@ -98,7 +107,7 @@
             // txtProjectDescription
             // 
             this.txtProjectDescription.Location = new System.Drawing.Point(176, 67);
-            this.txtProjectDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProjectDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtProjectDescription.Multiline = true;
             this.txtProjectDescription.Name = "txtProjectDescription";
             this.txtProjectDescription.Size = new System.Drawing.Size(330, 79);
@@ -107,7 +116,7 @@
             // txtProjectName
             // 
             this.txtProjectName.Location = new System.Drawing.Point(469, 18);
-            this.txtProjectName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProjectName.Margin = new System.Windows.Forms.Padding(2);
             this.txtProjectName.Multiline = true;
             this.txtProjectName.Name = "txtProjectName";
             this.txtProjectName.Size = new System.Drawing.Size(145, 28);
@@ -140,21 +149,14 @@
             this.dataGridViewDocs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridViewDocs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDocs.Location = new System.Drawing.Point(12, 201);
-            this.dataGridViewDocs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewDocs.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDocs.Name = "dataGridViewDocs";
+            this.dataGridViewDocs.ReadOnly = true;
             this.dataGridViewDocs.RowHeadersWidth = 51;
             this.dataGridViewDocs.RowTemplate.Height = 24;
             this.dataGridViewDocs.Size = new System.Drawing.Size(689, 180);
             this.dataGridViewDocs.TabIndex = 1;
-            // 
-            // lblHello
-            // 
-            this.lblHello.AutoSize = true;
-            this.lblHello.Location = new System.Drawing.Point(79, 133);
-            this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(35, 13);
-            this.lblHello.TabIndex = 13;
-            this.lblHello.Text = "label3";
+            this.dataGridViewDocs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDocs_CellClick);
             // 
             // Documents
             // 
@@ -163,7 +165,7 @@
             this.ClientSize = new System.Drawing.Size(730, 414);
             this.Controls.Add(this.panelDocuments);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Documents";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
