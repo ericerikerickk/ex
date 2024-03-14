@@ -190,7 +190,7 @@ namespace ex
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand updatecmd = new SqlCommand("UPDATE userTable SET firstName='" + txtUserFname.Text + "', lastName='" + txtUserLname.Text + "', contact='" + txtUserContact.Text + "', address='" + txtUserAddress.Text + "', gender='" + txtGender.Text + "' where userID='" + userID.Text + "'", con);
+            SqlCommand updatecmd = new SqlCommand("UPDATE userTable SET firstName='" + txtUserFname.Text + "', lastName='" + txtUserLname.Text + "', contact='" + txtUserContact.Text + "', address='" + txtUserAddress.Text + "', gender='" + txtGender.Text + "', email='" + txtUserEmail.Text + "' where userID='" + userID.Text + "'", con);
             updatecmd.ExecuteNonQuery();
             MessageBox.Show("Successfully Updated!", "info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             con.Close();

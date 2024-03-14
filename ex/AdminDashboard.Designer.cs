@@ -47,6 +47,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelHello = new System.Windows.Forms.Label();
             this.panelLogoutInactive = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,7 +59,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mainpanel = new System.Windows.Forms.Panel();
-            this.labelHello = new System.Windows.Forms.Label();
             this.panelDashboardInactive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panelUserActive.SuspendLayout();
@@ -312,6 +312,15 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mainpanel_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mainpanel_MouseMove);
             // 
+            // labelHello
+            // 
+            this.labelHello.AutoSize = true;
+            this.labelHello.Location = new System.Drawing.Point(38, 255);
+            this.labelHello.Name = "labelHello";
+            this.labelHello.Size = new System.Drawing.Size(35, 13);
+            this.labelHello.TabIndex = 35;
+            this.labelHello.Text = "label3";
+            // 
             // panelLogoutInactive
             // 
             this.panelLogoutInactive.BackColor = System.Drawing.Color.White;
@@ -444,15 +453,6 @@
             this.mainpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mainpanel_MouseDown);
             this.mainpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mainpanel_MouseMove);
             // 
-            // labelHello
-            // 
-            this.labelHello.AutoSize = true;
-            this.labelHello.Location = new System.Drawing.Point(38, 255);
-            this.labelHello.Name = "labelHello";
-            this.labelHello.Size = new System.Drawing.Size(35, 13);
-            this.labelHello.TabIndex = 35;
-            this.labelHello.Text = "label3";
-            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,6 +464,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin Dashboard";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminDashboard_FormClosed);
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.panelDashboardInactive.ResumeLayout(false);
             this.panelDashboardInactive.PerformLayout();

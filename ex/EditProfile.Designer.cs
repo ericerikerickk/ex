@@ -73,21 +73,19 @@
             this.panelGender.Controls.Add(this.txtGender);
             this.panelGender.Controls.Add(this.label33);
             this.panelGender.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelGender.Location = new System.Drawing.Point(404, 194);
-            this.panelGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelGender.Location = new System.Drawing.Point(303, 158);
             this.panelGender.Name = "panelGender";
-            this.panelGender.Size = new System.Drawing.Size(356, 47);
+            this.panelGender.Size = new System.Drawing.Size(267, 38);
             this.panelGender.TabIndex = 38;
             // 
             // lblGender
             // 
             this.lblGender.AutoSize = true;
-            this.lblGender.Location = new System.Drawing.Point(107, 15);
-            this.lblGender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lblGender.Location = new System.Drawing.Point(80, 12);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(44, 16);
+            this.lblGender.Size = new System.Drawing.Size(0, 13);
             this.lblGender.TabIndex = 45;
-            this.lblGender.Text = "label2";
             // 
             // txtGender
             // 
@@ -98,10 +96,9 @@
             this.txtGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.txtGender.Location = new System.Drawing.Point(111, 10);
-            this.txtGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGender.Location = new System.Drawing.Point(83, 8);
             this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(239, 25);
+            this.txtGender.Size = new System.Drawing.Size(180, 21);
             this.txtGender.TabIndex = 28;
             this.txtGender.Visible = false;
             // 
@@ -112,10 +109,9 @@
             this.label33.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label33.Location = new System.Drawing.Point(9, 12);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Location = new System.Drawing.Point(7, 10);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(57, 18);
+            this.label33.Size = new System.Drawing.Size(48, 15);
             this.label33.TabIndex = 27;
             this.label33.Text = "Gender";
             // 
@@ -126,21 +122,19 @@
             this.panelEmail.Controls.Add(this.txtUserEmail);
             this.panelEmail.Controls.Add(this.label35);
             this.panelEmail.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelEmail.Location = new System.Drawing.Point(19, 127);
-            this.panelEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelEmail.Location = new System.Drawing.Point(14, 103);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(356, 47);
+            this.panelEmail.Size = new System.Drawing.Size(267, 38);
             this.panelEmail.TabIndex = 39;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(109, 15);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lblEmail.Location = new System.Drawing.Point(82, 12);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(44, 16);
+            this.lblEmail.Size = new System.Drawing.Size(0, 13);
             this.lblEmail.TabIndex = 45;
-            this.lblEmail.Text = "label2";
             // 
             // txtUserEmail
             // 
@@ -148,10 +142,9 @@
             this.txtUserEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.txtUserEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtUserEmail.Location = new System.Drawing.Point(113, 12);
-            this.txtUserEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserEmail.Location = new System.Drawing.Point(85, 10);
             this.txtUserEmail.Name = "txtUserEmail";
-            this.txtUserEmail.Size = new System.Drawing.Size(239, 23);
+            this.txtUserEmail.Size = new System.Drawing.Size(180, 20);
             this.txtUserEmail.TabIndex = 0;
             this.txtUserEmail.Visible = false;
             // 
@@ -162,10 +155,9 @@
             this.label35.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label35.Location = new System.Drawing.Point(24, 15);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Location = new System.Drawing.Point(11, 13);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(45, 18);
+            this.label35.Size = new System.Drawing.Size(39, 15);
             this.label35.TabIndex = 27;
             this.label35.Text = "Email";
             // 
@@ -176,21 +168,19 @@
             this.panelContact.Controls.Add(this.txtUserContact);
             this.panelContact.Controls.Add(this.label36);
             this.panelContact.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelContact.Location = new System.Drawing.Point(404, 127);
-            this.panelContact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelContact.Location = new System.Drawing.Point(303, 103);
             this.panelContact.Name = "panelContact";
-            this.panelContact.Size = new System.Drawing.Size(356, 47);
+            this.panelContact.Size = new System.Drawing.Size(267, 38);
             this.panelContact.TabIndex = 37;
             // 
             // lblContact
             // 
             this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(107, 15);
-            this.lblContact.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lblContact.Location = new System.Drawing.Point(80, 12);
             this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(44, 16);
+            this.lblContact.Size = new System.Drawing.Size(0, 13);
             this.lblContact.TabIndex = 45;
-            this.lblContact.Text = "label2";
             // 
             // txtUserContact
             // 
@@ -198,10 +188,9 @@
             this.txtUserContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.txtUserContact.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtUserContact.Location = new System.Drawing.Point(111, 10);
-            this.txtUserContact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserContact.Location = new System.Drawing.Point(83, 8);
             this.txtUserContact.Name = "txtUserContact";
-            this.txtUserContact.Size = new System.Drawing.Size(239, 23);
+            this.txtUserContact.Size = new System.Drawing.Size(180, 20);
             this.txtUserContact.TabIndex = 0;
             this.txtUserContact.Visible = false;
             // 
@@ -212,10 +201,9 @@
             this.label36.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label36.Location = new System.Drawing.Point(9, 12);
-            this.label36.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label36.Location = new System.Drawing.Point(7, 10);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(88, 18);
+            this.label36.Size = new System.Drawing.Size(70, 15);
             this.label36.TabIndex = 27;
             this.label36.Text = "Contact No.";
             // 
@@ -226,21 +214,19 @@
             this.panelAddress.Controls.Add(this.txtUserAddress);
             this.panelAddress.Controls.Add(this.label37);
             this.panelAddress.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelAddress.Location = new System.Drawing.Point(19, 194);
-            this.panelAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAddress.Location = new System.Drawing.Point(14, 158);
             this.panelAddress.Name = "panelAddress";
-            this.panelAddress.Size = new System.Drawing.Size(356, 117);
+            this.panelAddress.Size = new System.Drawing.Size(267, 95);
             this.panelAddress.TabIndex = 36;
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(109, 15);
-            this.lblAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lblAddress.Location = new System.Drawing.Point(82, 12);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(44, 16);
+            this.lblAddress.Size = new System.Drawing.Size(0, 13);
             this.lblAddress.TabIndex = 45;
-            this.lblAddress.Text = "label2";
             // 
             // txtUserAddress
             // 
@@ -248,11 +234,10 @@
             this.txtUserAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.txtUserAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtUserAddress.Location = new System.Drawing.Point(113, 12);
-            this.txtUserAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserAddress.Location = new System.Drawing.Point(85, 10);
             this.txtUserAddress.Multiline = true;
             this.txtUserAddress.Name = "txtUserAddress";
-            this.txtUserAddress.Size = new System.Drawing.Size(239, 94);
+            this.txtUserAddress.Size = new System.Drawing.Size(180, 77);
             this.txtUserAddress.TabIndex = 0;
             this.txtUserAddress.Visible = false;
             // 
@@ -263,10 +248,9 @@
             this.label37.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label37.Location = new System.Drawing.Point(9, 12);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Location = new System.Drawing.Point(11, 9);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(62, 18);
+            this.label37.Size = new System.Drawing.Size(51, 15);
             this.label37.TabIndex = 27;
             this.label37.Text = "Address";
             // 
@@ -277,21 +261,19 @@
             this.panelLname.Controls.Add(this.txtUserLname);
             this.panelLname.Controls.Add(this.label38);
             this.panelLname.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelLname.Location = new System.Drawing.Point(404, 57);
-            this.panelLname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelLname.Location = new System.Drawing.Point(303, 46);
             this.panelLname.Name = "panelLname";
-            this.panelLname.Size = new System.Drawing.Size(356, 47);
+            this.panelLname.Size = new System.Drawing.Size(267, 38);
             this.panelLname.TabIndex = 35;
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(107, 15);
-            this.lblLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLastName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lblLastName.Location = new System.Drawing.Point(80, 12);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(44, 16);
+            this.lblLastName.Size = new System.Drawing.Size(0, 13);
             this.lblLastName.TabIndex = 45;
-            this.lblLastName.Text = "label2";
             // 
             // txtUserLname
             // 
@@ -299,10 +281,9 @@
             this.txtUserLname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserLname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.txtUserLname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtUserLname.Location = new System.Drawing.Point(111, 11);
-            this.txtUserLname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserLname.Location = new System.Drawing.Point(83, 9);
             this.txtUserLname.Name = "txtUserLname";
-            this.txtUserLname.Size = new System.Drawing.Size(239, 23);
+            this.txtUserLname.Size = new System.Drawing.Size(180, 20);
             this.txtUserLname.TabIndex = 0;
             this.txtUserLname.Visible = false;
             // 
@@ -313,24 +294,22 @@
             this.label38.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label38.Location = new System.Drawing.Point(9, 12);
-            this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label38.Location = new System.Drawing.Point(7, 10);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(80, 18);
+            this.label38.Size = new System.Drawing.Size(67, 15);
             this.label38.TabIndex = 27;
             this.label38.Text = "Last Name";
             // 
             // panelFname
             // 
             this.panelFname.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panelFname.Controls.Add(this.txtUserFname);
             this.panelFname.Controls.Add(this.label39);
             this.panelFname.Controls.Add(this.lblFname);
+            this.panelFname.Controls.Add(this.txtUserFname);
             this.panelFname.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelFname.Location = new System.Drawing.Point(19, 57);
-            this.panelFname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelFname.Location = new System.Drawing.Point(14, 46);
             this.panelFname.Name = "panelFname";
-            this.panelFname.Size = new System.Drawing.Size(356, 47);
+            this.panelFname.Size = new System.Drawing.Size(267, 38);
             this.panelFname.TabIndex = 34;
             // 
             // txtUserFname
@@ -339,10 +318,9 @@
             this.txtUserFname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtUserFname.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.txtUserFname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.txtUserFname.Location = new System.Drawing.Point(112, 11);
-            this.txtUserFname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserFname.Location = new System.Drawing.Point(84, 9);
             this.txtUserFname.Name = "txtUserFname";
-            this.txtUserFname.Size = new System.Drawing.Size(239, 23);
+            this.txtUserFname.Size = new System.Drawing.Size(180, 20);
             this.txtUserFname.TabIndex = 0;
             this.txtUserFname.Visible = false;
             // 
@@ -353,32 +331,30 @@
             this.label39.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label39.Location = new System.Drawing.Point(24, 11);
-            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Location = new System.Drawing.Point(11, 9);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(81, 18);
+            this.label39.Size = new System.Drawing.Size(67, 15);
             this.label39.TabIndex = 27;
             this.label39.Text = "First Name";
             // 
             // lblFname
             // 
             this.lblFname.AutoSize = true;
-            this.lblFname.Location = new System.Drawing.Point(109, 14);
-            this.lblFname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lblFname.Location = new System.Drawing.Point(82, 11);
             this.lblFname.Name = "lblFname";
-            this.lblFname.Size = new System.Drawing.Size(44, 16);
+            this.lblFname.Size = new System.Drawing.Size(0, 13);
             this.lblFname.TabIndex = 44;
-            this.lblFname.Text = "label2";
             // 
             // applyBtn
             // 
             this.applyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.applyBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applyBtn.ForeColor = System.Drawing.Color.White;
-            this.applyBtn.Location = new System.Drawing.Point(404, 389);
-            this.applyBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.applyBtn.Location = new System.Drawing.Point(303, 316);
+            this.applyBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.applyBtn.Name = "applyBtn";
-            this.applyBtn.Size = new System.Drawing.Size(136, 43);
+            this.applyBtn.Size = new System.Drawing.Size(102, 35);
             this.applyBtn.TabIndex = 40;
             this.applyBtn.Text = "Apply ";
             this.applyBtn.UseVisualStyleBackColor = false;
@@ -390,10 +366,10 @@
             this.CancelBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.CancelBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.ForeColor = System.Drawing.Color.White;
-            this.CancelBtn.Location = new System.Drawing.Point(589, 389);
-            this.CancelBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CancelBtn.Location = new System.Drawing.Point(442, 316);
+            this.CancelBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(136, 43);
+            this.CancelBtn.Size = new System.Drawing.Size(102, 35);
             this.CancelBtn.TabIndex = 41;
             this.CancelBtn.Text = "Cancel";
             this.CancelBtn.UseVisualStyleBackColor = false;
@@ -405,9 +381,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(13, 14);
+            this.label1.Location = new System.Drawing.Point(10, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(145, 25);
+            this.label1.Size = new System.Drawing.Size(119, 20);
             this.label1.TabIndex = 42;
             this.label1.Text = "EDIT PROFILE";
             // 
@@ -423,10 +400,10 @@
             this.panelEditProfile.Controls.Add(this.panelContact);
             this.panelEditProfile.Controls.Add(this.editBtn);
             this.panelEditProfile.Controls.Add(this.applyBtn);
-            this.panelEditProfile.Location = new System.Drawing.Point(12, 12);
-            this.panelEditProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelEditProfile.Location = new System.Drawing.Point(9, 10);
+            this.panelEditProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelEditProfile.Name = "panelEditProfile";
-            this.panelEditProfile.Size = new System.Drawing.Size(812, 482);
+            this.panelEditProfile.Size = new System.Drawing.Size(609, 392);
             this.panelEditProfile.TabIndex = 43;
             // 
             // editBtn
@@ -434,10 +411,10 @@
             this.editBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.editBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editBtn.ForeColor = System.Drawing.Color.White;
-            this.editBtn.Location = new System.Drawing.Point(589, 389);
-            this.editBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.editBtn.Location = new System.Drawing.Point(442, 316);
+            this.editBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.editBtn.Name = "editBtn";
-            this.editBtn.Size = new System.Drawing.Size(136, 43);
+            this.editBtn.Size = new System.Drawing.Size(102, 35);
             this.editBtn.TabIndex = 43;
             this.editBtn.Text = "Edit";
             this.editBtn.UseVisualStyleBackColor = false;
@@ -445,12 +422,12 @@
             // 
             // EditProfile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 507);
+            this.ClientSize = new System.Drawing.Size(627, 412);
             this.Controls.Add(this.panelEditProfile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EditProfile";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

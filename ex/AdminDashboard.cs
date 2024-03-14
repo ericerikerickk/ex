@@ -140,5 +140,10 @@ namespace ex
         {
             panelLogoutInactive.Hide();
         }
+
+        private void AdminDashboard_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
