@@ -13,13 +13,13 @@ namespace ex
     public partial class Documents : Form
     {
         DateTime dateTimeNow = DateTime.Now;
-        private string userName;
-        public Documents(string userName)
+        private int userName;
+        public Documents(int userName)
         {
             this.userName = userName;
             InitializeComponent();
             loadDataGrid();
-            lblHello.Text = userName;
+            lblHello.Text = Convert.ToString(userName);
         }
         SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         private void btnSubmitdocs_Click(object sender, EventArgs e)

@@ -12,9 +12,9 @@ namespace ex
 {
     public partial class STEP1 : Form
     {
-        private string step1User;
+        private int step1User;
 
-        public STEP1(string step1User)
+        public STEP1(int step1User)
         {
             this.step1User = step1User;
             InitializeComponent();

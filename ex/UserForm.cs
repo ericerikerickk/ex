@@ -12,8 +12,8 @@ namespace ex
 {
     public partial class UserForm : Form
     {
-        public string userName;
-        public UserForm(string userName)
+        public int userName;
+        public UserForm(int userName)
         {
             InitializeComponent();
             this.userName = userName;

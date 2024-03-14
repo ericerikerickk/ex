@@ -15,8 +15,8 @@ namespace ex
 {
     public partial class EditProfile : Form
     {
-        private string user;
-        public EditProfile(string user)
+        private int user;
+        public EditProfile(int user)
         {
             InitializeComponent();
             this.user = user;

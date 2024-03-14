@@ -53,13 +53,14 @@ namespace ex
             string Password = "";
             string Step1 = "";
             bool IsExistPassword = false;
-
+            int userID = -1;
             con.Open();
             SqlCommand cmdPassword = new SqlCommand("select * from userTable where userName='" + txtUsername.Text + "'", con);
             SqlDataReader sdrPassword = cmdPassword.ExecuteReader();
             if (sdrPassword.Read())
             {
                 Password = sdrPassword.GetString(2);
+                userID = sdrPassword.GetInt32(0);
                // Step1 = sdrPassword.GetString(4);
                 Step1 = sdrPassword.IsDBNull(4) ? "" : sdrPassword.GetString(4);
                 IsExistPassword = true;
@@ -80,20 +81,20 @@ namespace ex
                    
                     if (txtUsername.Text.Trim().Equals("admin", StringComparison.OrdinalIgnoreCase))
                     {
-                        AdminDashboard adminform = new AdminDashboard(txtUsername.Text);
+                        AdminDashboard adminform = new AdminDashboard(userID);
                         this.Hide();
                         adminform.ShowDialog();
                     }
                     else if(Step1 == "Step 1")
                     {
-                        STEP1 step1Form = new STEP1(txtUsername.Text);
+                        STEP1 step1Form = new STEP1(userID);
                         this.Hide();
                         step1Form.ShowDialog();
                     }
                     else
                     {
                         MessageBox.Show("Successfully Logging in", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        UserForm userform = new UserForm(txtUsername.Text);
+                        UserForm userform = new UserForm(userID);
                         this.Hide();
                         userform.ShowDialog();
                     }

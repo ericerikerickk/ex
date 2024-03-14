@@ -12,12 +12,12 @@ namespace ex
 {
     public partial class AdminDashboard : Form
     {
-        private string adminUser;
-        public AdminDashboard(string adminUser)
+        private int adminUser;
+        public AdminDashboard(int adminUser)
         {
             InitializeComponent();
             this.adminUser = adminUser;
-            labelHello.Text = "Hello World '    " + adminUser + "'";
+            labelHello.Text = Convert.ToString(adminUser);
         }
         private void sidecomponentsInactive()
         {
