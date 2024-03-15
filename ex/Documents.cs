@@ -75,6 +75,7 @@ namespace ex
             dataGridViewDocs.DataSource = tab;
             con.Close();
         }
+
         private void resetFocus()
         {
             txtProjectNo.Text = "";

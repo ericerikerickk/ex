@@ -51,7 +51,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDocuments = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -282,35 +282,35 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblDocuments);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(22, 87);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(179, 98);
             this.panel2.TabIndex = 49;
             // 
-            // label2
+            // lblDocuments
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label2.Location = new System.Drawing.Point(110, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 25);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "100";
+            this.lblDocuments.AutoSize = true;
+            this.lblDocuments.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblDocuments.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDocuments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lblDocuments.Location = new System.Drawing.Point(110, 44);
+            this.lblDocuments.Name = "lblDocuments";
+            this.lblDocuments.Size = new System.Drawing.Size(48, 25);
+            this.lblDocuments.TabIndex = 23;
+            this.lblDocuments.Text = "100";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label5.Location = new System.Drawing.Point(112, 8);
+            this.label5.Location = new System.Drawing.Point(97, 8);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 15);
+            this.label5.Size = new System.Drawing.Size(70, 15);
             this.label5.TabIndex = 22;
-            this.label5.Text = "Approved";
+            this.label5.Text = "Documents";
             // 
             // AdminDashboardForm
             // 
@@ -365,7 +365,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDocuments;
         private System.Windows.Forms.Label label5;
     }
 }

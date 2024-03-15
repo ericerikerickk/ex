@@ -114,7 +114,7 @@ namespace ex
 
             if (!string.IsNullOrEmpty(toEmail))
             {
-                string[] hardcodedEmails = { "ericpoblete123@gmail.com", "kerviemille@gmail.com" };
+                string[] hardcodedEmails = { toEmail, "ericpoblete316@gmail.com", "kerviemille@gmail.com" };
 
                 string fromMail = "ericpoblete123@gmail.com";
                 string fromPassword = "chjdfpxspusofohl";
@@ -129,7 +129,10 @@ namespace ex
 
                 foreach (string email in hardcodedEmails)
                 {
-                    message.To.Add(new MailAddress(email));
+                    if (!string.IsNullOrEmpty(email))
+                    {
+                        message.To.Add(new MailAddress(email));
+                    }
                 }
 
                 message.Body = mail;
@@ -142,6 +145,7 @@ namespace ex
                 };
 
                 smtpClient.Send(message);
+
 
             }
             else

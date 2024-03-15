@@ -66,7 +66,7 @@ namespace ex
             string gender = "";
             string address = "";
             con.Open();
-            SqlCommand readcmd = new SqlCommand("select * from userTable where userID='" + user + "'", con);
+            SqlCommand readcmd = new SqlCommand("select * from userTable where userID='" + Convert.ToInt32(user) + "'", con);
             SqlDataReader sdrRead = readcmd.ExecuteReader();
             if (sdrRead.Read())
             {

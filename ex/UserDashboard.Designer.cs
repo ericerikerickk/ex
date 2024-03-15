@@ -34,7 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPending = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -45,10 +45,10 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.countUserlbl = new System.Windows.Forms.Label();
+            this.lblApproved = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.countEmpLbl = new System.Windows.Forms.Label();
+            this.lblProcess = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -106,24 +106,24 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lblPending);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(33, 101);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(176, 98);
             this.panel2.TabIndex = 49;
             // 
-            // label2
+            // lblPending
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label2.Location = new System.Drawing.Point(117, 44);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 25);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "50";
+            this.lblPending.AutoSize = true;
+            this.lblPending.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblPending.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPending.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lblPending.Location = new System.Drawing.Point(117, 44);
+            this.lblPending.Name = "lblPending";
+            this.lblPending.Size = new System.Drawing.Size(36, 25);
+            this.lblPending.TabIndex = 22;
+            this.lblPending.Text = "50";
             // 
             // label5
             // 
@@ -220,24 +220,24 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel5.Controls.Add(this.countUserlbl);
+            this.panel5.Controls.Add(this.lblApproved);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Location = new System.Drawing.Point(397, 101);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(179, 98);
             this.panel5.TabIndex = 44;
             // 
-            // countUserlbl
+            // lblApproved
             // 
-            this.countUserlbl.AutoSize = true;
-            this.countUserlbl.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.countUserlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countUserlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.countUserlbl.Location = new System.Drawing.Point(110, 44);
-            this.countUserlbl.Name = "countUserlbl";
-            this.countUserlbl.Size = new System.Drawing.Size(48, 25);
-            this.countUserlbl.TabIndex = 23;
-            this.countUserlbl.Text = "100";
+            this.lblApproved.AutoSize = true;
+            this.lblApproved.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblApproved.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApproved.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lblApproved.Location = new System.Drawing.Point(110, 44);
+            this.lblApproved.Name = "lblApproved";
+            this.lblApproved.Size = new System.Drawing.Size(48, 25);
+            this.lblApproved.TabIndex = 23;
+            this.lblApproved.Text = "100";
             // 
             // label4
             // 
@@ -253,24 +253,24 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel4.Controls.Add(this.countEmpLbl);
+            this.panel4.Controls.Add(this.lblProcess);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(215, 101);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(176, 98);
             this.panel4.TabIndex = 45;
             // 
-            // countEmpLbl
+            // lblProcess
             // 
-            this.countEmpLbl.AutoSize = true;
-            this.countEmpLbl.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.countEmpLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countEmpLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.countEmpLbl.Location = new System.Drawing.Point(117, 44);
-            this.countEmpLbl.Name = "countEmpLbl";
-            this.countEmpLbl.Size = new System.Drawing.Size(36, 25);
-            this.countEmpLbl.TabIndex = 22;
-            this.countEmpLbl.Text = "50";
+            this.lblProcess.AutoSize = true;
+            this.lblProcess.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProcess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.lblProcess.Location = new System.Drawing.Point(117, 44);
+            this.lblProcess.Name = "lblProcess";
+            this.lblProcess.Size = new System.Drawing.Size(36, 25);
+            this.lblProcess.TabIndex = 22;
+            this.lblProcess.Text = "50";
             // 
             // label3
             // 
@@ -350,7 +350,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPending;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -361,10 +361,10 @@
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label countUserlbl;
+        private System.Windows.Forms.Label lblApproved;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label countEmpLbl;
+        private System.Windows.Forms.Label lblProcess;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Timer timer1;

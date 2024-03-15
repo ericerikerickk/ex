@@ -36,6 +36,14 @@ namespace ex
             countEmpLbl.Text = resultEmp.ToString();
 
         }
+        private void countDocuments()
+        {
+            con.Open();
+            SqlCommand countDoccmd = new SqlCommand("SELECT COUNT(projectTitle) from documentTable");
+            Int32 resultDoc = Convert.ToInt32(countDoccmd.ExecuteScalar());
+            con.Close();
+            lblDocuments.Text = resultDoc.ToString();
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
@@ -52,6 +60,7 @@ namespace ex
             timer1.Start();
             countUserFunction();
             countEmployeeFunction();
+            countDocuments();
         }
     }
 }
