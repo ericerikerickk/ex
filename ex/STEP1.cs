@@ -114,7 +114,7 @@ namespace ex
 
             if (!string.IsNullOrEmpty(toEmail))
             {
-                string[] hardcodedEmails = { "ericpoblete123@gmail.com", "kerviemille@gmail.com.com" };
+                string[] hardcodedEmails = { "ericpoblete123@gmail.com", "kerviemille@gmail.com" };
 
                 string fromMail = "ericpoblete123@gmail.com";
                 string fromPassword = "chjdfpxspusofohl";
