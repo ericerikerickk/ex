@@ -1,0 +1,47 @@
+﻿CREATE PROCEDURE InsertDocumentAndStep1NEW
+    @ProjectNo NVARCHAR(50),
+    @ProjectTitle NVARCHAR(50),
+    @ProjectDescription NVARCHAR(50),
+    @UserID INT
+AS
+BEGIN
+    DECLARE @Step1ID INT;
+
+    -- Insert into step1Table
+    INSERT INTO step1Table (step1Status, step1dateUpdated)
+    VALUES (0, GETDATE());
+
+    -- Get the generated step1ID
+    SET @Step1ID = SCOPE_IDENTITY();
+
+    DECLARE @Step2ID INT;
+
+    -- Insert into step2Table
+    INSERT INTO step2Table (step2Status, step2dateUpdated)
+    VALUES (0, GETDATE());
+
+    -- Get the generated step2ID
+    SET @Step2ID = SCOPE_IDENTITY();
+
+    DECLARE @Step3ID INT;
+
+    -- Insert into step1Table
+    INSERT INTO step3Table (step3Status, step3dateUpdated)
+    VALUES (0, GETDATE());
+
+    -- Get the generated step3ID
+    SET @Step3ID = SCOPE_IDENTITY();
+
+    DECLARE @Step4ID INT;
+
+    -- Insert into step4Table
+    INSERT INTO step4Table (step4Status, step4dateUpdated)
+    VALUES (0, GETDATE());
+
+    -- Get the generated step4ID
+    SET @Step4ID = SCOPE_IDENTITY();
+
+    -- Insert into documentTable with step1ID
+    INSERT INTO documentTable (projectNo, projectTitle, projectDescription, dateCreated, userID, step1ID, step2ID, step3ID, step4ID)
+    VALUES (@ProjectNo, @ProjectTitle, @ProjectDescription, GETDATE(), @UserID, @Step1ID, @Step2ID, @Step3ID, @Step4ID);
+END

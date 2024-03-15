@@ -359,6 +359,7 @@
     <Content Include="Step2TableSQL.txt" />
     <Content Include="Step3TableSQL.txt" />
     <Content Include="Step4TableSQL.txt" />
+    <Content Include="StepsScriptSQL.txt" />
     <Content Include="UserTableSQL.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
