@@ -1,0 +1,16 @@
+﻿CREATE TABLE [dbo].[documentTable] (
+    [docID]              INT           IDENTITY (1, 1) NOT NULL,
+    [projectNo]          NVARCHAR (50) NULL,
+    [projectTitle]       NVARCHAR (50) NULL,
+    [userID]             INT           NOT NULL,
+    [dateCreated]        DATETIME      NULL,
+    [step1ID]            INT           NOT NULL,
+    [step2ID]            INT           NOT NULL,
+    [step3ID]            INT           NOT NULL,
+    [step4ID]            INT           NOT NULL,
+    [projectDescription] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([docID] ASC),
+    CONSTRAINT [FK_documentTable_userTable] FOREIGN KEY ([userID]) REFERENCES [dbo].[userTable] ([userID]),
+    CONSTRAINT [FK_documentTable_step1Table] FOREIGN KEY ([step1ID]) REFERENCES [dbo].[step1Table] ([step1ID])
+);
+

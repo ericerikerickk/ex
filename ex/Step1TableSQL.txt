@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[step1Table] (
+    [step1ID]          INT      IDENTITY (1, 1) NOT NULL,
+    [step1Status]      BIT      NULL,
+    [step1dateUpdated] DATETIME NULL,
+    PRIMARY KEY CLUSTERED ([step1ID] ASC)
+);
+

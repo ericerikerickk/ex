@@ -1,0 +1,14 @@
+﻿CREATE TABLE [dbo].[userTable] (
+    [userID]         INT            IDENTITY (1, 1) NOT NULL,
+    [userName]       NVARCHAR (50)  NULL,
+    [password]       NVARCHAR (100) NULL,
+    [email]          NVARCHAR (50)  NULL,
+    [stepDepartment] NVARCHAR (50)  DEFAULT ((0)) NULL,
+    [firstName]      NVARCHAR (50)  NULL,
+    [lastName]       NVARCHAR (50)  NULL,
+    [contact]        NVARCHAR (50)  NULL,
+    [address]        NVARCHAR (50)  NULL,
+    [gender]         NVARCHAR (50)  NULL,
+    PRIMARY KEY CLUSTERED ([userID] ASC)
+);
+

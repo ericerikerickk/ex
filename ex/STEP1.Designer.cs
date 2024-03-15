@@ -91,7 +91,7 @@
             this.txtProjectNo.Multiline = true;
             this.txtProjectNo.Name = "txtProjectNo";
             this.txtProjectNo.Size = new System.Drawing.Size(145, 28);
-            this.txtProjectNo.TabIndex = 22;
+            this.txtProjectNo.TabIndex = 1;
             // 
             // label1
             // 
@@ -114,7 +114,7 @@
             this.btnSubmitdocs.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubmitdocs.Name = "btnSubmitdocs";
             this.btnSubmitdocs.Size = new System.Drawing.Size(111, 35);
-            this.btnSubmitdocs.TabIndex = 20;
+            this.btnSubmitdocs.TabIndex = 4;
             this.btnSubmitdocs.Text = "RECEIVE";
             this.btnSubmitdocs.UseVisualStyleBackColor = false;
             this.btnSubmitdocs.Click += new System.EventHandler(this.btnSubmitdocs_Click);
@@ -126,7 +126,7 @@
             this.txtProjectDescription.Multiline = true;
             this.txtProjectDescription.Name = "txtProjectDescription";
             this.txtProjectDescription.Size = new System.Drawing.Size(330, 79);
-            this.txtProjectDescription.TabIndex = 19;
+            this.txtProjectDescription.TabIndex = 3;
             // 
             // txtProjectName
             // 
@@ -135,7 +135,7 @@
             this.txtProjectName.Multiline = true;
             this.txtProjectName.Name = "txtProjectName";
             this.txtProjectName.Size = new System.Drawing.Size(145, 28);
-            this.txtProjectName.TabIndex = 18;
+            this.txtProjectName.TabIndex = 2;
             // 
             // label2
             // 

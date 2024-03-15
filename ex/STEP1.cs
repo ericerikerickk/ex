@@ -26,6 +26,7 @@ namespace ex
             LoadDataGrid();
             labelStep1.Text = "Hello " + step1User;
             dataGridSTEP1.CellClick += dataGridSTEP1_CellClick;
+            txtProjectNo.Focus();
         }
         private void resetFocus()
         {

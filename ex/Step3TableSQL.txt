@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[step3Table] (
+    [step3ID]          INT      IDENTITY (1, 1) NOT NULL,
+    [step3Status]      BIT      NULL,
+    [step3DateUpdated] DATETIME NULL,
+    [docID]            INT      NULL,
+    PRIMARY KEY CLUSTERED ([step3ID] ASC),
+    CONSTRAINT [FK_step3Table_documentTable] FOREIGN KEY ([docID]) REFERENCES [dbo].[documentTable] ([docID])
+);
+
