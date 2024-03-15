@@ -92,6 +92,7 @@ namespace ex
             submitcmd.ExecuteNonQuery();
             con.Close();
             emailNotif();
+            MessageBox.Show("Successfully Received", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadDataGrid();
         }
         private void emailNotif()
@@ -113,6 +114,8 @@ namespace ex
 
             if (!string.IsNullOrEmpty(toEmail))
             {
+                string[] hardcodedEmails = { "ericpoblete123@gmail.com", "kerviemille@gmail.com.com" };
+
                 string fromMail = "ericpoblete123@gmail.com";
                 string fromPassword = "chjdfpxspusofohl";
                 MailMessage message = new MailMessage();
@@ -123,10 +126,10 @@ namespace ex
                               "Your Document got approved in Step 1.";
                 string subject = $"Project No.: {txtProjectNo.Text}, Project Title: {txtProjectName.Text}";
                 message.Subject = subject;
-                // Check if toEmail is not empty before adding it to the message.To collection
-                if (!string.IsNullOrEmpty(toEmail))
+
+                foreach (string email in hardcodedEmails)
                 {
-                    message.To.Add(new MailAddress(toEmail));
+                    message.To.Add(new MailAddress(email));
                 }
 
                 message.Body = mail;
@@ -139,6 +142,7 @@ namespace ex
                 };
 
                 smtpClient.Send(message);
+
             }
             else
             {
