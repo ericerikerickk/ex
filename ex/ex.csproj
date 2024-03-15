@@ -352,5 +352,14 @@
   <ItemGroup>
     <None Include="Resources\logout %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="documentTableSQL.txt" />
+    <Content Include="Step1SQLScript.txt" />
+    <Content Include="Step1TableSQL.txt" />
+    <Content Include="Step2TableSQL.txt" />
+    <Content Include="Step3TableSQL.txt" />
+    <Content Include="Step4TableSQL.txt" />
+    <Content Include="UserTableSQL.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
