@@ -82,13 +82,16 @@ namespace ex
 
         private void btnSubmitdocs_Click(object sender, EventArgs e)
         {
+            string dateTimeNow = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
             con.Open();
-            SqlCommand submitcmd = new SqlCommand("UPDATE step1Table SET step1Status = 1 " +
+            SqlCommand submitcmd = new SqlCommand("UPDATE step1Table SET step1Status = 1, step1dateUpdated = @datetime" +
                                                    "FROM step1Table INNER JOIN documentTable " +
                                                    "ON step1Table.step1ID = documentTable.step1ID " +
                                                    "WHERE documentTable.projectNo = @projectno", con);
             // Assuming you have a variable called docID to pass the value
             submitcmd.Parameters.AddWithValue("@projectno", txtProjectNo.Text);
+            submitcmd.Parameters.AddWithValue("@datetime", dateTimeNow);
             submitcmd.ExecuteNonQuery();
             con.Close();
             emailNotif();

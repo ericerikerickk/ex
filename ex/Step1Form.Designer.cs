@@ -101,6 +101,7 @@
             this.paneLogoutActive.Size = new System.Drawing.Size(137, 38);
             this.paneLogoutActive.TabIndex = 37;
             this.paneLogoutActive.Click += new System.EventHandler(this.paneLogoutActive_Click);
+            this.paneLogoutActive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.paneLogoutActive_MouseClick);
             // 
             // label4
             // 

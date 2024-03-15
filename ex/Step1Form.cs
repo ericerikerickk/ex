@@ -43,7 +43,7 @@ namespace ex
             sidecomponentsInactive();
             panelDashboardInactive.Hide();
             panelDashboardActive.Show();
-            loadForm(new UserDashboard(userID));
+            loadForm(new Step1Dashboard(userID));
         }
 
         private void panelDocumentsInactive_MouseClick(object sender, MouseEventArgs e)
@@ -71,6 +71,13 @@ namespace ex
         }
 
         private void paneLogoutActive_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
+        }
+
+        private void paneLogoutActive_MouseClick(object sender, MouseEventArgs e)
         {
             this.Hide();
             Login login = new Login();
