@@ -33,23 +33,27 @@ namespace ex
             {
                 string dateTimeNow = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-                con.Open();
-                SqlCommand submitcmd = new SqlCommand("INSERT INTO documentTable (projectNo, projectTitle, projectDescription, dateCreated, userID) VALUES (@ProjectNo, @ProjectTitle, @ProjectDescription, @DateCreated, @userID)", con);
+                using (SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
 
-                // Add parameters
-                submitcmd.Parameters.AddWithValue("@ProjectNo", txtProjectNo.Text);
-                submitcmd.Parameters.AddWithValue("@ProjectTitle", txtProjectName.Text);
-                submitcmd.Parameters.AddWithValue("@ProjectDescription", txtProjectDescription.Text);
-                submitcmd.Parameters.AddWithValue("@DateCreated", dateTimeNow);
-                submitcmd.Parameters.AddWithValue("@userID", userID);
+                {
+                    using (SqlCommand submitcmd = new SqlCommand("InsertDocumentAndStep1NEW", con))
+                    {
+                        submitcmd.CommandType = CommandType.StoredProcedure;
+                        submitcmd.Parameters.AddWithValue("@ProjectNo", txtProjectNo.Text);
+                        submitcmd.Parameters.AddWithValue("@ProjectTitle", txtProjectName.Text);
+                        submitcmd.Parameters.AddWithValue("@ProjectDescription", txtProjectDescription.Text);
+                        submitcmd.Parameters.AddWithValue("@UserID", userID);
 
+                        con.Open();
+                        submitcmd.ExecuteNonQuery();
+                        con.Close();
 
-                // Execute the query
-                submitcmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                loadDataGrid();
-                reset();
+                        MessageBox.Show("Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadDataGrid();
+                        reset();
+                    }
+                }
+
             }
 
         }

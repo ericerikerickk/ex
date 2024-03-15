@@ -93,7 +93,7 @@ namespace ex
                     }
                     else if(Step1 == "Step 1")
                     {
-                        STEP1 step1Form = new STEP1(userID);
+                        Step1Form step1Form = new Step1Form(userID);
                         this.Hide();
                         step1Form.ShowDialog();
                     }
