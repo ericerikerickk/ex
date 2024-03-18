@@ -269,6 +269,9 @@
     <EmbeddedResource Include="STEP2.resx">
       <DependentUpon>STEP2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Step2Dashboard.resx">
+      <DependentUpon>Step2Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Step2Form.resx">
       <DependentUpon>Step2Form.cs</DependentUpon>
     </EmbeddedResource>
