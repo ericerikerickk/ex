@@ -25,38 +25,53 @@ namespace ex
         SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         private void btnSubmitdocs_Click(object sender, EventArgs e)
         {
-            if(txtProjectNo.Text.Contains(" ") && txtProjectName.Text.Contains(" ") && txtProjectDescription.Text.Contains(" "))
+            string emailtext = "";
+            con.Open();
+            SqlCommand checkEmail = new SqlCommand("SELECT email from userTable where userID='" + userID + "'", con);
+            SqlDataReader readEmail = checkEmail.ExecuteReader();
+            if (readEmail.Read())
             {
-                MessageBox.Show("Please enter the complete details", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                emailtext = readEmail.GetString(0);
             }
-            else
+            con.Close();
+            // Check if email address is provided
+            if (string.IsNullOrWhiteSpace(emailtext))
             {
-                string dateTimeNow = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                MessageBox.Show("Please input your email address before submitting", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                using (SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            // Check if project details are complete
+            if (string.IsNullOrWhiteSpace(txtProjectNo.Text) || string.IsNullOrWhiteSpace(txtProjectName.Text) || string.IsNullOrWhiteSpace(txtProjectDescription.Text))
+            {
+                MessageBox.Show("Please enter the complete project details", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
+            // Proceed with inserting the document and step
+            string dateTimeNow = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            using (SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"))
+            {
+                using (SqlCommand submitcmd = new SqlCommand("InsertDocumentAndStep1NEW", con))
                 {
-                    using (SqlCommand submitcmd = new SqlCommand("InsertDocumentAndStep1NEW", con))
-                    {
-                        submitcmd.CommandType = CommandType.StoredProcedure;
-                        submitcmd.Parameters.AddWithValue("@ProjectNo", txtProjectNo.Text);
-                        submitcmd.Parameters.AddWithValue("@ProjectTitle", txtProjectName.Text);
-                        submitcmd.Parameters.AddWithValue("@ProjectDescription", txtProjectDescription.Text);
-                        submitcmd.Parameters.AddWithValue("@UserID", userID);
+                    submitcmd.CommandType = CommandType.StoredProcedure;
+                    submitcmd.Parameters.AddWithValue("@ProjectNo", txtProjectNo.Text);
+                    submitcmd.Parameters.AddWithValue("@ProjectTitle", txtProjectName.Text);
+                    submitcmd.Parameters.AddWithValue("@ProjectDescription", txtProjectDescription.Text);
+                    submitcmd.Parameters.AddWithValue("@UserID", userID);
 
-                        con.Open();
-                        submitcmd.ExecuteNonQuery();
-                        con.Close();
+                    con.Open();
+                    submitcmd.ExecuteNonQuery();
+                    con.Close();
 
-                        MessageBox.Show("Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        loadDataGrid();
-                        reset();
-                    }
+                    MessageBox.Show("Inserted Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loadDataGrid();
+                    reset();
                 }
-
             }
-
         }
+
         private void reset()
         {
             txtProjectNo.Text = "";

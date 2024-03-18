@@ -65,10 +65,10 @@ namespace ex
                 Password = sdrPassword.GetString(2);
                 userID = sdrPassword.GetInt32(0);
                // Step1 = sdrPassword.GetString(4);
-                Step1 = sdrPassword.IsDBNull(4) ? "" : sdrPassword.GetString(4);
-                Step2 = sdrPassword.IsDBNull(4) ? "" : sdrPassword.GetString(4);
-                Step3 = sdrPassword.IsDBNull(4) ? "" : sdrPassword.GetString(4);
-                Step4 = sdrPassword.IsDBNull(4) ? "" : sdrPassword.GetString(4);
+                Step1 = sdrPassword.GetString(4);
+                Step2 = sdrPassword.GetString(4);
+                Step3 = sdrPassword.GetString(4);
+                Step4 = sdrPassword.GetString(4);
                 IsExistPassword = true;
                 
             }

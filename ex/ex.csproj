@@ -172,6 +172,18 @@
     <Compile Include="STEP3.Designer.cs">
       <DependentUpon>STEP3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Step3Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Step3Dashboard.Designer.cs">
+      <DependentUpon>Step3Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Step3Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Step3Form.Designer.cs">
+      <DependentUpon>Step3Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="STEP4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +274,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="STEP3.resx">
       <DependentUpon>STEP3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Step3Dashboard.resx">
+      <DependentUpon>Step3Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Step3Form.resx">
+      <DependentUpon>Step3Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="STEP4.resx">
       <DependentUpon>STEP4.cs</DependentUpon>

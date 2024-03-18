@@ -39,7 +39,7 @@ namespace ex
         private void LoadDataGrid()
         {
             con.Open();
-            SqlCommand loadcmd = new SqlCommand("SELECT documentTable.projectNo AS [Project No.], documentTable.projectTitle AS [Project Title], documentTable.projectDescription AS [Project Description], documentTable.dateCreated AS [Date Created], step1Table.step1Status AS [Step 1 Status], userTable.userName AS [User Name] FROM documentTable INNER JOIN userTable ON documentTable.userID = userTable.userID FULL OUTER JOIN step1Table ON documentTable.step1ID = step1Table.step1ID", con);
+            SqlCommand loadcmd = new SqlCommand("SELECT documentTable.projectNo AS [Project No.], documentTable.projectTitle AS [Project Title], documentTable.projectDescription AS [Project Description], documentTable.dateCreated AS [Date Created], step1Table.step1Status AS [Step 1 Status], userTable.userName AS [User Name] FROM documentTable INNER JOIN userTable ON documentTable.userID = userTable.userID FULL OUTER JOIN step1Table ON documentTable.step1ID = step1Table.step1ID WHERE step1Table.step1Status = 0", con);
             loadcmd.ExecuteNonQuery();
             SqlDataAdapter adapter = new SqlDataAdapter(loadcmd);
             DataTable tab = new DataTable();
@@ -84,79 +84,130 @@ namespace ex
         {
             string dateTimeNow = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-            con.Open();
-            SqlCommand submitcmd = new SqlCommand("UPDATE step1Table SET step1Status = 1, step1dateUpdated = @datetime" +
+            SqlCommand submitcmd = new SqlCommand("UPDATE step1Table SET step1Status = 1, step1dateUpdated = @datetime " +
                                                    "FROM step1Table INNER JOIN documentTable " +
                                                    "ON step1Table.step1ID = documentTable.step1ID " +
                                                    "WHERE documentTable.projectNo = @projectno", con);
             // Assuming you have a variable called docID to pass the value
             submitcmd.Parameters.AddWithValue("@projectno", txtProjectNo.Text);
             submitcmd.Parameters.AddWithValue("@datetime", dateTimeNow);
-            submitcmd.ExecuteNonQuery();
-            con.Close();
-            emailNotif();
-            MessageBox.Show("Successfully Received", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            LoadDataGrid();
-        }
-        private void emailNotif()
-        {
-            string toEmail = "";
             con.Open();
-            using (SqlCommand emailcmd = new SqlCommand("SELECT userTable.email FROM userTable INNER JOIN documentTable ON userTable.userID = documentTable.userID WHERE documentTable.projectNo = @ProjectNo", con))
-            {
-                emailcmd.Parameters.AddWithValue("@ProjectNo", txtProjectNo.Text); // Assuming txtProjectNo contains the project number
-                using (SqlDataReader sdremail = emailcmd.ExecuteReader())
-                {
-                    if (sdremail.Read())
-                    {
-                        toEmail = sdremail.GetString(0);
-                    }
-                }
-            }
+            string toEmail = GetRecipientEmail(txtProjectNo.Text); // Retrieve recipient email
             con.Close();
-
             if (!string.IsNullOrEmpty(toEmail))
             {
-                string[] hardcodedEmails = { toEmail, "ericpoblete316@gmail.com", "kerviemille@gmail.com" };
-
-                string fromMail = "ericpoblete123@gmail.com";
-                string fromPassword = "chjdfpxspusofohl";
-                MailMessage message = new MailMessage();
-                message.From = new MailAddress(fromMail);
-                string mail = $"Project No.: {txtProjectNo.Text}<br>" +
-                              $"Project Title: {txtProjectName.Text}<br><br>" +
-                              "Good Day!,<br>" +
-                              "Your Document got approved in Step 1.";
-                string subject = $"Project No.: {txtProjectNo.Text}, Project Title: {txtProjectName.Text}";
-                message.Subject = subject;
-
-                foreach (string email in hardcodedEmails)
-                {
-                    if (!string.IsNullOrEmpty(email))
-                    {
-                        message.To.Add(new MailAddress(email));
-                    }
-                }
-
-                message.Body = mail;
-                message.IsBodyHtml = true;
-                var smtpClient = new SmtpClient("smtp.gmail.com")
-                {
-                    Port = 587,
-                    Credentials = new NetworkCredential(fromMail, fromPassword),
-                    EnableSsl = true,
-                };
-
-                smtpClient.Send(message);
-
-
+                con.Open();
+                submitcmd.ExecuteNonQuery(); // Execute the update only if recipient email is found
+                emailNotif(); // Send email notification
+                MessageBox.Show("Successfully Received", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                // Handle the case when no recipient email address is found
-                Console.WriteLine("No recipient email address found for the project.");
+                MessageBox.Show("No recipient email address found for the project.", "Error");
+            }
+
+            con.Close(); // Close the connection after all operations are done
+            LoadDataGrid();
+            resetFocus();
+        }
+
+        private string GetRecipientEmail(string projectNo)
+        {
+            string email = "";
+            try
+            {
+                using (SqlCommand emailcmd = new SqlCommand("SELECT userTable.email FROM userTable INNER JOIN documentTable ON userTable.userID = documentTable.userID WHERE documentTable.projectNo = @ProjectNo", con))
+                {
+                    emailcmd.Parameters.AddWithValue("@ProjectNo", projectNo);
+                    using (SqlDataReader sdremail = emailcmd.ExecuteReader())
+                    {
+                        if (sdremail.Read())
+                        {
+                            email = sdremail.GetString(0);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occur during database operation
+                MessageBox.Show("Error retrieving recipient email address: " + ex.Message, "Error");
+            }
+            finally
+            {
+                con.Close();
+            }
+            return email;
+        }
+
+        private void emailNotif()
+        {
+            try
+            {
+                string toEmail = "";
+                using (SqlCommand emailcmd = new SqlCommand("SELECT userTable.email FROM userTable INNER JOIN documentTable ON userTable.userID = documentTable.userID WHERE documentTable.projectNo = @ProjectNo", con))
+                {
+                    emailcmd.Parameters.AddWithValue("@ProjectNo", txtProjectNo.Text); // Assuming txtProjectNo contains the project number
+                    using (SqlDataReader sdremail = emailcmd.ExecuteReader())
+                    {
+                        if (sdremail.Read())
+                        {
+                            toEmail = sdremail.GetString(0);
+                        }
+                    }
+                }
+                con.Close();
+
+                if (!string.IsNullOrEmpty(toEmail))
+                {
+                    string[] hardcodedEmails = { toEmail, "ericpoblete316@gmail.com", "kerviemille@gmail.com" };
+
+                    string fromMail = "ericpoblete123@gmail.com";
+                    string fromPassword = "ebeqvqxtlmfgamch";
+                    MailMessage message = new MailMessage();
+                    message.From = new MailAddress(fromMail);
+                    string mail = $"Project No.: {txtProjectNo.Text}<br>" +
+                                  $"Project Title: {txtProjectName.Text}<br><br>" +
+                                  "Good Day!,<br>" +
+                                  "Your Document got approved in Step 1.";
+                    string subject = $"Project No.: {txtProjectNo.Text}, Project Title: {txtProjectName.Text}";
+                    message.Subject = subject;
+
+                    foreach (string email in hardcodedEmails)
+                    {
+                        if (!string.IsNullOrEmpty(email))
+                        {
+                            message.To.Add(new MailAddress(email));
+                        }
+                    }
+
+                    message.Body = mail;
+                    message.IsBodyHtml = true;
+                    var smtpClient = new SmtpClient("smtp.gmail.com")
+                    {
+                        Port = 587,
+                        Credentials = new NetworkCredential(fromMail, fromPassword),
+                        EnableSsl = true,
+                    };
+
+                    smtpClient.Send(message);
+
+
+                
+                 }
+                else
+                {
+                    // Handle the case when no recipient email address is found
+                    MessageBox.Show("No recipient email address found for the project.", "Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any exceptions that occur during email sending
+                MessageBox.Show("Error sending email: " + ex.Message, "Error");
             }
         }
+
 
 
     }

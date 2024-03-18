@@ -440,6 +440,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditProfile";
+            this.Load += new System.EventHandler(this.EditProfile_Load);
             this.panelGender.ResumeLayout(false);
             this.panelGender.PerformLayout();
             this.panelEmail.ResumeLayout(false);

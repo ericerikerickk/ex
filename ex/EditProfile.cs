@@ -20,7 +20,6 @@ namespace ex
         {
             InitializeComponent();
             this.user = user;
-            getData();
         }
         SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
 
@@ -99,9 +98,9 @@ namespace ex
                 txtUserAddress.Text = address;
                 txtGender.Text = gender;
             }
-            catch (Exception ex)
+            catch
             {
-                MessageBox.Show("Error retrieving user data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please input the neccessary fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -262,6 +261,12 @@ namespace ex
             resetFocus();
             panelGender.BackColor = Color.White;
             txtGender.BackColor = Color.White;
+        }
+
+        private void EditProfile_Load(object sender, EventArgs e)
+        {
+            getData();
+
         }
     }
 }
