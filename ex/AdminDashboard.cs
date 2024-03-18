@@ -25,6 +25,7 @@ namespace ex
             panelDashboardInactive.Show();
             panelEmployeesInactive.Show();
             panelUserInactive.Show();
+            panelDocumentsInactive.Show();
         }
         public void loadForm(object form)
         {
@@ -144,6 +145,14 @@ namespace ex
         private void AdminDashboard_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panelDocumentsInactive_MouseClick(object sender, MouseEventArgs e)
+        {
+            sidecomponentsInactive();
+            panelDocumentsInactive.Hide();
+            panelDocumentsActive.Show();
+            loadForm(new DocumentForm());
         }
     }
 }

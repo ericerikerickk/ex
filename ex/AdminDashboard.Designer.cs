@@ -32,51 +32,61 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelDashboardInactive = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.panelUserActive = new System.Windows.Forms.Panel();
             this.panelUserInactive = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panelEmployee = new System.Windows.Forms.Panel();
             this.panelEmployeesInactive = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelHello = new System.Windows.Forms.Label();
+            this.panelLogoutInactive = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.paneLogoutActive = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelDashboardActive = new System.Windows.Forms.Panel();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.mainpanel = new System.Windows.Forms.Panel();
+            this.panelDocumentsActive = new System.Windows.Forms.Panel();
+            this.panelDocumentsInactive = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelLogoutInactive = new System.Windows.Forms.Panel();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.panelDashboardInactive.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.panelUserActive.SuspendLayout();
             this.panelUserInactive.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panelEmployee.SuspendLayout();
             this.panelEmployeesInactive.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panelLogoutInactive.SuspendLayout();
+            this.paneLogoutActive.SuspendLayout();
+            this.panelDashboardActive.SuspendLayout();
+            this.panelDocumentsActive.SuspendLayout();
+            this.panelDocumentsInactive.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            this.paneLogoutActive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panelDashboardActive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelLogoutInactive.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -110,20 +120,6 @@
             this.label14.TabIndex = 27;
             this.label14.Text = "Dashboard";
             this.label14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDashboardInactive_MouseClick);
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox14.Image = global::ex.Properties.Resources.dashboard__1_;
-            this.pictureBox14.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(22, 21);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox14.TabIndex = 1;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDashboardInactive_MouseClick);
-            this.pictureBox14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
-            this.pictureBox14.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
             // 
             // panelUserActive
             // 
@@ -165,31 +161,6 @@
             this.label16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelUserInactive_MouseClick_1);
             this.label16.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
             this.label16.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox16.Image = global::ex.Properties.Resources.group__1_;
-            this.pictureBox16.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(22, 21);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox16.TabIndex = 29;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelUserInactive_MouseClick_1);
-            this.pictureBox16.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
-            this.pictureBox16.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox12.Image = global::ex.Properties.Resources.group;
-            this.pictureBox12.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(22, 21);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 29;
-            this.pictureBox12.TabStop = false;
             // 
             // label12
             // 
@@ -256,18 +227,6 @@
             this.label15.Text = "Employees";
             this.label15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelEmployeesInactive_MouseClick_1);
             // 
-            // pictureBox15
-            // 
-            this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox15.Image = global::ex.Properties.Resources.teamwork__2_;
-            this.pictureBox15.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(22, 21);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 29;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelEmployeesInactive_MouseClick_1);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -281,20 +240,11 @@
             this.label11.TabIndex = 30;
             this.label11.Text = "Employees";
             // 
-            // pictureBox11
-            // 
-            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox11.Image = global::ex.Properties.Resources.teamwork;
-            this.pictureBox11.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(22, 21);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 29;
-            this.pictureBox11.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.panelDocumentsInactive);
+            this.panel1.Controls.Add(this.panelDocumentsActive);
             this.panel1.Controls.Add(this.panelDashboardInactive);
             this.panel1.Controls.Add(this.labelHello);
             this.panel1.Controls.Add(this.panelLogoutInactive);
@@ -315,11 +265,39 @@
             // labelHello
             // 
             this.labelHello.AutoSize = true;
-            this.labelHello.Location = new System.Drawing.Point(38, 255);
+            this.labelHello.Location = new System.Drawing.Point(18, 326);
             this.labelHello.Name = "labelHello";
             this.labelHello.Size = new System.Drawing.Size(35, 13);
             this.labelHello.TabIndex = 35;
             this.labelHello.Text = "label3";
+            // 
+            // panelLogoutInactive
+            // 
+            this.panelLogoutInactive.BackColor = System.Drawing.Color.White;
+            this.panelLogoutInactive.Controls.Add(this.label1);
+            this.panelLogoutInactive.Controls.Add(this.pictureBox1);
+            this.panelLogoutInactive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelLogoutInactive.Location = new System.Drawing.Point(12, 352);
+            this.panelLogoutInactive.Name = "panelLogoutInactive";
+            this.panelLogoutInactive.Size = new System.Drawing.Size(137, 38);
+            this.panelLogoutInactive.TabIndex = 33;
+            this.panelLogoutInactive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseClick);
+            this.panelLogoutInactive.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
+            this.panelLogoutInactive.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label1.Location = new System.Drawing.Point(41, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Logout";
+            this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
+            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
             // label8
             // 
@@ -333,18 +311,6 @@
             this.label8.Text = "___________________________";
             this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
             this.label8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::ex.Properties.Resources.user__2_;
-            this.pictureBox8.Location = new System.Drawing.Point(56, 15);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(48, 37);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 1;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
-            this.pictureBox8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
             // 
             // paneLogoutActive
             // 
@@ -369,17 +335,6 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "Logout";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::ex.Properties.Resources.logout__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(22, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 29;
-            this.pictureBox2.TabStop = false;
-            // 
             // panelDashboardActive
             // 
             this.panelDashboardActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
@@ -391,26 +346,98 @@
             this.panelDashboardActive.Size = new System.Drawing.Size(137, 38);
             this.panelDashboardActive.TabIndex = 3;
             // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox9.Image = global::ex.Properties.Resources.dashboard;
-            this.pictureBox9.Location = new System.Drawing.Point(9, 8);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(22, 21);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 1;
-            this.pictureBox9.TabStop = false;
-            // 
             // mainpanel
             // 
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainpanel.Location = new System.Drawing.Point(160, 0);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(585, 402);
+            this.mainpanel.Size = new System.Drawing.Size(824, 402);
             this.mainpanel.TabIndex = 6;
             this.mainpanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.mainpanel_MouseDown);
             this.mainpanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mainpanel_MouseMove);
+            // 
+            // panelDocumentsActive
+            // 
+            this.panelDocumentsActive.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.panelDocumentsActive.Controls.Add(this.pictureBox4);
+            this.panelDocumentsActive.Controls.Add(this.label4);
+            this.panelDocumentsActive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelDocumentsActive.Location = new System.Drawing.Point(12, 244);
+            this.panelDocumentsActive.Name = "panelDocumentsActive";
+            this.panelDocumentsActive.Size = new System.Drawing.Size(137, 38);
+            this.panelDocumentsActive.TabIndex = 36;
+            // 
+            // panelDocumentsInactive
+            // 
+            this.panelDocumentsInactive.BackColor = System.Drawing.Color.White;
+            this.panelDocumentsInactive.Controls.Add(this.label3);
+            this.panelDocumentsInactive.Controls.Add(this.pictureBox3);
+            this.panelDocumentsInactive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelDocumentsInactive.Location = new System.Drawing.Point(12, 244);
+            this.panelDocumentsInactive.Name = "panelDocumentsInactive";
+            this.panelDocumentsInactive.Size = new System.Drawing.Size(137, 38);
+            this.panelDocumentsInactive.TabIndex = 32;
+            this.panelDocumentsInactive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDocumentsInactive_MouseClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label3.Location = new System.Drawing.Point(41, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Documents";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(41, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Documents";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = global::ex.Properties.Resources.icons8_documents_50;
+            this.pictureBox3.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 29;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = global::ex.Properties.Resources.icons8_documents_50__1_;
+            this.pictureBox4.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 29;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox14.Image = global::ex.Properties.Resources.dashboard__1_;
+            this.pictureBox14.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox14.TabIndex = 1;
+            this.pictureBox14.TabStop = false;
+            this.pictureBox14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDashboardInactive_MouseClick);
+            this.pictureBox14.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
+            this.pictureBox14.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
             // 
             // pictureBox1
             // 
@@ -425,39 +452,93 @@
             this.pictureBox1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
-            // label1
+            // pictureBox16
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label1.Location = new System.Drawing.Point(41, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Logout";
-            this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
-            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox16.Image = global::ex.Properties.Resources.group__1_;
+            this.pictureBox16.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox16.TabIndex = 29;
+            this.pictureBox16.TabStop = false;
+            this.pictureBox16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelUserInactive_MouseClick_1);
+            this.pictureBox16.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
+            this.pictureBox16.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
             // 
-            // panelLogoutInactive
+            // pictureBox12
             // 
-            this.panelLogoutInactive.BackColor = System.Drawing.Color.White;
-            this.panelLogoutInactive.Controls.Add(this.label1);
-            this.panelLogoutInactive.Controls.Add(this.pictureBox1);
-            this.panelLogoutInactive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelLogoutInactive.Location = new System.Drawing.Point(12, 352);
-            this.panelLogoutInactive.Name = "panelLogoutInactive";
-            this.panelLogoutInactive.Size = new System.Drawing.Size(137, 38);
-            this.panelLogoutInactive.TabIndex = 33;
-            this.panelLogoutInactive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseClick);
-            this.panelLogoutInactive.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
-            this.panelLogoutInactive.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox12.Image = global::ex.Properties.Resources.group;
+            this.pictureBox12.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 29;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox15.Image = global::ex.Properties.Resources.teamwork__2_;
+            this.pictureBox15.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox15.TabIndex = 29;
+            this.pictureBox15.TabStop = false;
+            this.pictureBox15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelEmployeesInactive_MouseClick_1);
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox11.Image = global::ex.Properties.Resources.teamwork;
+            this.pictureBox11.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 29;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::ex.Properties.Resources.user__2_;
+            this.pictureBox8.Location = new System.Drawing.Point(56, 15);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(48, 37);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 1;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseDown);
+            this.pictureBox8.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox8_MouseMove);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = global::ex.Properties.Resources.logout__1_;
+            this.pictureBox2.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox9.Image = global::ex.Properties.Resources.dashboard;
+            this.pictureBox9.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 1;
+            this.pictureBox9.TabStop = false;
             // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(745, 402);
+            this.ClientSize = new System.Drawing.Size(984, 402);
             this.Controls.Add(this.mainpanel);
             this.Controls.Add(this.panel1);
             this.Name = "AdminDashboard";
@@ -468,31 +549,37 @@
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.panelDashboardInactive.ResumeLayout(false);
             this.panelDashboardInactive.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.panelUserActive.ResumeLayout(false);
             this.panelUserActive.PerformLayout();
             this.panelUserInactive.ResumeLayout(false);
             this.panelUserInactive.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panelEmployee.ResumeLayout(false);
             this.panelEmployee.PerformLayout();
             this.panelEmployeesInactive.ResumeLayout(false);
             this.panelEmployeesInactive.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            this.paneLogoutActive.ResumeLayout(false);
-            this.paneLogoutActive.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panelDashboardActive.ResumeLayout(false);
-            this.panelDashboardActive.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelLogoutInactive.ResumeLayout(false);
             this.panelLogoutInactive.PerformLayout();
+            this.paneLogoutActive.ResumeLayout(false);
+            this.paneLogoutActive.PerformLayout();
+            this.panelDashboardActive.ResumeLayout(false);
+            this.panelDashboardActive.PerformLayout();
+            this.panelDocumentsActive.ResumeLayout(false);
+            this.panelDocumentsActive.PerformLayout();
+            this.panelDocumentsInactive.ResumeLayout(false);
+            this.panelDocumentsInactive.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -528,6 +615,12 @@
         private System.Windows.Forms.Panel panelLogoutInactive;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panelDocumentsActive;
+        private System.Windows.Forms.Panel panelDocumentsInactive;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label4;
     }
 }
 
