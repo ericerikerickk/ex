@@ -37,7 +37,7 @@ namespace ex
         private void LoadDataGrid()
         {
             con.Open();
-            SqlCommand loadcmd = new SqlCommand("SELECT documentTable.projectNo AS [Project No.], documentTable.projectTitle AS [Project Title], documentTable.projectDescription AS [Project Description], documentTable.dateCreated AS [Date Created], step2Table.step2Status AS [Step 2 Status], userTable.userName AS [User Name] FROM documentTable INNER JOIN userTable ON documentTable.userID = userTable.userID FULL OUTER JOIN step1Table ON documentTable.step1ID = step1Table.step1ID FULL OUTER JOIN step2Table ON documentTable.step2ID = step2Table.step2ID WHERE step1Table.step1Status = 1 OR step2Table.step2Status = 0", con);
+            SqlCommand loadcmd = new SqlCommand("SELECT documentTable.projectNo AS [Project No.],\r\n       documentTable.projectTitle AS [Project Title], documentTable.projectDescription AS [Project Description], documentTable.dateCreated AS [Date Created], step2Table.step2Status AS [Step 2 Status], userTable.userName AS [User Name] FROM documentTable INNER JOIN userTable ON documentTable.userID = userTable.userID LEFT JOIN step1Table ON documentTable.step1ID = step1Table.step1ID LEFT JOIN step2Table ON documentTable.step2ID = step2Table.step2ID WHERE step1Table.step1Status = 1 AND (step2Table.step2Status IS NULL OR step2Table.step2Status != 1)", con);
             loadcmd.ExecuteNonQuery();
             SqlDataAdapter adapter = new SqlDataAdapter(loadcmd);
             DataTable tab = new DataTable();
