@@ -81,6 +81,8 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(110, 24);
             this.txtSearch.TabIndex = 24;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
             // lblHello
             // 
@@ -125,6 +127,7 @@
             this.btnReceive.TabIndex = 4;
             this.btnReceive.Text = "RECEIVE";
             this.btnReceive.UseVisualStyleBackColor = false;
+            this.btnReceive.Click += new System.EventHandler(this.btnReceive_Click);
             // 
             // txtProjectDescription
             // 
@@ -177,6 +180,7 @@
             this.dataGridSTEP3.RowTemplate.Height = 24;
             this.dataGridSTEP3.Size = new System.Drawing.Size(625, 204);
             this.dataGridSTEP3.TabIndex = 1;
+            this.dataGridSTEP3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSTEP3_CellClick);
             // 
             // STEP3
             // 
