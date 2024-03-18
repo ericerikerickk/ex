@@ -58,7 +58,7 @@ namespace ex
             sidecomponentsInactive();
             panelDocumentsInactiveStep2.Hide();
             panelDocumentsActiveStep2.Show();
-            loadForm(new STEP1(userID));
+            loadForm(new STEP2(userID));
         }
 
         private void paneLogoutActive_MouseClick(object sender, MouseEventArgs e)

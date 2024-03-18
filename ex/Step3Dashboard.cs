@@ -26,7 +26,7 @@ namespace ex
         private void labelPending()
         {
             con.Open();
-            SqlCommand pendingcmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step3Table ON step3Table.step1ID = documentTable.step3ID WHERE step3Table.step3Status = 0", con);
+            SqlCommand pendingcmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step3Table ON step3Table.step3ID = documentTable.step3ID WHERE step3Table.step3Status = 0", con);
             Int32 resultPending = Convert.ToInt32(pendingcmd.ExecuteScalar());
             con.Close();
             lblPending.Text = resultPending.ToString();
@@ -34,7 +34,7 @@ namespace ex
         private void labelReceived()
         {
             con.Open();
-            SqlCommand receivecmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step3Table ON step3Table.step1ID = documentTable.step3ID WHERE step1Table.step3Status = 1", con);
+            SqlCommand receivecmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step3Table ON step3Table.step3ID = documentTable.step3ID WHERE step3Table.step3Status = 1", con);
             Int32 receiveresult = Convert.ToInt32(receivecmd.ExecuteScalar());
             con.Close();
             lblReceived.Text = receiveresult.ToString();

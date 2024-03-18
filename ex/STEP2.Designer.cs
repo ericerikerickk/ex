@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelSTEP2 = new System.Windows.Forms.Panel();
+            this.labelStep2 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblHello = new System.Windows.Forms.Label();
             this.txtProjectNo = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblProject = new System.Windows.Forms.Label();
             this.dataGridSTEP2 = new System.Windows.Forms.DataGridView();
-            this.labelStep2 = new System.Windows.Forms.Label();
             this.panelSTEP2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSTEP2)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,16 @@
             this.panelSTEP2.Name = "panelSTEP2";
             this.panelSTEP2.Size = new System.Drawing.Size(949, 485);
             this.panelSTEP2.TabIndex = 2;
+            // 
+            // labelStep2
+            // 
+            this.labelStep2.AutoSize = true;
+            this.labelStep2.Location = new System.Drawing.Point(13, 10);
+            this.labelStep2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelStep2.Name = "labelStep2";
+            this.labelStep2.Size = new System.Drawing.Size(44, 16);
+            this.labelStep2.TabIndex = 25;
+            this.labelStep2.Text = "label1";
             // 
             // txtSearch
             // 
@@ -114,6 +124,7 @@
             this.btnReceive.TabIndex = 4;
             this.btnReceive.Text = "RECEIVE";
             this.btnReceive.UseVisualStyleBackColor = false;
+            this.btnReceive.Click += new System.EventHandler(this.btnReceive_Click);
             // 
             // txtProjectDescription
             // 
@@ -165,16 +176,6 @@
             this.dataGridSTEP2.Size = new System.Drawing.Size(833, 251);
             this.dataGridSTEP2.TabIndex = 1;
             this.dataGridSTEP2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSTEP2_CellClick);
-            // 
-            // labelStep2
-            // 
-            this.labelStep2.AutoSize = true;
-            this.labelStep2.Location = new System.Drawing.Point(13, 10);
-            this.labelStep2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelStep2.Name = "labelStep2";
-            this.labelStep2.Size = new System.Drawing.Size(44, 16);
-            this.labelStep2.TabIndex = 25;
-            this.labelStep2.Text = "label1";
             // 
             // STEP2
             // 
