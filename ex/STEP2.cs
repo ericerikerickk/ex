@@ -55,6 +55,10 @@ namespace ex
                 txtProjectName.Text = selectedRow.Cells["Project Title"].Value?.ToString();
                 txtProjectDescription.Text = selectedRow.Cells["Project Description"].Value?.ToString();
             }
+            else
+            {
+                MessageBox.Show("No value to be shown", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void txtSearch_Leave(object sender, EventArgs e)
