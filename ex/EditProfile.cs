@@ -25,17 +25,16 @@ namespace ex
 
         private void applyBtn_Click(object sender, EventArgs e)
         {
-            if(txtUserFname.Text.Contains(" ") && txtUserLname.Text.Contains(" ") && txtUserEmail.Text.Contains(" ") && txtUserContact.Text.Contains(" ") && txtUserAddress.Text.Contains(" ") && txtGender.Text.Contains(" "))
+            try
             {
-                MessageBox.Show("Please enter the complete details", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
 
-            }
-            else
-            {
                 SqlCommand cmdEdit = new SqlCommand("UPDATE userTable SET firstName='" + txtUserFname.Text + "',lastName ='" + txtUserLname.Text + "',email='" + txtUserEmail.Text + "',contact='" + txtUserContact.Text + "',address='" + txtUserAddress.Text + "',gender='" + txtGender.Text + "' where userID ='" + user + "'", con);
                 cmdEdit.ExecuteNonQuery();
                 MessageBox.Show("Successfully Updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                con.Close();
                 editBtn.Show();
                 applyBtn.Hide();
                 txtUserFname.Visible = false;
@@ -51,13 +50,28 @@ namespace ex
                 lblAddress.Visible = true;
                 lblGender.Visible = true;
                 CancelBtn.Visible = false;
+
+                // Call getData() again to update the labels with the new data
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
                 getData();
             }
-
+        }
+        private void refresh()
+        {
+            getData();
         }
         private void getData()
         {
-
             try
             {
                 string firstName = "";
@@ -83,6 +97,7 @@ namespace ex
                 {
                     MessageBox.Show("Please edit your profile", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                sdrRead.Close();
                 con.Close();
                 lblLastName.Text = lastName;
                 lblFname.Text = firstName;
@@ -103,54 +118,6 @@ namespace ex
             }
 
         }
-        private void getDataEdit()
-        {
-            try
-            {
-                string firstName = "";
-                string lastName = "";
-                string contact = "";
-                string email = "";
-                string gender = "";
-                string address = "";
-                con.Open();
-                SqlCommand readcmd = new SqlCommand("SELECT * FROM userTable WHERE userID = @UserID", con);
-                readcmd.Parameters.AddWithValue("@UserID", Convert.ToInt32(user));
-                SqlDataReader sdrRead = readcmd.ExecuteReader();
-                if (sdrRead.Read())
-                {
-                    firstName = sdrRead.GetString(5);
-                    lastName = sdrRead.GetString(6);
-                    email = sdrRead.GetString(3);
-                    contact = sdrRead.GetString(7);
-                    address = sdrRead.GetString(8);
-                    gender = sdrRead.GetString(9);
-                }
-                else
-                {
-                    MessageBox.Show("Please edit your profile", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                con.Close();
-                lblLastName.Text = lastName;
-                lblFname.Text = firstName;
-                lblEmail.Text = email;
-                lblContact.Text = contact;
-                lblAddress.Text = address;
-                lblGender.Text = gender;
-                txtUserFname.Text = firstName;
-                txtUserLname.Text = lastName;
-                txtUserEmail.Text = email;
-                txtUserContact.Text = contact;
-                txtUserAddress.Text = address;
-                txtGender.Text = gender;
-       
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error retrieving user data: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void editBtn_Click(object sender, EventArgs e)
         {
             getData();
