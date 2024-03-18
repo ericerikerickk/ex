@@ -36,12 +36,12 @@
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.HelloUser = new System.Windows.Forms.Label();
-            this.panelDocumentsInactiveStep2 = new System.Windows.Forms.Panel();
-            this.labeldocs = new System.Windows.Forms.Label();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panelDocumentsActiveStep2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.panelDocumentsInactiveStep2 = new System.Windows.Forms.Panel();
+            this.labeldocs = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panelProfileActiveStep2 = new System.Windows.Forms.Panel();
@@ -59,9 +59,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelDashboardInactiveStep2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panelDocumentsActiveStep2.SuspendLayout();
             this.panelDocumentsInactiveStep2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            this.panelDocumentsActiveStep2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panelProfileActiveStep2.SuspendLayout();
@@ -101,6 +101,7 @@
             this.paneLogoutActive.Name = "paneLogoutActive";
             this.paneLogoutActive.Size = new System.Drawing.Size(183, 47);
             this.paneLogoutActive.TabIndex = 37;
+            this.paneLogoutActive.Click += new System.EventHandler(this.paneLogoutActive_Click);
             this.paneLogoutActive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.paneLogoutActive_MouseClick);
             // 
             // label4
@@ -177,45 +178,6 @@
             this.HelloUser.TabIndex = 31;
             this.HelloUser.Text = "label3";
             // 
-            // panelDocumentsInactiveStep2
-            // 
-            this.panelDocumentsInactiveStep2.BackColor = System.Drawing.Color.White;
-            this.panelDocumentsInactiveStep2.Controls.Add(this.labeldocs);
-            this.panelDocumentsInactiveStep2.Controls.Add(this.pictureBox13);
-            this.panelDocumentsInactiveStep2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelDocumentsInactiveStep2.Location = new System.Drawing.Point(0, 0);
-            this.panelDocumentsInactiveStep2.Margin = new System.Windows.Forms.Padding(4);
-            this.panelDocumentsInactiveStep2.Name = "panelDocumentsInactiveStep2";
-            this.panelDocumentsInactiveStep2.Size = new System.Drawing.Size(183, 47);
-            this.panelDocumentsInactiveStep2.TabIndex = 29;
-            this.panelDocumentsInactiveStep2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDocumentsInactiveStep2_MouseClick);
-            // 
-            // labeldocs
-            // 
-            this.labeldocs.AutoSize = true;
-            this.labeldocs.BackColor = System.Drawing.Color.White;
-            this.labeldocs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.labeldocs.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
-            this.labeldocs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.labeldocs.Location = new System.Drawing.Point(55, 14);
-            this.labeldocs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labeldocs.Name = "labeldocs";
-            this.labeldocs.Size = new System.Drawing.Size(75, 16);
-            this.labeldocs.TabIndex = 28;
-            this.labeldocs.Text = "Documents";
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox13.Image = global::ex.Properties.Resources.icons8_documents_50;
-            this.pictureBox13.Location = new System.Drawing.Point(12, 11);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(29, 26);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 1;
-            this.pictureBox13.TabStop = false;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -254,6 +216,45 @@
             this.label2.Size = new System.Drawing.Size(75, 16);
             this.label2.TabIndex = 28;
             this.label2.Text = "Documents";
+            // 
+            // panelDocumentsInactiveStep2
+            // 
+            this.panelDocumentsInactiveStep2.BackColor = System.Drawing.Color.White;
+            this.panelDocumentsInactiveStep2.Controls.Add(this.labeldocs);
+            this.panelDocumentsInactiveStep2.Controls.Add(this.pictureBox13);
+            this.panelDocumentsInactiveStep2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelDocumentsInactiveStep2.Location = new System.Drawing.Point(0, 0);
+            this.panelDocumentsInactiveStep2.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDocumentsInactiveStep2.Name = "panelDocumentsInactiveStep2";
+            this.panelDocumentsInactiveStep2.Size = new System.Drawing.Size(183, 47);
+            this.panelDocumentsInactiveStep2.TabIndex = 29;
+            this.panelDocumentsInactiveStep2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDocumentsInactiveStep2_MouseClick);
+            // 
+            // labeldocs
+            // 
+            this.labeldocs.AutoSize = true;
+            this.labeldocs.BackColor = System.Drawing.Color.White;
+            this.labeldocs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labeldocs.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
+            this.labeldocs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.labeldocs.Location = new System.Drawing.Point(55, 14);
+            this.labeldocs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labeldocs.Name = "labeldocs";
+            this.labeldocs.Size = new System.Drawing.Size(75, 16);
+            this.labeldocs.TabIndex = 28;
+            this.labeldocs.Text = "Documents";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox13.Image = global::ex.Properties.Resources.icons8_documents_50;
+            this.pictureBox13.Location = new System.Drawing.Point(12, 11);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(29, 26);
+            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox13.TabIndex = 1;
+            this.pictureBox13.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -317,6 +318,7 @@
             this.labelprofile.Size = new System.Drawing.Size(50, 18);
             this.labelprofile.TabIndex = 27;
             this.labelprofile.Text = "Profile";
+            this.labelprofile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labelprofile_MouseClick);
             // 
             // pictureBox14
             // 
@@ -415,6 +417,7 @@
             this.Name = "Step2Form";
             this.ShowIcon = false;
             this.Text = "Step2Form";
+            this.Load += new System.EventHandler(this.Step2Form_Load);
             this.panel1step2.ResumeLayout(false);
             this.panel1step2.PerformLayout();
             this.paneLogoutActive.ResumeLayout(false);
@@ -423,11 +426,11 @@
             this.panelDashboardInactiveStep2.ResumeLayout(false);
             this.panelDashboardInactiveStep2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panelDocumentsActiveStep2.ResumeLayout(false);
+            this.panelDocumentsActiveStep2.PerformLayout();
             this.panelDocumentsInactiveStep2.ResumeLayout(false);
             this.panelDocumentsInactiveStep2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            this.panelDocumentsActiveStep2.ResumeLayout(false);
-            this.panelDocumentsActiveStep2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panelProfileActiveStep2.ResumeLayout(false);
