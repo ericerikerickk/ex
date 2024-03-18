@@ -99,13 +99,13 @@ namespace ex
                     }
                     else if (Step2 == "Step 2")
                     {
-                        STEP2 step2Form = new STEP2(userID);
+                        Step2Form step2Form = new Step2Form(userID);
                         this.Hide();
                         step2Form.ShowDialog();
                     }
                     else if (Step3 == "Step 3")
                     {
-                        STEP3 step3Form = new STEP3(userID);
+                        Step3Form step3Form = new Step3Form(userID);
                         this.Hide();
                         step3Form.ShowDialog();
                     }

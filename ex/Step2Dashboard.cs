@@ -20,7 +20,7 @@ namespace ex
             labelPending();
             labelReceived();
             labelDocuments();
-            //timer1.Start();
+            timer1.Start();
         }
 
         SqlConnection con = new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -28,7 +28,7 @@ namespace ex
         private void labelPending()
         {
             con.Open();
-            SqlCommand pendingcmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step1Table ON step1Table.step1ID = documentTable.step1ID WHERE step1Table.step1Status = 0", con);
+            SqlCommand pendingcmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step2Table ON step2Table.step2ID = documentTable.step2ID WHERE step2Table.step2Status = 0", con);
             Int32 resultPending = Convert.ToInt32(pendingcmd.ExecuteScalar());
             con.Close();
             lblPending.Text = resultPending.ToString();
@@ -36,7 +36,7 @@ namespace ex
         private void labelReceived()
         {
             con.Open();
-            SqlCommand receivecmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step1Table ON step1Table.step1ID = documentTable.step1ID WHERE step1Table.step1Status = 1", con);
+            SqlCommand receivecmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step2Table ON step2Table.step2ID = documentTable.step2ID WHERE step2Table.step2Status = 1", con);
             Int32 receiveresult = Convert.ToInt32(receivecmd.ExecuteScalar());
             con.Close();
             lblReceived.Text = receiveresult.ToString();
@@ -44,13 +44,12 @@ namespace ex
         private void labelDocuments()
         {
             con.Open();
-            SqlCommand documentscmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step1Table ON step1Table.step1ID = documentTable.step1ID WHERE step1Table.step1Status = 1 OR step1Table.step1Status = 0", con);
+            SqlCommand documentscmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step2Table ON step2Table.step2ID = documentTable.step2ID WHERE step2Table.step2Status = 1 OR step2Table.step2Status = 0", con);
             Int32 documentsResult = Convert.ToInt32(documentscmd.ExecuteScalar());
             con.Close();
             lblDocuments.Text = documentsResult.ToString();
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick_1(object sender, EventArgs e)
         {
             lblTime.Text = DateTime.Now.ToLongTimeString();
             lblDate.Text = DateTime.Now.ToLongDateString();

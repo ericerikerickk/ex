@@ -13,6 +13,7 @@ namespace ex
     public partial class Step2Form : Form
     {
         private int userID;
+        
         public Step2Form(int userID)
         {
             InitializeComponent();
