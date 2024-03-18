@@ -37,7 +37,7 @@ namespace ex
         private void LoadDataGrid()
         {
             con.Open();
-            SqlCommand loadcmd = new SqlCommand("SELECT documentTable.projectNo AS [Project No.], documentTable.projectTitle AS [Project Title], documentTable.projectDescription AS [Project Description], documentTable.dateCreated AS [Date Created], step1Table.step1Status AS [Step 1 Status], userTable.userName AS [User Name] FROM documentTable INNER JOIN userTable ON documentTable.userID = userTable.userID FULL OUTER JOIN step1Table ON documentTable.step1ID = step1Table.step1ID", con);
+            SqlCommand loadcmd = new SqlCommand("SELECT documentTable.projectNo AS [Project No.], documentTable.projectTitle AS [Project Title], documentTable.projectDescription AS [Project Description], documentTable.dateCreated AS [Date Created], step2Table.step2Status AS [Step 2 Status], userTable.userName AS [User Name] FROM documentTable INNER JOIN userTable ON documentTable.userID = userTable.userID FULL OUTER JOIN step1Table ON documentTable.step1ID = step1Table.step1ID FULL OUTER JOIN step2Table ON documentTable.step2ID = step2Table.step2ID WHERE step1Table.step1Status = 1 AND step2Table.step2Status = 0", con);
             loadcmd.ExecuteNonQuery();
             SqlDataAdapter adapter = new SqlDataAdapter(loadcmd);
             DataTable tab = new DataTable();
@@ -69,7 +69,7 @@ namespace ex
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand searchcmd = new SqlCommand("SELECT documentTable.projectNo AS [Project No.], documentTable.projectTitle AS [Project Title], documentTable.projectDescription AS [Project Description], documentTable.dateCreated AS [Date Created], step1Table.step1Status AS [Step 1 Status], userTable.firstName AS [Requestor] FROM documentTable INNER JOIN userTable ON documentTable.userID = userTable.userID FULL OUTER JOIN step1Table ON documentTable.step1ID = step1Table.step1ID WHERE projectNo like '%" + txtSearch.Text + "%'", con);
+            SqlCommand searchcmd = new SqlCommand("SELECT documentTable.projectNo AS [Project No.], documentTable.projectTitle AS [Project Title], documentTable.projectDescription AS [Project Description], documentTable.dateCreated AS [Date Created], step2Table.step2Status AS [Step 2 Status], userTable.firstName AS [Requestor] FROM documentTable INNER JOIN userTable ON documentTable.userID = userTable.userID FULL OUTER JOIN step2Table ON documentTable.step2ID = step2Table.step2ID WHERE projectNo like '%" + txtSearch.Text + "%'", con);
             searchcmd.ExecuteNonQuery();
 
             SqlDataAdapter adap = new SqlDataAdapter(searchcmd);
@@ -86,9 +86,9 @@ namespace ex
             string dateTimeNow = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
             con.Open();
-            SqlCommand submitcmd = new SqlCommand("UPDATE step1Table SET step1Status = 1, step1dateUpdated = @datetime" +
-                                                   "FROM step1Table INNER JOIN documentTable " +
-                                                   "ON step1Table.step1ID = documentTable.step1ID " +
+            SqlCommand submitcmd = new SqlCommand("UPDATE step2Table SET step2Status = 1, step2dateUpdated = @datetime" +
+                                                   "FROM step2Table INNER JOIN documentTable " +
+                                                   "ON step2Table.step2ID = documentTable.step2ID " +
                                                    "WHERE documentTable.projectNo = @projectno", con);
             // Assuming you have a variable called docID to pass the value
             submitcmd.Parameters.AddWithValue("@projectno", txtProjectNo.Text);
