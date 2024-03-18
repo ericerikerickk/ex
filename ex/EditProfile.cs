@@ -66,10 +66,6 @@ namespace ex
                 getData();
             }
         }
-        private void refresh()
-        {
-            getData();
-        }
         private void getData()
         {
             try
@@ -86,16 +82,23 @@ namespace ex
                 SqlDataReader sdrRead = readcmd.ExecuteReader();
                 if (sdrRead.Read())
                 {
-                    firstName = sdrRead.GetString(5);
-                    lastName = sdrRead.GetString(6);
-                    email = sdrRead.GetString(3);
-                    contact = sdrRead.GetString(7);
-                    address = sdrRead.GetString(8);
-                    gender = sdrRead.GetString(9);
+                    // Check if the fields are null before retrieving their values
+                    if (!sdrRead.IsDBNull(5))
+                        firstName = sdrRead.GetString(5);
+                    if (!sdrRead.IsDBNull(6))
+                        lastName = sdrRead.GetString(6);
+                    if (!sdrRead.IsDBNull(3))
+                        email = sdrRead.GetString(3);
+                    if (!sdrRead.IsDBNull(7))
+                        contact = sdrRead.GetString(7);
+                    if (!sdrRead.IsDBNull(8))
+                        address = sdrRead.GetString(8);
+                    if (!sdrRead.IsDBNull(9))
+                        gender = sdrRead.GetString(9);
                 }
                 else
                 {
-                    MessageBox.Show("Please edit your profile", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("User not found in the database.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 sdrRead.Close();
                 con.Close();
@@ -112,12 +115,24 @@ namespace ex
                 txtUserAddress.Text = address;
                 txtGender.Text = gender;
             }
-            catch
+            catch (SqlException ex)
             {
-                MessageBox.Show("Please input the neccessary fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Database error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
         }
+
+
         private void editBtn_Click(object sender, EventArgs e)
         {
             getData();
