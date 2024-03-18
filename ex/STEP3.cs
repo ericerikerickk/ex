@@ -33,7 +33,7 @@ namespace ex
         private void LoadDataGrid()
         {
             con.Open();
-            SqlCommand loadcmd = new SqlCommand("SELECT documentTable.projectNo, documentTable.projectTitle, documentTable.projectDescription, documentTable.dateCreated, documentTable.userID, step3Table.step3Status FROM documentTable FULL OUTER JOIN userTable ON documentTable.userID = userTable.userID FULL OUTER JOIN step3Table ON documentTable.step3ID = step3Table.step3ID", con);
+            SqlCommand loadcmd = new SqlCommand("SELECT documentTable.projectNo, documentTable.projectTitle, documentTable.projectDescription, documentTable.dateCreated, documentTable.userID, step3Table.step3Status FROM documentTable FULL OUTER JOIN userTable ON documentTable.userID = userTable.userID FULL OUTER JOIN step3Table ON documentTable.step3ID = step3Table.step3ID WHERE step1Table.step1Status = 1 AND step2Table.step2Status = 1", con);
             loadcmd.ExecuteNonQuery();
             SqlDataAdapter adapter = new SqlDataAdapter(loadcmd);
             DataTable tab = new DataTable();
@@ -51,6 +51,10 @@ namespace ex
                 txtProjectNo.Text = selectedRow.Cells["Project No."].Value?.ToString();
                 txtProjectName.Text = selectedRow.Cells["Project Title"].Value?.ToString();
                 txtProjectDescription.Text = selectedRow.Cells["Project Description"].Value?.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No value to be shown", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

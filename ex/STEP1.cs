@@ -26,7 +26,6 @@ namespace ex
             LoadDataGrid();
             labelStep1.Text = "Hello " + step1User;
             dataGridSTEP1.CellClick += dataGridSTEP1_CellClick;
-            txtProjectNo.Focus();
         }
         private void resetFocus()
         {
@@ -57,6 +56,10 @@ namespace ex
                 txtProjectNo.Text = selectedRow.Cells["Project No."].Value?.ToString();
                 txtProjectName.Text = selectedRow.Cells["Project Title"].Value?.ToString();
                 txtProjectDescription.Text = selectedRow.Cells["Project Description"].Value?.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No value to be shown", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -208,7 +211,9 @@ namespace ex
             }
         }
 
-
-
+        private void STEP1_Load(object sender, EventArgs e)
+        {
+            txtProjectNo.Focus();
+        }
     }
 }

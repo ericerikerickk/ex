@@ -110,7 +110,7 @@ namespace ex
                             if (txtPass.Text.Trim().ToLower() == txtConfirmpass.Text.Trim().ToLower())
                             {
                                 // Convert the username to lower case for comparison
-                                string username = txtUsername.Text.ToLower();
+                                string username = txtUsername.Text;
                                 SqlCommand cmd = new SqlCommand("SELECT * FROM userTable WHERE LOWER(userName) = @Username", con);
                                 cmd.Parameters.AddWithValue("@Username", username);
                                 SqlDataReader dr = cmd.ExecuteReader();
@@ -262,7 +262,7 @@ namespace ex
             if (e.KeyCode == Keys.Enter)
             {
                 // Trigger the click event of the login button
-                btnLogin.PerformClick();
+                btnSignup.PerformClick();
             }
         }
     }

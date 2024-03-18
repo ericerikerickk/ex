@@ -121,13 +121,17 @@ namespace ex
 
         private void dataGridViewDocs_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) // Ensure a valid cell is clicked
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && dataGridViewDocs.Rows[e.RowIndex].Cells["Project No."].Value != null && dataGridViewDocs.Rows[e.RowIndex].Cells["Project Title"].Value != null && dataGridViewDocs.Rows[e.RowIndex].Cells["Project Description"].Value != null)
             {
                 resetFocus();
                 DataGridViewRow selectedRow = dataGridViewDocs.Rows[e.RowIndex];
-                txtProjectNo.Text = selectedRow.Cells["Project No."].Value.ToString();
-                txtProjectName.Text = selectedRow.Cells["Project Title"].Value.ToString();
-                txtProjectDescription.Text = selectedRow.Cells["Project Description"].Value.ToString();
+                txtProjectNo.Text = selectedRow.Cells["Project No."].Value?.ToString();
+                txtProjectName.Text = selectedRow.Cells["Project Title"].Value?.ToString();
+                txtProjectDescription.Text = selectedRow.Cells["Project Description"].Value?.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No value to be shown", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
