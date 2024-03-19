@@ -33,7 +33,7 @@ namespace ex
         private void LoadDataGrid()
         {
             con.Open();
-            SqlCommand loadcmd = new SqlCommand("SELECT documentTable.projectNo, documentTable.projectTitle, documentTable.projectDescription, documentTable.dateCreated, documentTable.userID, step3Table.step3Status FROM documentTable FULL OUTER JOIN userTable ON documentTable.userID = userTable.userID FULL OUTER JOIN step3Table ON documentTable.step3ID = step3Table.step3ID FULL OUTER JOIN step1Table ON documentTable.step1ID = step1Table.step1ID FULL OUTER JOIN step2Table ON documentTable.step2ID = step2Table.step2ID WHERE step1Table.step1Status = 1 AND step2Table.step2Status = 1 AND step3Table.step3Status = 0", con);
+            SqlCommand loadcmd = new SqlCommand("SELECT documentTable.projectNo AS [Project No.], documentTable.projectTitle AS [Project Title], documentTable.projectDescription AS [Project Description], documentTable.dateCreated AS [Date Created], documentTable.userID AS [Requestor], step3Table.step3Status AS [Step 3 Status] FROM documentTable FULL OUTER JOIN userTable ON documentTable.userID = userTable.userID FULL OUTER JOIN step3Table ON documentTable.step3ID = step3Table.step3ID FULL OUTER JOIN step1Table ON documentTable.step1ID = step1Table.step1ID FULL OUTER JOIN step2Table ON documentTable.step2ID = step2Table.step2ID WHERE step1Table.step1Status = 1 AND step2Table.step2Status = 1 AND step3Table.step3Status = 0", con);
             loadcmd.ExecuteNonQuery();
             SqlDataAdapter adapter = new SqlDataAdapter(loadcmd);
             DataTable tab = new DataTable();
@@ -166,7 +166,7 @@ namespace ex
                     string mail = $"Project No.: {txtProjectNo.Text}<br>" +
                                   $"Project Title: {txtProjectName.Text}<br><br>" +
                                   "Good Day!,<br>" +
-                                  "Your Document got approved in Step 3.";
+                                  "Your Document got received in Step 3.";
                     string subject = $"Project No.: {txtProjectNo.Text}, Project Title: {txtProjectName.Text}";
                     message.Subject = subject;
 

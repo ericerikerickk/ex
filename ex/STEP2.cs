@@ -114,7 +114,7 @@ namespace ex
                     string mail = $"Project No.: {txtProjectNo.Text}<br>" +
                                   $"Project Title: {txtProjectName.Text}<br><br>" +
                                   "Good Day!,<br>" +
-                                  "Your Document got approved in Step 2.";
+                                  "Your Document got received in Step 2.";
                     string subject = $"Project No.: {txtProjectNo.Text}, Project Title: {txtProjectName.Text}";
                     message.Subject = subject;
 
