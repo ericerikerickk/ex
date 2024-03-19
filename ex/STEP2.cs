@@ -22,7 +22,6 @@ namespace ex
             this.step2User = step2User;
             InitializeComponent();
             LoadDataGrid();
-            labelStep2.Text = "Hello " + step2User;
             dataGridSTEP2.CellClick += dataGridSTEP2_CellClick;
             txtProjectNo.Focus();
         }

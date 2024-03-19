@@ -50,7 +50,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblReceived = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelEditProfileStep2.SuspendLayout();
@@ -77,7 +76,6 @@
             this.panelEditProfileStep2.Controls.Add(this.panel6);
             this.panelEditProfileStep2.Controls.Add(this.panel5);
             this.panelEditProfileStep2.Controls.Add(this.panel4);
-            this.panelEditProfileStep2.Controls.Add(this.button3);
             this.panelEditProfileStep2.Controls.Add(this.label1);
             this.panelEditProfileStep2.Location = new System.Drawing.Point(12, 12);
             this.panelEditProfileStep2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -303,20 +301,6 @@
             this.label3.TabIndex = 21;
             this.label3.Text = "Received";
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(755, 4);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(53, 49);
-            this.button3.TabIndex = 43;
-            this.button3.Text = "X";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -341,6 +325,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Step2Dashboard";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Step2Dashboard";
             this.panelEditProfileStep2.ResumeLayout(false);
             this.panelEditProfileStep2.PerformLayout();
@@ -385,7 +370,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblReceived;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
     }

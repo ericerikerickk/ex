@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panelSTEP2 = new System.Windows.Forms.Panel();
-            this.labelStep2 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblHello = new System.Windows.Forms.Label();
             this.txtProjectNo = new System.Windows.Forms.TextBox();
@@ -47,7 +46,6 @@
             // panelSTEP2
             // 
             this.panelSTEP2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelSTEP2.Controls.Add(this.labelStep2);
             this.panelSTEP2.Controls.Add(this.txtSearch);
             this.panelSTEP2.Controls.Add(this.lblHello);
             this.panelSTEP2.Controls.Add(this.txtProjectNo);
@@ -58,21 +56,11 @@
             this.panelSTEP2.Controls.Add(this.label2);
             this.panelSTEP2.Controls.Add(this.lblProject);
             this.panelSTEP2.Controls.Add(this.dataGridSTEP2);
-            this.panelSTEP2.Location = new System.Drawing.Point(13, 12);
+            this.panelSTEP2.Location = new System.Drawing.Point(43, 11);
             this.panelSTEP2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSTEP2.Name = "panelSTEP2";
-            this.panelSTEP2.Size = new System.Drawing.Size(949, 485);
+            this.panelSTEP2.Size = new System.Drawing.Size(885, 485);
             this.panelSTEP2.TabIndex = 2;
-            // 
-            // labelStep2
-            // 
-            this.labelStep2.AutoSize = true;
-            this.labelStep2.Location = new System.Drawing.Point(13, 10);
-            this.labelStep2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelStep2.Name = "labelStep2";
-            this.labelStep2.Size = new System.Drawing.Size(44, 16);
-            this.labelStep2.TabIndex = 25;
-            this.labelStep2.Text = "label1";
             // 
             // txtSearch
             // 
@@ -167,7 +155,7 @@
             // dataGridSTEP2
             // 
             this.dataGridSTEP2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridSTEP2.Location = new System.Drawing.Point(59, 210);
+            this.dataGridSTEP2.Location = new System.Drawing.Point(38, 209);
             this.dataGridSTEP2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridSTEP2.Name = "dataGridSTEP2";
             this.dataGridSTEP2.ReadOnly = true;
@@ -208,6 +196,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblProject;
         private System.Windows.Forms.DataGridView dataGridSTEP2;
-        private System.Windows.Forms.Label labelStep2;
     }
 }

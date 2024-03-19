@@ -20,7 +20,6 @@ namespace ex
         {
             InitializeComponent();
             LoadDataGrid();
-            labelStep3.Text = "Hello " + step3User;
         }
         private void resetFocus()
         {
@@ -204,5 +203,7 @@ namespace ex
                 MessageBox.Show("Error sending email: " + ex.Message, "Error");
             }
         }
+
+     
     }
 }

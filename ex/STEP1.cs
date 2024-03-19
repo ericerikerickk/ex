@@ -24,7 +24,6 @@ namespace ex
             this.step1User = step1User;
             InitializeComponent();
             LoadDataGrid();
-            labelStep1.Text = "Hello " + step1User;
             dataGridSTEP1.CellClick += dataGridSTEP1_CellClick;
         }
         private void resetFocus()

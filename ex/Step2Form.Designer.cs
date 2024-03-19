@@ -402,19 +402,20 @@
             this.panel2Step2.Location = new System.Drawing.Point(213, 0);
             this.panel2Step2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2Step2.Name = "panel2Step2";
-            this.panel2Step2.Size = new System.Drawing.Size(836, 507);
+            this.panel2Step2.Size = new System.Drawing.Size(974, 507);
             this.panel2Step2.TabIndex = 9;
             // 
             // Step2Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 507);
+            this.ClientSize = new System.Drawing.Size(1187, 507);
             this.Controls.Add(this.panel2Step2);
             this.Controls.Add(this.panel1step2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Step2Form";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Step2Form";
             this.Load += new System.EventHandler(this.Step2Form_Load);
             this.panel1step2.ResumeLayout(false);

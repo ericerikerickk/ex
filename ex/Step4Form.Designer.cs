@@ -85,8 +85,9 @@
             this.panel1.Controls.Add(this.panelDashboardActive);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(160, 412);
+            this.panel1.Size = new System.Drawing.Size(213, 507);
             this.panel1.TabIndex = 11;
             // 
             // paneLogoutActive
@@ -95,9 +96,10 @@
             this.paneLogoutActive.Controls.Add(this.label4);
             this.paneLogoutActive.Controls.Add(this.pictureBox5);
             this.paneLogoutActive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.paneLogoutActive.Location = new System.Drawing.Point(12, 362);
+            this.paneLogoutActive.Location = new System.Drawing.Point(16, 446);
+            this.paneLogoutActive.Margin = new System.Windows.Forms.Padding(4);
             this.paneLogoutActive.Name = "paneLogoutActive";
-            this.paneLogoutActive.Size = new System.Drawing.Size(137, 38);
+            this.paneLogoutActive.Size = new System.Drawing.Size(183, 47);
             this.paneLogoutActive.TabIndex = 37;
             this.paneLogoutActive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.paneLogoutActive_MouseClick);
             // 
@@ -107,9 +109,10 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(41, 11);
+            this.label4.Location = new System.Drawing.Point(55, 14);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(48, 16);
             this.label4.TabIndex = 30;
             this.label4.Text = "Logout";
             this.label4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.paneLogoutActive_MouseClick);
@@ -118,9 +121,10 @@
             // 
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Image = global::ex.Properties.Resources.logout__1_;
-            this.pictureBox5.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox5.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox5.Size = new System.Drawing.Size(29, 26);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 29;
             this.pictureBox5.TabStop = false;
@@ -129,9 +133,10 @@
             // HelloUser
             // 
             this.HelloUser.AutoSize = true;
-            this.HelloUser.Location = new System.Drawing.Point(78, 301);
+            this.HelloUser.Location = new System.Drawing.Point(104, 370);
+            this.HelloUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.HelloUser.Name = "HelloUser";
-            this.HelloUser.Size = new System.Drawing.Size(35, 13);
+            this.HelloUser.Size = new System.Drawing.Size(44, 16);
             this.HelloUser.TabIndex = 31;
             this.HelloUser.Text = "label3";
             // 
@@ -141,9 +146,10 @@
             this.panelDocumentsInactive.Controls.Add(this.labeldocs);
             this.panelDocumentsInactive.Controls.Add(this.pictureBox13);
             this.panelDocumentsInactive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelDocumentsInactive.Location = new System.Drawing.Point(12, 168);
+            this.panelDocumentsInactive.Location = new System.Drawing.Point(16, 207);
+            this.panelDocumentsInactive.Margin = new System.Windows.Forms.Padding(4);
             this.panelDocumentsInactive.Name = "panelDocumentsInactive";
-            this.panelDocumentsInactive.Size = new System.Drawing.Size(137, 38);
+            this.panelDocumentsInactive.Size = new System.Drawing.Size(183, 47);
             this.panelDocumentsInactive.TabIndex = 29;
             this.panelDocumentsInactive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDocumentsInactive_MouseClick);
             // 
@@ -154,9 +160,10 @@
             this.labeldocs.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labeldocs.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
             this.labeldocs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.labeldocs.Location = new System.Drawing.Point(41, 11);
+            this.labeldocs.Location = new System.Drawing.Point(55, 14);
+            this.labeldocs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labeldocs.Name = "labeldocs";
-            this.labeldocs.Size = new System.Drawing.Size(61, 13);
+            this.labeldocs.Size = new System.Drawing.Size(75, 16);
             this.labeldocs.TabIndex = 28;
             this.labeldocs.Text = "Documents";
             this.labeldocs.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDocumentsInactive_MouseClick);
@@ -165,9 +172,10 @@
             // 
             this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox13.Image = global::ex.Properties.Resources.icons8_documents_50;
-            this.pictureBox13.Location = new System.Drawing.Point(9, 9);
+            this.pictureBox13.Location = new System.Drawing.Point(12, 11);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox13.Size = new System.Drawing.Size(29, 26);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 1;
             this.pictureBox13.TabStop = false;
@@ -178,9 +186,10 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(-3, 55);
+            this.label8.Location = new System.Drawing.Point(-4, 68);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(169, 13);
+            this.label8.Size = new System.Drawing.Size(196, 16);
             this.label8.TabIndex = 2;
             this.label8.Text = "___________________________";
             // 
@@ -190,9 +199,10 @@
             this.panelDocumentsActive.Controls.Add(this.label2);
             this.panelDocumentsActive.Controls.Add(this.pictureBox2);
             this.panelDocumentsActive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelDocumentsActive.Location = new System.Drawing.Point(12, 168);
+            this.panelDocumentsActive.Location = new System.Drawing.Point(16, 207);
+            this.panelDocumentsActive.Margin = new System.Windows.Forms.Padding(4);
             this.panelDocumentsActive.Name = "panelDocumentsActive";
-            this.panelDocumentsActive.Size = new System.Drawing.Size(137, 38);
+            this.panelDocumentsActive.Size = new System.Drawing.Size(183, 47);
             this.panelDocumentsActive.TabIndex = 30;
             // 
             // label2
@@ -202,9 +212,10 @@
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.75F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(41, 11);
+            this.label2.Location = new System.Drawing.Point(55, 14);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(75, 16);
             this.label2.TabIndex = 28;
             this.label2.Text = "Documents";
             // 
@@ -212,9 +223,10 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::ex.Properties.Resources.icons8_documents_50__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(9, 9);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 11);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox2.Size = new System.Drawing.Size(29, 26);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -222,9 +234,10 @@
             // pictureBox8
             // 
             this.pictureBox8.Image = global::ex.Properties.Resources.user__2_;
-            this.pictureBox8.Location = new System.Drawing.Point(56, 15);
+            this.pictureBox8.Location = new System.Drawing.Point(75, 18);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(48, 37);
+            this.pictureBox8.Size = new System.Drawing.Size(64, 46);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 1;
             this.pictureBox8.TabStop = false;
@@ -236,9 +249,10 @@
             this.panelProfileActive.Controls.Add(this.label1);
             this.panelProfileActive.Controls.Add(this.pictureBox1);
             this.panelProfileActive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelProfileActive.Location = new System.Drawing.Point(12, 124);
+            this.panelProfileActive.Location = new System.Drawing.Point(16, 153);
+            this.panelProfileActive.Margin = new System.Windows.Forms.Padding(4);
             this.panelProfileActive.Name = "panelProfileActive";
-            this.panelProfileActive.Size = new System.Drawing.Size(137, 38);
+            this.panelProfileActive.Size = new System.Drawing.Size(183, 47);
             this.panelProfileActive.TabIndex = 29;
             // 
             // panelProfileInactive
@@ -248,8 +262,9 @@
             this.panelProfileInactive.Controls.Add(this.pictureBox14);
             this.panelProfileInactive.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelProfileInactive.Location = new System.Drawing.Point(0, 0);
+            this.panelProfileInactive.Margin = new System.Windows.Forms.Padding(4);
             this.panelProfileInactive.Name = "panelProfileInactive";
-            this.panelProfileInactive.Size = new System.Drawing.Size(137, 38);
+            this.panelProfileInactive.Size = new System.Drawing.Size(183, 47);
             this.panelProfileInactive.TabIndex = 28;
             this.panelProfileInactive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labelprofile_MouseClick);
             // 
@@ -260,9 +275,10 @@
             this.labelprofile.Cursor = System.Windows.Forms.Cursors.Hand;
             this.labelprofile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.labelprofile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.labelprofile.Location = new System.Drawing.Point(41, 10);
+            this.labelprofile.Location = new System.Drawing.Point(55, 12);
+            this.labelprofile.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelprofile.Name = "labelprofile";
-            this.labelprofile.Size = new System.Drawing.Size(42, 15);
+            this.labelprofile.Size = new System.Drawing.Size(50, 18);
             this.labelprofile.TabIndex = 27;
             this.labelprofile.Text = "Profile";
             this.labelprofile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labelprofile_MouseClick);
@@ -271,9 +287,10 @@
             // 
             this.pictureBox14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox14.Image = global::ex.Properties.Resources.icons8_edit_profile_48;
-            this.pictureBox14.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox14.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox14.Size = new System.Drawing.Size(29, 26);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 1;
             this.pictureBox14.TabStop = false;
@@ -286,9 +303,10 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(41, 10);
+            this.label1.Location = new System.Drawing.Point(55, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 15);
+            this.label1.Size = new System.Drawing.Size(50, 18);
             this.label1.TabIndex = 27;
             this.label1.Text = "Profile";
             // 
@@ -297,9 +315,10 @@
             this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::ex.Properties.Resources.icons8_edit_profile_48__1_1;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox1.Size = new System.Drawing.Size(29, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -311,9 +330,10 @@
             this.panelDashboardActive.Controls.Add(this.label9);
             this.panelDashboardActive.Controls.Add(this.pictureBox9);
             this.panelDashboardActive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelDashboardActive.Location = new System.Drawing.Point(12, 80);
+            this.panelDashboardActive.Location = new System.Drawing.Point(16, 98);
+            this.panelDashboardActive.Margin = new System.Windows.Forms.Padding(4);
             this.panelDashboardActive.Name = "panelDashboardActive";
-            this.panelDashboardActive.Size = new System.Drawing.Size(137, 38);
+            this.panelDashboardActive.Size = new System.Drawing.Size(183, 47);
             this.panelDashboardActive.TabIndex = 38;
             // 
             // panelDashboardInactive
@@ -323,8 +343,9 @@
             this.panelDashboardInactive.Controls.Add(this.pictureBox3);
             this.panelDashboardInactive.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelDashboardInactive.Location = new System.Drawing.Point(0, 0);
+            this.panelDashboardInactive.Margin = new System.Windows.Forms.Padding(4);
             this.panelDashboardInactive.Name = "panelDashboardInactive";
-            this.panelDashboardInactive.Size = new System.Drawing.Size(137, 38);
+            this.panelDashboardInactive.Size = new System.Drawing.Size(183, 47);
             this.panelDashboardInactive.TabIndex = 33;
             this.panelDashboardInactive.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDashboardInactive_MouseClick);
             // 
@@ -335,9 +356,10 @@
             this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.label14.Location = new System.Drawing.Point(41, 10);
+            this.label14.Location = new System.Drawing.Point(55, 12);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(68, 15);
+            this.label14.Size = new System.Drawing.Size(81, 18);
             this.label14.TabIndex = 27;
             this.label14.Text = "Dashboard";
             this.label14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDashboardInactive_MouseClick);
@@ -346,9 +368,10 @@
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = global::ex.Properties.Resources.dashboard__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox3.Size = new System.Drawing.Size(29, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
@@ -361,9 +384,10 @@
             this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(41, 10);
+            this.label9.Location = new System.Drawing.Point(55, 12);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 15);
+            this.label9.Size = new System.Drawing.Size(81, 18);
             this.label9.TabIndex = 27;
             this.label9.Text = "Dashboard";
             // 
@@ -371,30 +395,31 @@
             // 
             this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox9.Image = global::ex.Properties.Resources.dashboard;
-            this.pictureBox9.Location = new System.Drawing.Point(9, 8);
+            this.pictureBox9.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(22, 21);
+            this.pictureBox9.Size = new System.Drawing.Size(29, 26);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 1;
             this.pictureBox9.TabStop = false;
             // 
             // panel2
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Location = new System.Drawing.Point(215, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(787, 412);
+            this.panel2.Size = new System.Drawing.Size(967, 507);
             this.panel2.TabIndex = 12;
             // 
             // Step4Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(787, 412);
+            this.ClientSize = new System.Drawing.Size(1187, 507);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Step4Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Step4Form";

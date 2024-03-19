@@ -30,7 +30,6 @@
         {
             this.panelSTEP2 = new System.Windows.Forms.Panel();
             this.btnDeny = new System.Windows.Forms.Button();
-            this.labelStep3 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblHello = new System.Windows.Forms.Label();
             this.txtProjectNo = new System.Windows.Forms.TextBox();
@@ -49,7 +48,6 @@
             // 
             this.panelSTEP2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panelSTEP2.Controls.Add(this.btnDeny);
-            this.panelSTEP2.Controls.Add(this.labelStep3);
             this.panelSTEP2.Controls.Add(this.txtSearch);
             this.panelSTEP2.Controls.Add(this.lblHello);
             this.panelSTEP2.Controls.Add(this.txtProjectNo);
@@ -60,10 +58,10 @@
             this.panelSTEP2.Controls.Add(this.label2);
             this.panelSTEP2.Controls.Add(this.lblProject);
             this.panelSTEP2.Controls.Add(this.dataGridSTEP4);
-            this.panelSTEP2.Location = new System.Drawing.Point(9, 10);
-            this.panelSTEP2.Margin = new System.Windows.Forms.Padding(2);
+            this.panelSTEP2.Location = new System.Drawing.Point(12, 11);
+            this.panelSTEP2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSTEP2.Name = "panelSTEP2";
-            this.panelSTEP2.Size = new System.Drawing.Size(712, 394);
+            this.panelSTEP2.Size = new System.Drawing.Size(949, 485);
             this.panelSTEP2.TabIndex = 4;
             // 
             // btnDeny
@@ -73,33 +71,23 @@
             this.btnDeny.FlatAppearance.BorderSize = 0;
             this.btnDeny.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeny.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDeny.Location = new System.Drawing.Point(542, 94);
-            this.btnDeny.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeny.Location = new System.Drawing.Point(723, 116);
+            this.btnDeny.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeny.Name = "btnDeny";
-            this.btnDeny.Size = new System.Drawing.Size(111, 35);
+            this.btnDeny.Size = new System.Drawing.Size(148, 43);
             this.btnDeny.TabIndex = 26;
             this.btnDeny.Text = "DECLINE";
             this.btnDeny.UseVisualStyleBackColor = false;
             this.btnDeny.Click += new System.EventHandler(this.btnDeny_Click);
             // 
-            // labelStep3
-            // 
-            this.labelStep3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelStep3.AutoSize = true;
-            this.labelStep3.Location = new System.Drawing.Point(10, 8);
-            this.labelStep3.Name = "labelStep3";
-            this.labelStep3.Size = new System.Drawing.Size(35, 13);
-            this.labelStep3.TabIndex = 25;
-            this.labelStep3.Text = "label1";
-            // 
             // txtSearch
             // 
             this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearch.Location = new System.Drawing.Point(159, 143);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Location = new System.Drawing.Point(212, 176);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(110, 24);
+            this.txtSearch.Size = new System.Drawing.Size(145, 29);
             this.txtSearch.TabIndex = 24;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
@@ -108,21 +96,20 @@
             // 
             this.lblHello.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblHello.AutoSize = true;
-            this.lblHello.Location = new System.Drawing.Point(44, 150);
-            this.lblHello.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblHello.Location = new System.Drawing.Point(59, 185);
             this.lblHello.Name = "lblHello";
-            this.lblHello.Size = new System.Drawing.Size(111, 13);
+            this.lblHello.Size = new System.Drawing.Size(137, 16);
             this.lblHello.TabIndex = 23;
             this.lblHello.Text = "Search by Project No.";
             // 
             // txtProjectNo
             // 
             this.txtProjectNo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProjectNo.Location = new System.Drawing.Point(200, 6);
-            this.txtProjectNo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProjectNo.Location = new System.Drawing.Point(269, 17);
+            this.txtProjectNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProjectNo.Multiline = true;
             this.txtProjectNo.Name = "txtProjectNo";
-            this.txtProjectNo.Size = new System.Drawing.Size(145, 28);
+            this.txtProjectNo.Size = new System.Drawing.Size(192, 34);
             this.txtProjectNo.TabIndex = 1;
             // 
             // label1
@@ -130,10 +117,9 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(379, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(489, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 16);
+            this.label1.Size = new System.Drawing.Size(140, 20);
             this.label1.TabIndex = 21;
             this.label1.Text = "PROJECT NAME";
             // 
@@ -144,10 +130,10 @@
             this.btnApprove.FlatAppearance.BorderSize = 0;
             this.btnApprove.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApprove.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnApprove.Location = new System.Drawing.Point(542, 55);
-            this.btnApprove.Margin = new System.Windows.Forms.Padding(2);
+            this.btnApprove.Location = new System.Drawing.Point(723, 68);
+            this.btnApprove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnApprove.Name = "btnApprove";
-            this.btnApprove.Size = new System.Drawing.Size(111, 35);
+            this.btnApprove.Size = new System.Drawing.Size(148, 43);
             this.btnApprove.TabIndex = 4;
             this.btnApprove.Text = "APPROVE";
             this.btnApprove.UseVisualStyleBackColor = false;
@@ -156,21 +142,21 @@
             // txtProjectDescription
             // 
             this.txtProjectDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProjectDescription.Location = new System.Drawing.Point(202, 55);
-            this.txtProjectDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProjectDescription.Location = new System.Drawing.Point(269, 68);
+            this.txtProjectDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProjectDescription.Multiline = true;
             this.txtProjectDescription.Name = "txtProjectDescription";
-            this.txtProjectDescription.Size = new System.Drawing.Size(330, 79);
+            this.txtProjectDescription.Size = new System.Drawing.Size(439, 96);
             this.txtProjectDescription.TabIndex = 3;
             // 
             // txtProjectName
             // 
             this.txtProjectName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtProjectName.Location = new System.Drawing.Point(495, 6);
-            this.txtProjectName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtProjectName.Location = new System.Drawing.Point(648, 17);
+            this.txtProjectName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtProjectName.Multiline = true;
             this.txtProjectName.Name = "txtProjectName";
-            this.txtProjectName.Size = new System.Drawing.Size(145, 28);
+            this.txtProjectName.Size = new System.Drawing.Size(192, 34);
             this.txtProjectName.TabIndex = 2;
             // 
             // label2
@@ -178,10 +164,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 56);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(45, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 16);
+            this.label2.Size = new System.Drawing.Size(205, 20);
             this.label2.TabIndex = 17;
             this.label2.Text = "PROJECT DESCRIPTION";
             // 
@@ -190,10 +175,9 @@
             this.lblProject.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblProject.AutoSize = true;
             this.lblProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProject.Location = new System.Drawing.Point(64, 11);
-            this.lblProject.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblProject.Location = new System.Drawing.Point(85, 31);
             this.lblProject.Name = "lblProject";
-            this.lblProject.Size = new System.Drawing.Size(132, 16);
+            this.lblProject.Size = new System.Drawing.Size(165, 20);
             this.lblProject.TabIndex = 16;
             this.lblProject.Text = "PROJECT NUMBER";
             // 
@@ -201,24 +185,24 @@
             // 
             this.dataGridSTEP4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridSTEP4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridSTEP4.Location = new System.Drawing.Point(44, 171);
-            this.dataGridSTEP4.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridSTEP4.Location = new System.Drawing.Point(59, 210);
+            this.dataGridSTEP4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridSTEP4.Name = "dataGridSTEP4";
             this.dataGridSTEP4.ReadOnly = true;
             this.dataGridSTEP4.RowHeadersWidth = 51;
             this.dataGridSTEP4.RowTemplate.Height = 24;
-            this.dataGridSTEP4.Size = new System.Drawing.Size(625, 204);
+            this.dataGridSTEP4.Size = new System.Drawing.Size(833, 251);
             this.dataGridSTEP4.TabIndex = 1;
             this.dataGridSTEP4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSTEP4_CellClick);
             // 
             // STEP4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 414);
+            this.ClientSize = new System.Drawing.Size(973, 510);
             this.Controls.Add(this.panelSTEP2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "STEP4";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -234,7 +218,6 @@
 
         private System.Windows.Forms.Panel panelSTEP2;
         private System.Windows.Forms.Button btnDeny;
-        private System.Windows.Forms.Label labelStep3;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblHello;
         private System.Windows.Forms.TextBox txtProjectNo;
