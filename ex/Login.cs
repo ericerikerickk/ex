@@ -111,9 +111,9 @@ namespace ex
                     }
                     else if (Step4 == "Step 4")
                     {
-                        STEP4 step4Form = new STEP4(userID);
+                        Step4Form step4 = new Step4Form(userID);
                         this.Hide();
-                        step4Form.ShowDialog();
+                        step4.ShowDialog();
                     }
                     else
                     {

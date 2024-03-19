@@ -318,7 +318,6 @@
             this.labelprofile.Size = new System.Drawing.Size(50, 18);
             this.labelprofile.TabIndex = 27;
             this.labelprofile.Text = "Profile";
-            this.labelprofile.MouseClick += new System.Windows.Forms.MouseEventHandler(this.labelprofile_MouseClick);
             // 
             // pictureBox14
             // 

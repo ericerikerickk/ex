@@ -190,6 +190,18 @@
     <Compile Include="STEP4.Designer.cs">
       <DependentUpon>STEP4.cs</DependentUpon>
     </Compile>
+    <Compile Include="step4Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="step4Dashboard.Designer.cs">
+      <DependentUpon>step4Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Step4Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Step4Form.Designer.cs">
+      <DependentUpon>Step4Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -286,6 +298,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="STEP4.resx">
       <DependentUpon>STEP4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="step4Dashboard.resx">
+      <DependentUpon>step4Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Step4Form.resx">
+      <DependentUpon>Step4Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserDashboard.resx">
       <DependentUpon>UserDashboard.cs</DependentUpon>

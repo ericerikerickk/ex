@@ -40,9 +40,9 @@ namespace ex
         private void panelDashboardInactiveStep2_MouseClick(object sender, MouseEventArgs e)
         {
             sidecomponentsInactive();
-            panelProfileInactiveStep2.Hide();
-            panelProfileActiveStep2.Show();
-            loadForm(new EditProfile(userID));
+            panelDashboardInactiveStep2.Hide();
+            panelDashboardActiveStep2.Show();
+            loadForm(new Step2Dashboard(userID));
         }
 
         private void panelProfileInactiveStep2_MouseClick(object sender, MouseEventArgs e)
@@ -67,14 +67,6 @@ namespace ex
             this.Hide();
             Login login = new Login();
             login.ShowDialog();
-        }
-
-        private void labelprofile_MouseClick(object sender, MouseEventArgs e)
-        {
-            sidecomponentsInactive();
-            panelProfileInactiveStep2.Hide();
-            panelProfileActiveStep2.Show();
-            loadForm(new EditProfile(userID));
         }
 
         private void Step2Form_Load(object sender, EventArgs e)
