@@ -1,0 +1,106 @@
+﻿CREATE TABLE [dbo].[documentTable] (
+    [docID]              INT           IDENTITY (1, 1) NOT NULL,
+    [projectNo]          NVARCHAR (50) NULL,
+    [projectTitle]       NVARCHAR (50) NULL,
+    [userID]             INT           NOT NULL,
+    [dateCreated]        DATETIME      NULL,
+    [step1ID]            INT           NOT NULL,
+    [step2ID]            INT           NOT NULL,
+    [step3ID]            INT           NOT NULL,
+    [step4ID]            INT           NOT NULL,
+    [projectDescription] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([docID] ASC),
+    CONSTRAINT [FK_documentTable_userTable] FOREIGN KEY ([userID]) REFERENCES [dbo].[userTable] ([userID]),
+    CONSTRAINT [FK_documentTable_step1Table] FOREIGN KEY ([step1ID]) REFERENCES [dbo].[step1Table] ([step1ID])
+);
+
+CREATE TABLE [dbo].[step1Table] (
+    [step1ID]          INT      IDENTITY (1, 1) NOT NULL,
+    [step1Status]      BIT      DEFAULT (NULL) NULL,
+    [step1dateUpdated] DATETIME NULL,
+    PRIMARY KEY CLUSTERED ([step1ID] ASC)
+);
+
+CREATE TABLE [dbo].[step2Table] (
+    [step2ID]          INT      IDENTITY (1, 1) NOT NULL,
+    [step2Status]      BIT      DEFAULT (NULL) NULL,
+    [step2DateUpdated] DATETIME NULL,
+    PRIMARY KEY CLUSTERED ([step2ID] ASC)
+);
+
+CREATE TABLE [dbo].[step3Table] (
+    [step3ID]          INT      IDENTITY (1, 1) NOT NULL,
+    [step3Status]      BIT      DEFAULT (NULL) NULL,
+    [step3DateUpdated] DATETIME NULL,
+    PRIMARY KEY CLUSTERED ([step3ID] ASC)
+);
+
+CREATE TABLE [dbo].[step4Table] (
+    [step4ID]          INT      IDENTITY (1, 1) NOT NULL,
+    [step4Status]      BIT      DEFAULT (NULL) NULL,
+    [step4DateUpdated] DATETIME NULL,
+    [step4Denied] BIT NULL, 
+    PRIMARY KEY CLUSTERED ([step4ID] ASC)
+);
+
+CREATE TABLE [dbo].[userTable] (
+    [userID]         INT            IDENTITY (1, 1) NOT NULL,
+    [userName]       NVARCHAR (50)  NULL,
+    [password]       NVARCHAR (100) NULL,
+    [email]          NVARCHAR (50)  NULL,
+    [stepDepartment] NVARCHAR (50)  DEFAULT ((0)) NULL,
+    [firstName]      NVARCHAR (50)  NULL,
+    [lastName]       NVARCHAR (50)  NULL,
+    [contact]        NVARCHAR (50)  NULL,
+    [address]        NVARCHAR (50)  NULL,
+    [gender]         NVARCHAR (50)  NULL,
+    PRIMARY KEY CLUSTERED ([userID] ASC)
+);
+
+CREATE PROCEDURE InsertDocumentAndStep1NEW
+    @ProjectNo NVARCHAR(50),
+    @ProjectTitle NVARCHAR(50),
+    @ProjectDescription NVARCHAR(50),
+    @UserID INT
+AS
+BEGIN
+    DECLARE @Step1ID INT;
+
+    -- Insert into step1Table
+    INSERT INTO step1Table (step1Status)
+    VALUES (0);
+
+    -- Get the generated step1ID
+    SET @Step1ID = SCOPE_IDENTITY();
+
+    DECLARE @Step2ID INT;
+
+    -- Insert into step2Table
+    INSERT INTO step2Table (step2Status)
+    VALUES (0);
+
+    -- Get the generated step2ID
+    SET @Step2ID = SCOPE_IDENTITY();
+
+    DECLARE @Step3ID INT;
+
+    -- Insert into step1Table
+    INSERT INTO step3Table (step3Status)
+    VALUES (0);
+
+    -- Get the generated step3ID
+    SET @Step3ID = SCOPE_IDENTITY();
+
+    DECLARE @Step4ID INT;
+
+    -- Insert into step4Table
+    INSERT INTO step4Table (step4Status)
+    VALUES (0);
+
+    -- Get the generated step4ID
+    SET @Step4ID = SCOPE_IDENTITY();
+
+    -- Insert into documentTable with step1ID
+    INSERT INTO documentTable (projectNo, projectTitle, projectDescription, dateCreated, userID, step1ID, step2ID, step3ID, step4ID)
+    VALUES (@ProjectNo, @ProjectTitle, @ProjectDescription, GETDATE(), @UserID, @Step1ID, @Step2ID, @Step3ID, @Step4ID);
+END

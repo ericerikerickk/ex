@@ -416,6 +416,7 @@
     <None Include="Resources\logout %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AllSQLScripts.txt" />
     <Content Include="documentTableSQL.txt" />
     <Content Include="Step1SQLScript.txt" />
     <Content Include="Step1TableSQL.txt" />
