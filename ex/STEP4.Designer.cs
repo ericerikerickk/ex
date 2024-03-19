@@ -78,7 +78,7 @@
             this.btnDeny.Name = "btnDeny";
             this.btnDeny.Size = new System.Drawing.Size(111, 35);
             this.btnDeny.TabIndex = 26;
-            this.btnDeny.Text = "DENY";
+            this.btnDeny.Text = "DECLINE";
             this.btnDeny.UseVisualStyleBackColor = false;
             this.btnDeny.Click += new System.EventHandler(this.btnDeny_Click);
             // 
@@ -209,6 +209,7 @@
             this.dataGridSTEP4.RowTemplate.Height = 24;
             this.dataGridSTEP4.Size = new System.Drawing.Size(625, 204);
             this.dataGridSTEP4.TabIndex = 1;
+            this.dataGridSTEP4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSTEP4_CellClick);
             // 
             // STEP4
             // 

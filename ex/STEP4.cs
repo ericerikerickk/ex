@@ -43,21 +43,7 @@ namespace ex
             txtProjectDescription.Text = "";
             txtProjectNo.Focus();
         }
-        private void dataGridSTEP3_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && dataGridSTEP4.Rows[e.RowIndex].Cells["Project No."].Value != null && dataGridSTEP4.Rows[e.RowIndex].Cells["Project Title"].Value != null && dataGridSTEP4.Rows[e.RowIndex].Cells["Project Description"].Value != null)
-            {
-                resetFocus();
-                DataGridViewRow selectedRow = dataGridSTEP4.Rows[e.RowIndex];
-                txtProjectNo.Text = selectedRow.Cells["Project No."].Value?.ToString();
-                txtProjectName.Text = selectedRow.Cells["Project Title"].Value?.ToString();
-                txtProjectDescription.Text = selectedRow.Cells["Project Description"].Value?.ToString();
-            }
-            else
-            {
-                MessageBox.Show("No value to be shown", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
+       
 
         private void txtSearch_Leave(object sender, EventArgs e)
         {
@@ -234,7 +220,7 @@ namespace ex
                     string mail = $"Project No.: {txtProjectNo.Text}<br>" +
                                   $"Project Title: {txtProjectName.Text}<br><br>" +
                                   "Good Day!,<br>" +
-                                  "Unfortunately, your Document got denied in Step 4.";
+                                  "Unfortunately, your Document got declined in Step 4.";
                     string subject = $"Project No.: {txtProjectNo.Text}, Project Title: {txtProjectName.Text}";
                     message.Subject = subject;
 
@@ -291,7 +277,7 @@ namespace ex
                 con.Open();
                 submitcmd.ExecuteNonQuery(); // Execute the update only if recipient email is found
                 emailNotifDeny(); // Send email notification
-                MessageBox.Show("Successfully Denied", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Successfully Declined", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -301,6 +287,22 @@ namespace ex
             con.Close(); // Close the connection after all operations are done
             LoadDataGrid();
             resetFocus();
+        }
+
+        private void dataGridSTEP4_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && dataGridSTEP4.Rows[e.RowIndex].Cells["Project No."].Value != null && dataGridSTEP4.Rows[e.RowIndex].Cells["Project Title"].Value != null && dataGridSTEP4.Rows[e.RowIndex].Cells["Project Description"].Value != null)
+            {
+                resetFocus();
+                DataGridViewRow selectedRow = dataGridSTEP4.Rows[e.RowIndex];
+                txtProjectNo.Text = selectedRow.Cells["Project No."].Value?.ToString();
+                txtProjectName.Text = selectedRow.Cells["Project Title"].Value?.ToString();
+                txtProjectDescription.Text = selectedRow.Cells["Project Description"].Value?.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No value to be shown", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
