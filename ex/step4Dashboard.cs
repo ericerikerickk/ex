@@ -27,7 +27,7 @@ namespace ex
         private void labelPending()
         {
             con.Open();
-            SqlCommand pendingcmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step4Table ON step4Table.step4ID = documentTable.step4ID WHERE step4Table.step4Status = 0", con);
+            SqlCommand pendingcmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step4Table ON step4Table.step4ID = documentTable.step4ID WHERE step4Table.step4Status = 0 AND step4Table.step4Denied = 0", con);
             Int32 resultPending = Convert.ToInt32(pendingcmd.ExecuteScalar());
             con.Close();
             lblPending.Text = resultPending.ToString();
