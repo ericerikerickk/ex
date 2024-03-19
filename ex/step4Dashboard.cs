@@ -18,11 +18,11 @@ namespace ex
         public step4Dashboard(int userID)
         {
             InitializeComponent();
+            timer1.Start();
+            this.userID = userID;
             labelPending();
             labelApproved();
             labelDocuments();
-            timer1.Start();
-            this.userID = userID;
         }
         private void labelPending()
         {
@@ -35,7 +35,7 @@ namespace ex
         private void labelApproved()
         {
             con.Open();
-            SqlCommand approvecmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step4Table ON step4Table.step3ID = documentTable.step4ID WHERE step4Table.step4Status = 1", con);
+            SqlCommand approvecmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step4Table ON step4Table.step4ID = documentTable.step4ID WHERE step4Table.step4Status = 1", con);
             Int32 approveresult = Convert.ToInt32(approvecmd.ExecuteScalar());
             con.Close();
             lblApproved.Text = approveresult.ToString();
@@ -43,7 +43,7 @@ namespace ex
         private void labelDocuments()
         {
             con.Open();
-            SqlCommand documentscmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step3Table ON step4Table.step4ID = documentTable.step4ID WHERE step4Table.step4Status = 1 OR step4Table.step4Status = 0", con);
+            SqlCommand documentscmd = new SqlCommand("SELECT COUNT(projectTitle) FROM documentTable INNER JOIN step4Table ON step4Table.step4ID = documentTable.step4ID WHERE step4Table.step4Status = 1 OR step4Table.step4Status = 0", con);
             Int32 documentsResult = Convert.ToInt32(documentscmd.ExecuteScalar());
             con.Close();
             lblDocuments.Text = documentsResult.ToString();

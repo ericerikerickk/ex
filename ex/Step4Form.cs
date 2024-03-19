@@ -42,7 +42,7 @@ namespace ex
             sidecomponentsInactive();
             panelDashboardInactive.Hide();
             panelDashboardActive.Show();
-            loadForm(new Step3Dashboard(userID));
+            loadForm(new step4Dashboard(userID));
         }
 
         private void panelDashboardInactive_MouseClick(object sender, MouseEventArgs e)
