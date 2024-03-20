@@ -89,78 +89,96 @@ namespace ex
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            Regex mRegxExpression;
-            if (txtGmail.Text.Trim() != string.Empty)
+            bool isExist = false;
+            con.Open();
+            SqlCommand cmdEmail = new SqlCommand("select email from userTable where email='" + txtGmail.Text + "'", con) ;
+            SqlDataReader sdrEmail = cmdEmail.ExecuteReader();
+            if(sdrEmail.Read())
             {
-                mRegxExpression = new Regex(@"^([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@gmail\.com$");
-
-                if (!mRegxExpression.IsMatch(txtGmail.Text.Trim()))
+                isExist = true;
+            }
+            con.Close();
+            if(isExist)
+            {
+                MessageBox.Show("Email that you've enered is already exist.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                Regex mRegxExpression;
+                if (txtGmail.Text.Trim() != string.Empty)
                 {
-                    MessageBox.Show("E-mail address must end with @gmail.com", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    string passwordtest = txtPass.Text;
+                    mRegxExpression = new Regex(@"^([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@gmail\.com$");
 
-                    if (IsValidPassword(passwordtest))
+                    if (!mRegxExpression.IsMatch(txtGmail.Text.Trim()))
                     {
-                        con.Open();
-                        if (txtUsername.Text != "" && txtConfirmpass.Text != "" && txtGmail.Text != "")
+                        MessageBox.Show("E-mail address must end with @gmail.com", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    else
+                    {
+                        string passwordtest = txtPass.Text;
+
+                        if (IsValidPassword(passwordtest))
                         {
-                            if (txtPass.Text.Trim().ToLower() == txtConfirmpass.Text.Trim().ToLower())
+                            con.Open();
+                            if (txtUsername.Text != "" && txtConfirmpass.Text != "" && txtGmail.Text != "")
                             {
-                                // Convert the username to lower case for comparison
-                                string username = txtUsername.Text;
-                                SqlCommand cmd = new SqlCommand("SELECT * FROM userTable WHERE LOWER(userName) = @Username", con);
-                                cmd.Parameters.AddWithValue("@Username", username);
-                                SqlDataReader dr = cmd.ExecuteReader();
-                                if (dr.Read())
+                                if (txtPass.Text.Trim().ToLower() == txtConfirmpass.Text.Trim().ToLower())
                                 {
-                                    dr.Close();
-                                    MessageBox.Show("Username already exists, please try another", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    con.Close();
+                                    // Convert the username to lower case for comparison
+                                    string username = txtUsername.Text;
+                                    SqlCommand cmd = new SqlCommand("SELECT * FROM userTable WHERE LOWER(userName) = @Username", con);
+                                    cmd.Parameters.AddWithValue("@Username", username);
+                                    SqlDataReader dr = cmd.ExecuteReader();
+                                    if (dr.Read())
+                                    {
+                                        dr.Close();
+                                        MessageBox.Show("Username already exists, please try another", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                        con.Close();
+                                    }
+                                    else
+                                    {
+                                        string email = txtGmail.Text;
+                                        string password = Cryptography.Encrypt(txtConfirmpass.Text);
+                                        con.Close();
+                                        con.Open();
+                                        SqlCommand insertUserPass = new SqlCommand("INSERT INTO userTable (userName, password, email) VALUES (@UserName, @Password, @Email)", con);
+                                        insertUserPass.Parameters.AddWithValue("@UserName", username);
+                                        insertUserPass.Parameters.AddWithValue("@Password", password);
+                                        insertUserPass.Parameters.AddWithValue("@Email", email);
+                                        insertUserPass.ExecuteNonQuery();
+                                        con.Close();
+                                        MessageBox.Show("Record inserted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        this.Hide();
+                                        Login login = new Login();
+                                        login.ShowDialog();
+                                    }
                                 }
                                 else
                                 {
-                                    string email = txtGmail.Text;
-                                    string password = Cryptography.Encrypt(txtConfirmpass.Text);
+                                    MessageBox.Show("Password and Confirm Password don't match! Please check.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     con.Close();
-                                    con.Open();
-                                    SqlCommand insertUserPass = new SqlCommand("INSERT INTO userTable (userName, password, email) VALUES (@UserName, @Password, @Email)", con);
-                                    insertUserPass.Parameters.AddWithValue("@UserName", username);
-                                    insertUserPass.Parameters.AddWithValue("@Password", password);
-                                    insertUserPass.Parameters.AddWithValue("@Email", email);
-                                    insertUserPass.ExecuteNonQuery();
-                                    con.Close();
-                                    MessageBox.Show("Record inserted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    this.Hide();
-                                    Login login = new Login();
-                                    login.ShowDialog();
                                 }
                             }
                             else
                             {
-                                MessageBox.Show("Password and Confirm Password don't match! Please check.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Please fill all the fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 con.Close();
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Please fill all the fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Password does not meet the requirements. The password should have at least one special character, one upper and lower case letter, and at least 8 characters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             con.Close();
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("Password does not meet the requirements. The password should have at least one special character, one upper and lower case letter, and at least 8 characters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        con.Close();
-                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please input email", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            else
-            {
-                MessageBox.Show("Please input email", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            
         }
 
 
